@@ -1,0 +1,67 @@
+[
+    {
+      "id": 1,
+      "img": "https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2VkZGluZyUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+      "name": "Wedding Basic",
+      "Duration" : "6months",
+      "details": "Limited space access Secuirty facility,event support, Decoration design,Per day bill",
+      "price": 50000
+    },
+    {
+      "id": 2,
+      "img": "https://www.brides.com/thmb/psWP0UmDNSEyVRFQp97Gm8nr-m8=/1067x800/smart/filters:no_upscale()/sq-740658be0504413a8a77d501ba133df6.jpg",
+      "name": "Weddin Plus",
+      "Duration" : "5months",
+      "details": "Full space access, Dedicated team, Buffet food,premium Decoration, pay as plan",
+      "price": 70000
+    },
+    {
+      "id": 3,
+      "img": "https://img.freepik.com/free-photo/business-brainstorming-graph-chart-report-data-concept_53876-31213.jpg?w=2000",
+      "name": "Business Fair",
+      "Duration" : "6months",
+      "details": "Full space access,Food arrangement,mangement support, Decoration design,Billed as shift ",
+      "price": 120000
+    },
+    {
+      "id": 4,
+      "img": "https://www.google.com/search?q=occasion+picture&sxsrf=ALiCzsZbfBotbn4YipcU6DSexQeCQLCMdQ:1652078250004&tbm=isch&source=iu&ictx=1&vet=1&fir=fDs3HrIcl49vtM%252C-boTw4842ny-PM%252C_%253BHIOocg0x9hVO1M%252Cg5iqp64fHDeaFM%252C_%253BzjS7cJNE30M4QM%252Cg5iqp64fHDeaFM%252C_%253BRucv-o6SWOm-ZM%252CQGGeV5Wm3c2XXM%252C_%253BkJ_WNGGPX295SM%252C7TqQ3VwciYapfM%252C_%253B6N1IGtnf9JuMgM%252CEljmo1idxbZo0M%252C_%253BKkJNWoN8aeqMjM%252CMsWWjJEwmfythM%252C_%253BjNKatOXsusBISM%252CQGGeV5Wm3c2XXM%252C_%253B3dlE-RMX7JdnoM%252C7TqQ3VwciYapfM%252C_%253BBHFIEyJtxTGqPM%252CQGGeV5Wm3c2XXM%252C_%253BcSm1JjSNAejwaM%252CDDl0BUh1e6JK6M%252C_%253Bz5kFM6jVUb8ywM%252CQGGeV5Wm3c2XXM%252C_&usg=AI4_-kT6WLmTJe_DS5InheeOUhnGjMV2zw&sa=X&ved=2ahUKEwid5u2J59H3AhXNmFYBHRuqAFgQ9QF6BAgLEAE#imgrc=zjS7cJNE30M4QM",
+      "name": "Custom Package",
+      
+        "details": "Full space access,Food arrangement,mangement support, Decoration design,Billed as shift ",
+      "price": 30000 
+    },
+    {
+      "id": 5,
+      "img": "https://media.istockphoto.com/photos/dancing-friends-picture-id501387734?k=20&m=501387734&s=612x612&w=0&h=1mli5b7kpDg428fFZfsDPJ9dyVHsWsGK-EVYZUGWHpI=",
+      "name": "Custom Package",
+      "Duration" : "6months",
+      "details": " Full space access,Dedicated team, Buffet food, premium Decorationpay as plan",
+      "price": 150000 
+    }
+ 
+   
+  ]
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+  
+  

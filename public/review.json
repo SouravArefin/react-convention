@@ -1,0 +1,77 @@
+[
+    {
+      "id": 1,
+      "img": "https://scontent.fcgp6-1.fna.fbcdn.net/v/t1.6435-1/68314277_502691683890963_8154648581492441088_n.jpg?stp=dst-jpg_p100x100&_nc_cat=100&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeF1jD9LEKY4Q5E3k4GH1Xeyn6TjKACEXmCfpOMoAIReYC0IatVAW0-PgyjghqsVdw9x7IR2Hf_Dg5cyXHwEweW7&_nc_ohc=UlWkXfgXpgQAX8IoT2-&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fcgp6-1.fna&oh=00_AT8_i-BCCOE3PhTFN2z_NF2O91zdha0dkrbqfdssMd3P4A&oe=62702681",
+      "customer": "Kabir Khan ",
+      "identity":"Doctor of Chipa-pur",
+      "time": "Reviewed in the United States on November 8, 2021",
+     "rating":4.8,
+      "reviewer": "Good quality in cheapest price.I want to buy from this site again in future"
+      
+    },
+    {
+      "id": 2,
+      
+      "img": "https://scontent.fcgp6-1.fna.fbcdn.net/v/t39.30808-1/241818950_1538292469842081_5836580680667266216_n.jpg?stp=dst-jpg_p100x100&_nc_cat=102&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeFDz6uRQTllEaKmg7MF5H3FTu-eJJmPFKBO754kmY8UoDTzGH6LVQv6UAu5FRF27hd3JsRKDYeRwlwWFKUL8_bp&_nc_ohc=xEwbaY9W7HgAX9h8Fe0&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fcgp6-1.fna&oh=00_AT9T5rQLmi9goQWAtS4rLra5sGqTkyPZV_zStPxDSiDmPg&oe=6250D155",
+      "customer": "Sabbir Mahmud",
+      "time": "Reviewed in the United Kingdom on January 10, 2021",
+      "rating":4.5,
+      "review": "I love their service.They keep their word"
+    },
+    {
+      "id": 3,
+      "img": "https://scontent.fcgp6-1.fna.fbcdn.net/v/t39.30808-1/276097936_4962132923901567_4733052065658357793_n.jpg?stp=dst-jpg_p100x100&_nc_cat=101&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeHOBkWYFbfoVTfihlC61Xzz1N36lV3ye5zU3fqVXfJ7nL_EqVs1GUwT6VcY6S50W-lVjInavcT9yzzR9ciohtSF&_nc_ohc=QDcfRR0VasAAX-zbBpL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fcgp6-1.fna&oh=00_AT-vGisWR5kxk7NWMqwQE0ON4Qu0CLXrGtn0xG45qNgTgg&oe=625085B7",
+      "customer": "David Parvej",
+      "time": "Reviewed in the Canada on May 16, 2021",
+      "rating":4,
+      "review": "I love their behaviour and their response"
+    },
+    {
+      "id": 4,
+      "img": "https://scontent.fcgp6-1.fna.fbcdn.net/v/t39.30808-1/241795595_815796625707228_2443661126579624942_n.jpg?stp=c30.0.100.100a_dst-jpg_p100x100&_nc_cat=100&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeHho9wTbVUjTGwVN2QfYLf6-mRpgqvxEqr6ZGmCq_ESqhdHOlnrUQaJtNR0Dm_lawnlOTjeUsTnWH26w3-g1LTt&_nc_ohc=0TMDcoN7SSQAX--fWFi&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fcgp6-1.fna&oh=00_AT9z2nXLUj0tLET_76HD6KhjJNeLifqbgKTQcIeJ9cRIrA&oe=6250C70A",
+      "customer": "Ayon Joddr",
+      "time": "Reviewed in the India on March 8, 2021",
+      "rating":"5",
+      "review": "Their delivery service is much faster than others.I recommend it to everyone"
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/55jHjVX/ashraful.jpg",
+      "customer": "Ashraful Khan",
+      "time": "Reviewed in the United States on February 8, 2022",
+      "rating":4.8,
+      "review": "One of the best Online-shop in town.They known for their well response and good behaviour. and quality clothes"
+    },
+    {
+      "id": 6,
+      "img": "https://scontent.fcgp6-1.fna.fbcdn.net/v/t39.30808-1/275282669_133135179258273_7494846335747922317_n.jpg?stp=dst-jpg_p100x100&_nc_cat=111&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeGlwg0_41tDH-7aMzxYxll-IZJdAK_ADJMhkl0Ar8AMk8ABzfbDdAsNJU9mM1zZUvbtJJ-lQGwURQ_mfVCaj-y4&_nc_ohc=pDgcB-RvgQwAX-jO-WZ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fcgp6-1.fna&oh=00_AT_gK1zMBuol6wH4eA0e0i8XlLXjaGynNSZH5wVuEyoQFg&oe=62603C12",
+      "customer": "Md Monirujjaman",
+      "time": "Reviewed in the United States on February 8, 2022",
+      "rating":4.8,
+      "review": "One of the best Online-shop in town.They known for their well response and good behaviour. and quality clothes"
+    },
+    {
+      "id": 7,
+      "img": "https://scontent.fcgp6-1.fna.fbcdn.net/v/t39.30808-1/272837930_1282149615587979_4909082754838408971_n.jpg?stp=c0.17.100.100a_dst-jpg_p100x100&_nc_cat=102&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeH2rRuLMwbBCgW2kQf5AVOXki0gZMVNR2qSLSBkxU1Haoim13akEMHcJXkKUxuVjqqQ6qNx4McRsWMroauQuiUd&_nc_ohc=h2sqwreJA9YAX_1FbH7&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fcgp6-1.fna&oh=00_AT9DlIzAnEj0Ek6TLJwAeIEVptPzWuA_eMz3YnQuwxUC5Q&oe=62514710",
+      "customer": "Ashraful Hossain",
+      "time": "Reviewed in the Germany on February 18, 2022",
+      "rating":4.8,
+      "review": "Best price,best product.I just love it"
+    },
+    {
+      "id": 8,
+      "img": "https://scontent.fcgp6-1.fna.fbcdn.net/v/t39.30808-6/277253880_279407797709808_2070124997499998628_n.jpg?stp=dst-jpg_p526x296&_nc_cat=100&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeFNPfxqy6w5ZZmEvOBm5jCOMRvQ2wPmFqIxG9DbA-YWom5JFLHp2pUEJm-xqyy6iAXo66kpYAV7wdzJlq_LsZ3_&_nc_ohc=VFtGZl-O6cMAX_3Cz70&_nc_ht=scontent.fcgp6-1.fna&oh=00_AT-i7CujF7eNCefKE5O90qB2nDMJeyCQeCo6QxHPPNg0Sg&oe=62519573",
+      "customer": "Samsul Anwar Sanjid",
+      "time": "Reviewed in the Bangladesh on February 22, 2022",
+      "rating":4.8,
+      "review": "Nice color.Fast delivery"
+    },
+    {
+      "id": 9,
+      "img": "https://scontent.fcgp6-1.fna.fbcdn.net/v/t39.30808-1/276167223_528941975326600_5946153192262724368_n.jpg?stp=c0.0.100.100a_dst-jpg_p100x100&_nc_cat=101&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeEkDMrMG8221NTVJI5FhQNCiuOhtjJln92K46G2MmWf3XI3w0w8bIc6cjL5luod7IQgOWVmbSlhfc-bHm9cb5I7&_nc_ohc=Fk4PkA2tkVMAX8AruUU&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fcgp6-1.fna&oh=00_AT97AMvWHis_EUc04aGr-iByPwsd-ywEtsie1pv0pSAUTQ&oe=62522374",
+      "customer": "Promi Chowdhury",
+      "time": "Reviewed in the Bangladesh on March 11, 2022",
+      "rating":4.8,
+      "review": "Fast delivary, no extra money. outstanding serving. I'll must recommend to my to buy from here. Thank you."
+    }
+  ]
