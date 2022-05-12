@@ -10,6 +10,7 @@ const CheckOut = () => {
 
 
     // const [services, setServices] = useState([])
+    // console.log(services);
     // useEffect(() => {
     //     fetch('data.json')
     //         .then(response => response.json())
@@ -18,7 +19,7 @@ const CheckOut = () => {
     const { id } = useParams()
     console.log(id);
      const [services] = useService()
-    console.log(services);
+     console.log(services);
     const [user] = useAuthState(auth)
    
    
