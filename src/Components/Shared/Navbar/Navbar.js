@@ -126,6 +126,12 @@ const Navbar = () => {
                                     Contact
                                 </NavLink>
                                 <NavLink
+                                    to='/faq'
+                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                >
+                                    FAQ
+                                </NavLink>
+                                <NavLink
                                     to='/about'
                                     className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                 >
@@ -232,6 +238,12 @@ const Navbar = () => {
                                 className="hover:bg-gray-700 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium"
                             >
                                 Package
+                            </NavLink>
+                            <NavLink
+                                to="/faq"
+                                className="hover:bg-gray-700 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium"
+                            >
+                                FAQ
                             </NavLink>
 
                        

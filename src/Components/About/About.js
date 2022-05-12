@@ -4,11 +4,11 @@ import promi from '../../promi.jpg'
 import rahat from '../../rahat.jpg'
 import asraf from '../../asraf.jpg'
 import sanjid from '../../sanjd.jpg'
-import Type from '../Contact/Type';
+import AutoType from'./AboutType'
 const About = () => {
     return (
     <div>
-   
+      <h1 className='text-center text-3xl sp-style mt-20'><AutoType/></h1>
             <div data-aos="fade-up-left" style={{
                 marginTop: "10%", marginLeft: '20%',
                 marginRight: '20%',
@@ -33,7 +33,7 @@ const About = () => {
                </div>
             </div>
             
-            <div data-aos="fade-down-right" style={{ margin: "20%" }} className="custom-shadow">
+            <div data-aos="fade-down-left" style={{ margin: "20%" }} className="custom-shadow">
                 
        <div className='pt-2'>
        <img className="w-20 h-20 about-image rounded-full  "src={rahat} alt=''/>
@@ -44,7 +44,7 @@ const About = () => {
            </div>
             </div>
             
-            <div data-aos="fade-down-left" style={{ margin: "20%" }} className="custom-shadow">
+            <div data-aos="fade-down-right" style={{ margin: "20%" }} className="custom-shadow">
                 
 
      <div  className='pt-2'>
@@ -56,7 +56,7 @@ const About = () => {
          </div>
         </div>
       
-            <div data-aos="flip-down" style={{ margin: "20%" }} className="custom-shadow">
+            <div data-aos="fade-down-left" style={{ margin: "20%" }} className="custom-shadow">
                 
                 <div className='pt-2'>
                 <img className="w-20 about-image h-20 rounded-full  "src={asraf} alt=''/>
