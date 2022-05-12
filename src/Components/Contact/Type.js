@@ -7,7 +7,7 @@ const Type = () => {
             <>
     <AutoTyping
       active // <boolean>
-      textRef='Here Is The Member Of Team Debugger' // <string>
+      textRef='Fill the form,If you want to purchase this service' // <string>
       writeSpeed={150} // <number>
       deleteSpeed={150} // <number>
       delayToWrite={1000} // <number>

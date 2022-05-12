@@ -49,6 +49,9 @@ color: var(--secondery);
   border-left: none;
   border-top: none;
 }
+.see-more{
+  margin-left:45%;
+}
 .nav-btn::before {
   content: '';
   height: 0;

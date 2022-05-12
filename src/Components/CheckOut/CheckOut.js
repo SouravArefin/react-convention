@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import { auth } from '../../firebase.init';
 import useService from '../../Hooks/useService';
+import Type from '../Contact/Type';
 
 const CheckOut = () => {
 
@@ -30,7 +31,7 @@ const CheckOut = () => {
     }
     return (
         <div style={{ margin: "10%" }}>
-            <h1 className="text-3xl text-center sp-style">Fill the form,If you want to purchase this service</h1>
+           <h1 className='text-center text-3xl sp-style mt-20'><Type/></h1>
             <form onSubmit={confirmOrder} className='mt-5'>
                 <div className="mb-6">
                     <label>Email:</label>
@@ -77,7 +78,7 @@ const CheckOut = () => {
         </div>
                 <div className="mb-6">
                     <label>Anything Else??</label>
-                    <textarea rows="10" cols="80" type="text" id="text" name='description' placeholder="write about the items" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <textarea rows="10" cols="80" type="text" id="text" name='description' placeholder="Tell us" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
                 <div className='text-center'>
                     <input type="submit" className="text-white bg-[#445e05]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-1/5 w-1/2 px-5 py-2.5 text-center dark:bg-blue-600  dark:focus:ring-blue-800" value='Confirm' />

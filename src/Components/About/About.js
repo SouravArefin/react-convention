@@ -8,7 +8,7 @@ import Type from '../Contact/Type';
 const About = () => {
     return (
     <div>
-   <h1 className='text-center text-3xl sp-style mt-20'><Type/></h1>
+   
             <div data-aos="fade-up-left" style={{
                 marginTop: "10%", marginLeft: '20%',
                 marginRight: '20%',
