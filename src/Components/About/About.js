@@ -16,7 +16,7 @@ const About = () => {
             }} className="custom-shadow">
                 <div className='pt-2'>
                 <img className="about-image w-20 mt-5 h-20 rounded-full  "src={sourav} alt=''/>
-            <h1 className='text-2xl sp-style text-center mt-5 pt-5' >Sourav <span className='text-3xl'></span> Arefin.
+            <h1 className='text-2xl sp-style text-center mt-5 pt-5' >Sourav <span className='text-3xl'></span> Arefin
              </h1>
         <p className='text-blue-500 font-bold p-10 text-center sp-style text-2xl'>Web Developer</p>  
            </div>
@@ -37,7 +37,7 @@ const About = () => {
                 
        <div className='pt-2'>
        <img className="w-20 h-20 about-image rounded-full  "src={rahat} alt=''/>
-            <h1 className='text-2xl sp-style text-center mt-5 pt-5' > <span className='text-3xl'>M.A.T</span> Rahat.
+            <h1 className='text-2xl sp-style text-center mt-5 pt-5' > <span className='text-3xl'>M.A.T</span> Rahat
              </h1>
 
         <p className='text-blue-500 font-bold p-10 text-center sp-style text-2xl pt-5'> Instructor</p>

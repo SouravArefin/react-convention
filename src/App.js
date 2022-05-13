@@ -14,6 +14,7 @@ import NotFound from './Components/NotFound.js/NotFound';
 import CheckOut from './Components/CheckOut/CheckOut';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import FAQ from './Components/FAQ/FAQ';
+import NewFaq from './Components/NewFaq/NewFaq';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/signup" element={<Register />}></Route> 
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/faq' element={<FAQ />}></Route>
+        {/* <Route path='/faq' element={<NewFaq />}></Route> */}
         <Route path='/checkout/:id' element={
           
       //     <RequireAuth>

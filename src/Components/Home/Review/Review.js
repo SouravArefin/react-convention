@@ -10,7 +10,7 @@ const Review = () => {
 
         <div className="mt-20">
         
-            <h1 className="text-6xl sp-style mt-10 text-sky-900" style={{ textAlign: 'center'}}>Our Customers Review</h1>
+            <h1 className="text-6xl sp-style mt-10 text-sky-900" style={{ textAlign: 'center'}}>Our Client's Review</h1>
         <div className="mt-10 grid gap-10 grid-cols-1 md:grid-cols-3 mx-10">
           
             <div className="custom-shadow">
