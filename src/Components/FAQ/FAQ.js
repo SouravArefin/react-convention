@@ -99,6 +99,11 @@ const FAQ = () => {
             <div>
 <img className='w-1/2 mt-10 md:mx-0 mx-auto 'src={image} alt=''/>
             </div>
+            <div className=' m-20 grid justify-items-center'>
+            <marquee className='text-red-700' width="100%" direction="left" height="100px">
+    For Information Contact Us
+</marquee>
+          </div>
         </div>
     );
 };
