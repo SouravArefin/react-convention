@@ -12,7 +12,7 @@ const Service = () => {
             <h1 className='text-3xl sp-style text-green-700 font-medium text-center py-4'> Our packages</h1>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-10 container mx-auto my-10 px-8 md:px-0'>
                 {
-                    services.slice(4,10).map(service => <SingleService key={service.id} service={service}></SingleService>)
+                    services.slice(3,11).map(service => <SingleService key={service.id} service={service}></SingleService>)
                 }
             </div>
         </div>

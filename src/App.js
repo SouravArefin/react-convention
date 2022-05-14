@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Shared/Navbar/Navbar';
@@ -12,9 +12,9 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import NotFound from './Components/NotFound.js/NotFound';
 import CheckOut from './Components/CheckOut/CheckOut';
-import RequireAuth from './Components/RequireAuth/RequireAuth';
+//import RequireAuth from './Components/RequireAuth/RequireAuth';
 import FAQ from './Components/FAQ/FAQ';
-import NewFaq from './Components/NewFaq/NewFaq';
+
 
 function App() {
   return (

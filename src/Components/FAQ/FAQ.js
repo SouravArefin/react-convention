@@ -101,7 +101,7 @@ const FAQ = () => {
             </div>
             <div className=' m-20 grid justify-items-center'>
             <marquee className='text-red-700' width="100%" direction="left" height="100px">
-    For Information Contact Us
+    For More Information Contact Us
 </marquee>
           </div>
         </div>
