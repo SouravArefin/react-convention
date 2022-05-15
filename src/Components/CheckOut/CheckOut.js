@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+
 import { auth } from '../../firebase.init';
 import useService from '../../Hooks/useService';
 import Type from '../Contact/Type';
@@ -31,7 +32,9 @@ const CheckOut = () => {
 
     const confirmOrder = e => {
         e.preventDefault();
-        toast.success('We received your order.We will contact you soon.')
+    const name=e.target.name.value
+        toast.success(`Dear ${name}, We received your order.We will contact you soon.`)
+        e.target.reset()
     }
     return (
         <div style={{ margin: "10%" }}>
@@ -44,7 +47,7 @@ const CheckOut = () => {
 
                 <div className="mb-6">
                     <label> Name:</label>
-                    <input type="text" id="text" name='itemName' placeholder="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <input type="text" id="text" name='name' placeholder="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
 
 
