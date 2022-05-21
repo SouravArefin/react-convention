@@ -92,7 +92,7 @@ const Navbar = () => {
                                 src={logo}
                                     alt="Workflow"
                             /> 
-                            <h1 className='sp-style '>Royal ~ Convention Hall</h1>
+                            <h1 style={{color:"#00112B"}} className='font-bold sp-style '>Royal ~ Convention Hall</h1>
                                </div>
                         </div>
                         <div className="hidden md:flex justify-between md:ml-auto">
@@ -108,6 +108,12 @@ const Navbar = () => {
                                     className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                 >
                                   Package
+                                </NavLink>
+                                <NavLink
+                                    to="/menu"
+                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                >
+                                  Menu
                                 </NavLink>
                                 {/* <NavLink
                                     to="/blog"
@@ -238,6 +244,12 @@ const Navbar = () => {
                                 className="hover:bg-gray-700 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium"
                             >
                                 Package
+                            </NavLink>
+                            <NavLink
+                                to="/menu"
+                                className="hover:bg-gray-700 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium"
+                            >
+                                Menu
                             </NavLink>
                             <NavLink
                                 to="/faq"

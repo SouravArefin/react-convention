@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import error from '../../yalantis-interactive-404.gif'
+import error from '../../200.gif'
 const NotFound = () => {
     return (
         <>

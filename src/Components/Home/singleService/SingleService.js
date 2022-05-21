@@ -2,12 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SingleService = (props) => {
-    const {id, name, img, details, price,Duration } = props.service;
+    const { id, name, img, details, price, Duration } = props.service;
     return (
-        <div className='custom-shadow py-10 rounded-md'>
+        <div data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" className='custom-shadow py-10 rounded-md'>
 
-            <div style={{border:"none"}}className="max-w-sm  rounded-lg border text-center">
-                <img className="rounded-t-lg w-2/3 mx-auto" src={img} alt="" />
+            <div style={{ border: "none" }} className="max-w-sm  rounded-lg border text-center">
+                <img className="rounded-t-lg w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear" src={img} alt="" />
+                <div className='card-border  mt-5  ml-5 mr-5 bg-[#2e0099] '>
+
+                </div>
+              
                 <div className="p-5">
                     <h1 className='font-bold'> Package Name: {name}</h1>
 

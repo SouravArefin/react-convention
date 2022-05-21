@@ -10,10 +10,10 @@ const Review = () => {
 
         <div className="mt-20">
         
-            <h1 className="text-6xl sp-style mt-10 text-sky-900" style={{ textAlign: 'center'}}>Our Client's Review</h1>
+            <h1 data-aos="fade-up-right"className="text-6xl sp-style mt-10 text-sky-900" style={{ textAlign: 'center'}}>Our Client's Review</h1>
         <div className="mt-10 grid gap-10 grid-cols-1 md:grid-cols-3 mx-10">
           
-            <div className="custom-shadow">
+            <div data-aos="flip-up" className="custom-shadow">
   
             <div className="flex items-center mt-10 p-5 ">
                 <img className='w-10 h-10 rounded-full mr-3'src={image2} alt=''/>
@@ -30,7 +30,7 @@ const Review = () => {
 
        </div>
 
-       <div className="custom-shadow">
+       <div data-aos="flip-up" className="custom-shadow">
   
   <div className="flex items-center mt-10 p-5 ">
       <img className='w-10 h-10 rounded-full mr-3'src={image} alt=''/>
@@ -46,7 +46,7 @@ const Review = () => {
   </div>
 
 </div>
-<div className="custom-shadow">
+<div data-aos="flip-up" className="custom-shadow">
   
   <div className="flex items-center mt-10 p-5 ">
       <img className='w-10 h-10 rounded-full mr-3'src={image3} alt=''/>
@@ -62,7 +62,7 @@ const Review = () => {
   </div>
 
 </div>
-<div className="custom-shadow">
+<div data-aos="flip-up" className="custom-shadow">
   
   <div className="flex items-center mt-10 p-5 ">
       <img className='w-10 h-10 rounded-full mr-3'src={image4} alt=''/>
@@ -78,7 +78,7 @@ const Review = () => {
   </div>
 
 </div>
-<div className="custom-shadow">
+<div data-aos="flip-up" className="custom-shadow">
   
   <div className="flex items-center mt-10 p-5 ">
       <img className='w-10 h-10 rounded-full mr-3'src={image5} alt=''/>
@@ -94,7 +94,7 @@ const Review = () => {
   </div>
 
 </div>
-<div className="custom-shadow">
+<div data-aos="flip-up" className="custom-shadow">
   
   <div className="flex items-center mt-10 p-5 ">
       <img className='w-10 h-10 rounded-full mr-3'src={image6} alt=''/>

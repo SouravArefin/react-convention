@@ -1,8 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useService from '../../Hooks/useService';
+import BestProject from '../BestProject/BestProject';
 import Happy from '../Happy/Happy';
 import Why from '../Why/Why';
+import Feature from './Feature';
 import Review from './Review/Review';
 
 
@@ -16,9 +18,15 @@ const Home = () => {
     return (
         <div>
             <Slider />
-            {/* <Happy/> */}
+            
+            <h1 className="tracking-widest mt-10 best-moment text-center text-3xl">Some Of Our Best Memories</h1>
+            <BestProject></BestProject>
+            <h1 className="tracking-widest font-bold text-[#D69900] mt-10 sp-style text-center text-3xl">
+            Features & Facilities
+            </h1>
+            <Feature/>
             <div className='mt-28'>
-            {/* <h1 className='serv-head text-3xl text-gray-500 font-medium text-center py-4'>Soultion for moving better and felling a healthier..</h1> */}
+            
                 <h1 className='text-3xl sp-style text-green-700 font-medium text-center py-4'>
                 
                 Our Best Packages
@@ -29,9 +37,11 @@ const Home = () => {
                 }
             </div>
             </div>
-            <button  className="about-image text-center cursor:pointer happy bg-[#3005ee] hover:bg-[#141414]  px-4 py-2 mb-2 rounded-full text-white" onClick={() => navigate('/services')}>
+           
+            <button style={{marginLeft:'45%'}} className=" text-center cursor:pointer happy bg-[#3005ee] hover:bg-[#141414]  px-4 py-2 mb-2 rounded-full text-white" onClick={() => navigate('/services')}>
                                 See More
-                            </button>
+            </button>
+            
             <Review />
             
         </div>
