@@ -10,7 +10,7 @@ const Dish = () => {
         <div className='mt-10 '>
             <h1 className='text-center text-4xl text-[#F1C552]'>Our Signature Dishes</h1>
             
-        <div  className='mx-auto  grid grid-cols-1 md:grid-cols-3 gap-5 py-10 rounded-md'>
+        <div  className='ml-10 mr-10  grid grid-cols-1 md:grid-cols-3 gap-5 py-10 rounded-md'>
 
             <div style={{ border: "none" }} className="custom-shadow max-w-sm  rounded-lg border text-center">
                 <img className="pt-2 rounded-t-lg w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear" src={img1} alt="" />

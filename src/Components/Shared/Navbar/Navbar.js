@@ -115,6 +115,12 @@ const Navbar = () => {
                                 >
                                   Menu
                                 </NavLink>
+                                <NavLink
+                                    to="/photography"
+                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                >
+                                  PhotoGraphy
+                                </NavLink>
                                 {/* <NavLink
                                     to="/blog"
                                     className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
@@ -250,6 +256,12 @@ const Navbar = () => {
                                 className="hover:bg-gray-700 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium"
                             >
                                 Menu
+                            </NavLink>
+                            <NavLink
+                                to="/photography"
+                                className="hover:bg-gray-700 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium"
+                            >
+                               PhotoGraphy
                             </NavLink>
                             <NavLink
                                 to="/faq"
