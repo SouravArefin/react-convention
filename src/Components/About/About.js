@@ -29,7 +29,7 @@ const About = () => {
         <div className='grid grid-cols-1 md:grid-cols-3'>
           
       
-                <div data-aos="fade-right" style={{ margin: "20%" }} className="custom-shadow
+                <div  style={{ margin: "20%" }} className="custom-shadow
         profile
         ">
            <div className='pt-2'>
@@ -42,7 +42,7 @@ const About = () => {
             </div>
             
 
-            <div data-aos="fade-right" style={{ margin: "20%" }} className="custom-shadow">
+            <div  style={{ margin: "20%" }} className="custom-shadow">
            <div className='pt-2'>
            <img className="w-20 about-image mt-5 h-20 rounded-full  "src={promi} alt=''/>
             <h1 className='text-2xl sp-style text-center mt-5 pt-5' > <span className='text-3xl'>Promi</span> Chowdhury
@@ -52,7 +52,7 @@ const About = () => {
                </div>
             </div>
             
-            <div data-aos="fade-down-left" style={{ margin: "20%" }} className="custom-shadow">
+            <div  style={{ margin: "20%" }} className="custom-shadow">
                 
        <div className='pt-2'>
        <img className="w-20 h-20 about-image rounded-full  "src={rahat} alt=''/>
@@ -63,7 +63,7 @@ const About = () => {
            </div>
             </div>
             
-            <div data-aos="fade-down-right" style={{ margin: "20%" }} className="custom-shadow">
+            <div  style={{ margin: "20%" }} className="custom-shadow">
                 
 
      <div  className='pt-2'>
@@ -75,7 +75,7 @@ const About = () => {
          </div>
         </div>
       
-            <div data-aos="fade-down-left" style={{ margin: "20%" }} className="custom-shadow">
+            <div  style={{ margin: "20%" }} className="custom-shadow">
                 
                 <div className='pt-2'>
                 <img className="w-20 about-image h-20 rounded-full  "src={asraf} alt=''/>

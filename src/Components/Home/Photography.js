@@ -36,10 +36,12 @@ To Capture Your Beautiful Memories
 
       <p><span className='font-bold'>Price:</span> BDT, 40000/-</p>
        
-      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Pillarless & stylish interior decoration</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+    
+   
     </div>
  
 </div>
@@ -54,10 +56,10 @@ To Capture Your Beautiful Memories
 
       <p><span className='font-bold'>Price:</span> BDT, 20000/-</p>
        
-      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Pillarless & stylish interior decoration</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
     </div>
  
 </div>
@@ -67,15 +69,15 @@ To Capture Your Beautiful Memories
 
     </div>
   
-    <div className="p-5">0
+    <div className="p-5">
         <h1 className='font-bold'> Package-3 </h1>
 
       <p><span className='font-bold'>Price:</span> BDT, 30000/-</p>
        
-      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Pillarless & stylish interior decoration</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
     </div>
  
 </div>
@@ -90,10 +92,10 @@ To Capture Your Beautiful Memories
 
       <p><span className='font-bold'>Price:</span> BDT, 50000/-</p>
        
-      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Pillarless & stylish interior decoration</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
     </div>
  
 </div>
@@ -108,10 +110,10 @@ To Capture Your Beautiful Memories
 
       <p><span className='font-bold'>Price:</span> BDT, 60000/-</p>
        
-      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Pillarless & stylish interior decoration</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
     </div>
  
 </div>
@@ -126,10 +128,11 @@ To Capture Your Beautiful Memories
 
       <p><span className='font-bold'>Price:</span> BDT, 40000/-</p>
        
-      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Pillarless & stylish interior decoration</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
-    <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
+      
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
+      <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
     </div>
  
 </div>
