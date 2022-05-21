@@ -86,7 +86,7 @@ To Capture Your Beautiful Memories
     </div>
   
     <div className="p-5">
-        <h1 className='font-bold'> Package-1 </h1>
+        <h1 className='font-bold'> Package-4 </h1>
 
       <p><span className='font-bold'>Price:</span> BDT, 50000/-</p>
        
@@ -104,7 +104,7 @@ To Capture Your Beautiful Memories
     </div>
   
     <div className="p-5">
-        <h1 className='font-bold'> Package-6 </h1>
+        <h1 className='font-bold'> Package-5 </h1>
 
       <p><span className='font-bold'>Price:</span> BDT, 60000/-</p>
        
@@ -116,13 +116,13 @@ To Capture Your Beautiful Memories
  
 </div>
 <div style={{ border: "none" }} className="custom-shadow max-w-sm  rounded-lg border text-center">
-    <img className="rounded-t-lg pt-2 w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear" src={img1} alt="" />
+    <img className="rounded-t-lg pt-2 w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear" src={img5} alt="" />
     <div className='card-border  mt-5  ml-5 mr-5 bg-[#2e0099] '>
 
     </div>
   
     <div className="p-5">
-        <h1 className='font-bold'> Package-1 </h1>
+        <h1 className='font-bold'> Package-6 </h1>
 
       <p><span className='font-bold'>Price:</span> BDT, 40000/-</p>
        
