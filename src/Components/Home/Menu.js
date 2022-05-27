@@ -6,7 +6,7 @@ import Dish from './Dish';
 const Menu = () => {
     return (
         <div>
-            <h1 className='text-center text-6xl sp-style mt-10 text-[#D69900]'>Our Packages</h1>
+            <h1 className='text-center text-4xl sp-style mt-10 text-green-700'>Our Packages</h1>
             <div className="">
         <div  className='ml-10 mr-10 grid grid-cols-1 md:grid-cols-3 gap-5 py-10 rounded-md'>
 

@@ -8,7 +8,7 @@ import img6 from '../../conven/10026.png'
 const Dish = () => {
     return (
         <div className='mt-10 '>
-            <h1 className='text-center text-4xl text-[#F1C552]'>Our Signature Dishes</h1>
+            <h1 className='text-center text-4xl text-green-700'>Our Signature Dishes</h1>
             
         <div  className='ml-10 mr-10  grid grid-cols-1 md:grid-cols-3 gap-5 py-10 rounded-md'>
 
@@ -19,7 +19,7 @@ const Dish = () => {
                 </div>
               
                 <div className="p-5">
-                    <h1 className='font-bold text-3xl'> Mustard Hilsa</h1>
+                    <h1 className='font-bold text-3xl best-moment'> Mustard Hilsa</h1>
                     
                     
 
@@ -34,7 +34,7 @@ const Dish = () => {
                 </div>
               
                 <div className="p-5">
-                    <h1 className='font-bold text-3xl'> Beef Kala Bhuna</h1>
+                    <h1 className='font-bold text-3xl best-moment'> Beef Kala Bhuna</h1>
                     
                     
 
@@ -48,7 +48,7 @@ const Dish = () => {
                 </div>
               
                 <div className="p-5">
-                    <h1 className='font-bold text-3xl'>Shahi Tukra</h1>
+                    <h1 className='font-bold text-3xl best-moment'>Shahi Tukra</h1>
                
                     
 
@@ -62,7 +62,7 @@ const Dish = () => {
                 </div>
               
                 <div className="p-5">
-                    <h1 className='font-bold text-3xl'> Murag Pulao</h1>
+                    <h1 className='font-bold text-3xl best-moment'> Murag Pulao</h1>
                   
                     
 
@@ -76,7 +76,7 @@ const Dish = () => {
                 </div>
               
                 <div className="p-5">
-                    <h1 className='font-bold text-3xl'> Kacchi Biryani</h1>
+                    <h1 className='font-bold text-3xl best-moment'> Kacchi Biryani</h1>
                     
                     
 
@@ -90,7 +90,7 @@ const Dish = () => {
                 </div>
               
                 <div className="p-5">
-                    <h1 className='font-bold text-3xl'> Patishapta Petha</h1>
+                    <h1 className='font-bold text-3xl best-moment'> Patishapta Petha</h1>
                     
                     
 

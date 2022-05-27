@@ -10,21 +10,21 @@ import Type from '../Contact/Type';
 const CheckOut = () => {
     const { id } = useParams()
     // const [services] = useService()
-    console.log(id);
+  //  console.log(id);
     const [services, setServices] = useState([])
-   console.log(services)
+   //console.log(services)
     
     useEffect(() => {
-        fetch('/data.json')
+        fetch('http://localhost:4000/package')
             .then(response => response.json())
         .then(data=> setServices(data))
     }, [])
    
 
    const found= services.filter(service => 
-        service.id == id
+        service._id == id
        )
-    console.log(found[0]);
+    //console.log(found[0]);
      
     const [user] = useAuthState(auth)
    
@@ -32,9 +32,37 @@ const CheckOut = () => {
 
     const confirmOrder = e => {
         e.preventDefault();
-    const name=e.target.name.value
-        toast.success(`Dear ${name}, We received your order.We will contact you soon.`)
-        e.target.reset()
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const phone = e.target.phone.value;
+        const sendPackage = found[0]?.name;
+        const sendPrice = found[0]?.price;
+        const adults = e.target.adults.value;
+        const child = e.target.children.value;
+        const checkin = e.target.checkin.value;
+         const startTime = e.target.time.value;
+        const description = e.target.description.value
+        console.log(name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description);
+        const sendOrder = { name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description }
+        fetch(`https://hidden-brushlands-28019.herokuapp.com/order`, {
+            method:"POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body:JSON.stringify(sendOrder)
+        })
+        .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    toast.success(`Dear ${name}, We received your order.We will contact you soon.`)
+                    e.target.reset()
+                }
+                else {
+                    toast.error('Sorry!!There is a problem.Try again')
+                }
+        })
+      
     }
     return (
         <div style={{ margin: "10%" }}>
@@ -42,7 +70,7 @@ const CheckOut = () => {
             <form onSubmit={confirmOrder} className='mt-5'>
                 <div className="mb-6">
                     <label>Email:</label>
-                    <input value={user?.email} type="email" id="text" name='email' placeholder='Enter your email' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                    <input  type="email" id="text" name='email' placeholder='Enter your email' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                 </div>
 
                 <div className="mb-6">
@@ -53,7 +81,7 @@ const CheckOut = () => {
 
                 <div className="mb-6">
                     <label htmlFor="phone">Your Phone</label>
-                    <input type="tel" id="phone" name="visitor_phone" placeholder="Enter Your Number" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Your Number" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
                 <div className="mb-6">
                     <label>Package Name:</label>
@@ -65,11 +93,11 @@ const CheckOut = () => {
                 </div>
                 <div className="mb-6">
                     <label htmlFor="adult">Adults</label>
-                    <input type="number" id="adult" name="total_adults" placeholder="Quantity of Adults" min="1" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <input type="number" id="adult" name="adults" placeholder="Quantity of Adults" min="1" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
                 <div className="mb-6">
                     <label htmlFor="child">Children</label>
-                    <input type="number" id="child" name="total_children" placeholder="Quantity of Children" min="0"
+                    <input type="number" id="child" name="children" placeholder="Quantity of Children" min="0"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
 
@@ -80,7 +108,7 @@ const CheckOut = () => {
                 </div>
                 <div className="mb-6">
           <label htmlFor="checkout-date">Starting Time</label>
-                    <input type="time" id="checkout-date" name="checkout"
+                    <input type="time" id="time" name="time"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"required />
         </div>
                 <div className="mb-6">

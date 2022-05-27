@@ -131,11 +131,16 @@ color: var(--secondery);
   align-items: center;
   
 }
+.icon-color{
+  color:orangered;
+}
 li{font-family: bold;}
 .feature{
   background-color:white;
   padding:10%;
-  margin:10%
+  border-radius:10px;
+
+  
 }
 .about-card {
   background-color:rgb(176, 176, 230);

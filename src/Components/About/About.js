@@ -12,7 +12,7 @@ const About = () => {
         <div>
                  <div style={{margin:"10%"}}className="about-card  custom-shadow ">
             
-            <h1 className='about-text text-6xl pt-10 sp-style  mt-5 ml-10' >Weave Dreams Into Reality
+            <h1 className='about-text text-6xl pt-10 sp-style  mt-5 ml-10' >We've Dreams Into Reality
              </h1>
 
                 <p className='m-10  text-black  text-2xl p-20'>`Infuse your celebration with the warmth and luxury of Royal ~ Convention Hall, a perfect venue for weddings, social programs, gaye holud, birthday parties or intimate gatherings. The modern & elegant design of our banquet & convention hall makes for a perfect upscale fiesta.`
@@ -21,11 +21,27 @@ const About = () => {
                 <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
                 <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
                 <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
+               
                 </p>
                
-                
+               <p className="pr-5 text-right font-bold text-4xl pb-10 sp-style">~Royal Convention Hall</p>
             </div>
+
+            {/* <div class="hero min-h-screen"
+                style= {{ backgroundImage:"url(../../../../banner-1.jpg)"  }}>
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+      <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <button class="btn btn-primary">Get Started</button>
+    </div>
+  </div>
+</div> */}
+
+
             <h1 className='text-center text-3xl sp-style mt-20'><AutoType/></h1>
+       
         <div className='grid grid-cols-1 md:grid-cols-3'>
           
       
@@ -63,7 +79,7 @@ const About = () => {
            </div>
             </div>
             
-            <div  style={{ margin: "20%" }} className="custom-shadow">
+            <div  style={{ margin: "10%" }} className="custom-shadow">
                 
 
      <div  className='pt-2'>
@@ -75,7 +91,7 @@ const About = () => {
          </div>
         </div>
       
-            <div  style={{ margin: "20%" }} className="custom-shadow">
+            <div  style={{ margin: "10%" }} className="custom-shadow">
                 
                 <div className='pt-2'>
                 <img className="w-20 about-image h-20 rounded-full  "src={asraf} alt=''/>

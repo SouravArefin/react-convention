@@ -6,11 +6,18 @@ import Happy from '../Happy/Happy';
 import Why from '../Why/Why';
 import Feature from './Feature';
 import Review from './Review/Review';
-
-
+import ReviewSlider from '../NewReview/ReviewSlider'
+import { BiWorld } from 'react-icons/bi';
+import { BsPeopleFill } from 'react-icons/bs';
+import { MdOutlineComputer } from 'react-icons/md';
+import wave from '../../waves.svg'
+import hand from '../../hand.jpg'
+import world from '../../world.jpg'
+import project from '../../project.jpg'
 import Service from './Service/Service';
 import SingleService from './singleService/SingleService';
 import Slider from './Slider/Slider';
+import BusinessSummary from '../BusinessSummary/BusinessSummary';
 
 const Home = () => {
     const [services] = useService()
@@ -21,7 +28,7 @@ const Home = () => {
             
             <h1 className="tracking-widest mt-10 best-moment text-center text-3xl">Some Of Our Best Memories</h1>
             <BestProject></BestProject>
-            <h1 className="tracking-widest font-bold text-[#D69900] mt-10 sp-style text-center text-3xl">
+            <h1 className=" font-bold text-purple-900 mt-10 sp-style text-center text-3xl">
             Features & Facilities
             </h1>
             <Feature/>
@@ -33,7 +40,7 @@ const Home = () => {
                 </h1>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-10 container mx-auto my-10 px-8 md:px-0'>
                 {
-                    services.slice(0,3).map(service => <SingleService key={service.id} service={service}></SingleService>)
+                    services.slice(0,3).map(service => <SingleService key={service._id} service={service}></SingleService>)
                 }
             </div>
             </div>
@@ -42,8 +49,40 @@ const Home = () => {
                                 See More
             </button>
             
-            <Review />
+            {/* <Review /> */}
+            <h1 className="md:text-5xl text-2xl sp-style text-center text-amber-900 mt-10 ">What Our Client's Says</h1>
+            <div className='container mx-auto  mb-10'>
+                <ReviewSlider></ReviewSlider>
+            </div>
             
+            <div className='bg-[#04193A] mt-10'>
+
+                        <div className="custom-shape-divider-top-1653206227">
+                    <img src={wave} alt="" />
+                </div>
+                        <h1 className='text-uppercase sp-style text-center text-white text-4xl md:text-5xl '>We Always Try To Give Our Best</h1>
+                        
+                            <div className="business-summery mt-10 pb-10 grid grid-cols-1 md:grid-cols-3 gap-10 container mx-auto">
+                                <BusinessSummary
+                                    icon={<BiWorld></BiWorld>}
+                                    end={1}
+                                    title="Country"
+                                    image={world}
+                                />
+                                <BusinessSummary
+                                    icon={<BsPeopleFill></BsPeopleFill>}
+                                    end={500}
+                                    title="Happy Clients"
+                                    image={hand}
+                                />
+                                <BusinessSummary
+                                    icon={<MdOutlineComputer></MdOutlineComputer>}
+                                    end={900}
+                                    title="Successful Projects"
+                                    image={project}
+                                />
+                            </div>
+                        </div>
         </div>
     );
 };

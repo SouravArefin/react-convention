@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 const Feature = () => {
     return (
-        <div className=' grid grid-cols-1 md:grid-cols-2  '>
+        <div className='mt-10 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 '>
             <div className=" feature">
-            <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]'icon={faCheck} /> <span className='ml-2'>Accommodates 400 Guests</span> </li>
+            <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]'icon={faCheck} /> <span className='ml-2 '>Accommodates 400 Guests</span> </li>
                 <li style={{listStyle:'none'}}> <FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Pillarless Banquet Hall</span></li>
                 <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">2 Spacious Halls: 3500sft each</span></li>
                 <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Customizable Stage Size</span></li>
