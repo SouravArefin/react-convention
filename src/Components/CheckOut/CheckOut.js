@@ -15,7 +15,7 @@ const CheckOut = () => {
    //console.log(services)
     
     useEffect(() => {
-        fetch('http://localhost:4000/package')
+        fetch('https://hidden-brushlands-28019.herokuapp.com/package')
             .then(response => response.json())
         .then(data=> setServices(data))
     }, [])

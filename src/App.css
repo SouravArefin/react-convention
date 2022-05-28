@@ -131,6 +131,14 @@ color: var(--secondery);
   align-items: center;
   
 }
+.background{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(./images/logo-6.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ height:50%
+}
+
 .icon-color{
   color:orangered;
 }
@@ -143,7 +151,7 @@ li{font-family: bold;}
   
 }
 .about-card {
-  background-color:rgb(176, 176, 230);
+  /* background-color:rgb(176, 176, 230); */
   border-radius:20px
 }
 .card-border{

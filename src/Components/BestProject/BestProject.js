@@ -26,17 +26,7 @@ import "./BestProject.module.css";
 import { EffectCards } from "swiper";
 const BestProject = () => {
     return (
-        //         <div>
-        //             <h1 className="tracking-widest mt-10 best-moment text-center text-3xl">Some Of Our Best Memories</h1>
-        //             <div  className='mt-10 grid gap-10 ml-0  md:ml-10 grid-cols-1 md:grid-cols-3'>
-        // <img src={happy1} className="rounded-t-lg w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear" alt=''/>
-        // <img src={happy2} className="rounded-t-lg w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear"alt=''/>
-        // <img src={happy2} className="rounded-t-lg w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear "alt=''/>
-        // <img  src={happy2} className="rounded-t-lg w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear "alt=''/>
-        // <img  src={happy2} className="rounded-t-lg w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear "alt=''/>
-        // <img src={happy2} className="rounded-t-lg w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear "alt=''/>
-        //             </div>
-        //         </div>
+     
 
         <div className='mt-10 
            w-2/5 md:w-100 mx-auto 

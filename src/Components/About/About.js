@@ -6,39 +6,46 @@ import asraf from '../../asraf.jpg'
 import sanjid from '../../sanjd.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import royal from '../../images/logo-6.png'
 import AutoType from './AboutType'
 const About = () => {
     return (
         <div>
-                 <div style={{margin:"10%"}}className="about-card  custom-shadow ">
+                 <div className="text-white mx-auto about-card background  custom-shadow ">
             
             <h1 className='about-text text-6xl pt-10 sp-style  mt-5 ml-10' >We've Dreams Into Reality
              </h1>
 
-                <p className='m-10  text-black  text-2xl p-20'>`Infuse your celebration with the warmth and luxury of Royal ~ Convention Hall, a perfect venue for weddings, social programs, gaye holud, birthday parties or intimate gatherings. The modern & elegant design of our banquet & convention hall makes for a perfect upscale fiesta.`
+                <p className='m-10    text-2xl p-20'>`Infuse your celebration with the warmth and luxury of Royal ~ Convention Hall, a perfect venue for weddings, social programs, gaye holud, birthday parties or intimate gatherings. The modern & elegant design of our banquet & convention hall makes for a perfect upscale fiesta.`
                  
-                    <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Pillarless & stylish interior decoration</span></li>
-                <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
-                <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
-                <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
+                    <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-white' icon={faCheck} /> <span className="ml-2">Pillarless & stylish interior decoration</span></li>
+                <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-white' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
+                <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-white' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
+                <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-white' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
                
                 </p>
                
-               <p className="pr-5 text-right font-bold text-4xl pb-10 sp-style">~Royal Convention Hall</p>
+               <p className="pr-5 text-right text-cyan-700 font-bold text-4xl pb-10 sp-style">~Royal Convention Hall</p>
             </div>
 
-            {/* <div class="hero min-h-screen"
-                style= {{ backgroundImage:"url(../../../../banner-1.jpg)"  }}>
-  <div class="hero-overlay bg-opacity-60"></div>
-  <div class="hero-content text-center text-neutral-content">
-    <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-      <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div> */}
+            {/* <div class="card mt-10 w-full h-50 bg-base-100 shadow-xl image-full">
+  <figure><img src={royal} alt="Shoes" /></figure>
+  <div class="card-body">
+  <h1 className='about-text text-6xl pt-10 sp-style  mt-5 ml-10' >We've Dreams Into Reality
+             </h1>
 
+                <p className='m-10    text-2xl p-20'>`Infuse your celebration with the warmth and luxury of Royal ~ Convention Hall, a perfect venue for weddings, social programs, gaye holud, birthday parties or intimate gatherings. The modern & elegant design of our banquet & convention hall makes for a perfect upscale fiesta.`
+                 
+                    <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-white' icon={faCheck} /> <span className="ml-2">Pillarless & stylish interior decoration</span></li>
+                <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-white' icon={faCheck} /> <span className="ml-2">Dining capacity of 300+ guests</span></li>
+                <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-white' icon={faCheck} /> <span className="ml-2">Several menu with option for customization</span></li>
+                <li style={{listStyle:'none'}}><FontAwesomeIcon className='text-white' icon={faCheck} /> <span className="ml-2">Affordable price compared to convention centers</span></li>
+               
+                </p>
+               
+               {/* <p className="pr-5 text-right text-cyan-700 font-bold text-4xl pb-10 sp-style">~Royal Convention Hall</p> */}
+  {/* </div>
+</div> */} */
 
             <h1 className='text-center text-3xl sp-style mt-20'><AutoType/></h1>
        
