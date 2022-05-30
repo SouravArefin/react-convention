@@ -14,11 +14,20 @@ module.exports = {
           "base-100": "#ffffff",
         },
       },
-      // "dark",
-      // "cupcake",
+    
     ],
   },
-  plugins: [require("daisyui")],
-  // daisyUI config (optional)
+  plugins: [
+    require("daisyui", 'tw-elements/dist/plugin')
+  
+  
+  ],
+ 
 
 }
+// module.exports = {
+//   content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
+//   plugins: [
+//     require('tw-elements/dist/plugin')
+//   ]
+// }
