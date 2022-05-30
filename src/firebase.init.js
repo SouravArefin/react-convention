@@ -6,12 +6,12 @@ import {getAuth} from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCZd8fYc7gsh1-zRcCD-7nnpZAR2S7UXjI",
-  authDomain: "sp-zone-aac4d.firebaseapp.com",
-  projectId: "sp-zone-aac4d",
-  storageBucket: "sp-zone-aac4d.appspot.com",
-  messagingSenderId: "222787441899",
-  appId: "1:222787441899:web:f91f37ac63b0a362ba5aae"
+  apiKey: "AIzaSyCIdegGymisgXFDRkGbst9MX9kOgNUd4Jg",
+  authDomain: "royal-convention-hall.firebaseapp.com",
+  projectId: "royal-convention-hall",
+  storageBucket: "royal-convention-hall.appspot.com",
+  messagingSenderId: "915126498332",
+  appId: "1:915126498332:web:e3cd447bd735bce7851bd9"
 };
 
 // Initialize Firebase
