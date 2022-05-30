@@ -1,3 +1,5 @@
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import useService from '../../../Hooks/useService';
 import SingleService from '../singleService/SingleService';
@@ -14,7 +16,12 @@ const Service = () => {
                 {
                     services.slice(3,11).map(service => <SingleService key={service._id} service={service}></SingleService>)
                 }
-            </div>
+                </div>
+                <div className="  mt-10 mb-10 text-right mr-10">
+            <button><a href="#"> <FontAwesomeIcon
+               style={{borderRadius:"10px"}}
+                className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
+           </div>
         </div>
         </div>
     );

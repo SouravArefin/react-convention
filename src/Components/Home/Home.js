@@ -18,6 +18,8 @@ import Service from './Service/Service';
 import SingleService from './singleService/SingleService';
 import Slider from './Slider/Slider';
 import BusinessSummary from '../BusinessSummary/BusinessSummary';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     const [services] = useService()
@@ -50,11 +52,15 @@ const Home = () => {
             </button>
             
             {/* <Review /> */}
-            <h1 className="md:text-5xl text-2xl sp-style text-center text-amber-900 mt-10 ">What Our Client's Says</h1>
+            <h1 className="md:text-5xl text-2xl sp-style text-center mb-10 text-amber-900 mt-10 ">What Our Client's Says</h1>
             <div className='container mx-auto  mb-10'>
                 <ReviewSlider></ReviewSlider>
             </div>
-            
+            <div className="  mt-10 mb-10 text-right mr-10">
+            <button><a href="#"> <FontAwesomeIcon
+               style={{borderRadius:"10px"}}
+                className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
+           </div>
             <div className='bg-[#04193A] mt-10'>
 
                         <div className="custom-shape-divider-top-1653206227">
@@ -82,7 +88,8 @@ const Home = () => {
                                     image={project}
                                 />
                             </div>
-                        </div>
+            </div>
+          
         </div>
     );
 };

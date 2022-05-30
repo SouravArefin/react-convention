@@ -1,3 +1,5 @@
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import image from '../../images/Thinking.png'
 const FAQ = () => {
@@ -97,13 +99,18 @@ const FAQ = () => {
 </div>
             </div>
             <div>
-<img className='w-1/2 mt-10 md:mx-0 mx-auto 'src={image} alt=''/>
+<img className='w-1/2 mt-20 md:mx-0 mx-auto 'src={image} alt=''/>
             </div>
-            <div className=' m-20 grid justify-items-center'>
+            <div className=' ml-20 grid justify-items-center'>
             <marquee className='text-red-700' width="100%" direction="left" height="100px">
     For More Information Contact Us
 </marquee>
-          </div>
+        </div>
+        <div className="  mt-10 mb-5 ml-60  text-right ">
+            <button><a href="#"> <FontAwesomeIcon
+               style={{borderRadius:"10px"}}
+                className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
+           </div>
         </div>
     );
 };

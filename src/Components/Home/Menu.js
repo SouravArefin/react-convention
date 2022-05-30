@@ -1,3 +1,5 @@
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import img1 from '../../conven/10018.png'
 import img2 from '../../conven/10019.png'
@@ -59,7 +61,12 @@ const Menu = () => {
 
                 </div>
             </div>
-            <Dish/>
+            <Dish />
+            <div className="  mt-10 mb-10 text-right mr-10">
+            <button><a href="#"> <FontAwesomeIcon
+               style={{borderRadius:"10px"}}
+                className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
+           </div>
         </div>
         
     );
