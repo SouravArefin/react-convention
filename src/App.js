@@ -12,12 +12,16 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import NotFound from './Components/NotFound.js/NotFound';
 import CheckOut from './Components/CheckOut/CheckOut';
-//import RequireAuth from './Components/RequireAuth/RequireAuth';
+import RequireAuth from './Components/RequireAuth/RequireAuth';
 import FAQ from './Components/FAQ/FAQ';
 import Menu from './Components/Home/Menu';
 import Photography from './Components/Home/Photography';
-
-
+import AllUser from "./Components/DashBoard/Admin/AllUser";
+import { ToastContainer } from "react-toastify";
+import Welcome from './Components/DashBoard/Welcome';
+import DashBoard from './Components/DashBoard/DashBoard';
+import MyProfile from './Components/MyProfile/MyProfile';
+import RequireAdmin from './Components/RequireAuth/RequireAdmin';
 
 function App() {
   return (
@@ -26,15 +30,56 @@ function App() {
       <Routes>
         <Route path = '/' element={<Home/>}></Route>
         <Route path = '/services' element={<Service/>}></Route>
-        <Route path = '/blog' element={<Blog/>}></Route>
+      
         <Route path = '/about' element={<About/>}></Route>
-        <Route path='/login' element={<Login />}></Route>
+        <Route path='/signin' element={<Login />}></Route>
         <Route path="/signup" element={<Register />}></Route> 
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/faq' element={<FAQ />}></Route>
         <Route path='/menu' element={<Menu/>}></Route>
-        <Route path='/photography' element={<Photography/>}></Route>
+        <Route path='/photography' element={<Photography />}></Route>
         
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <DashBoard />
+          </RequireAuth>
+
+        }>
+
+          <Route index element={<Welcome/>}></Route>
+          <Route path="user" element={
+            <RequireAdmin><AllUser /></RequireAdmin>
+          
+          }></Route>
+           <Route path="profile" element={<MyProfile />}></Route>
+          {/* <Route path="review" element={<AddReview />}></Route>
+         
+          <Route path="myorder" element={<MyOrder />}></Route>
+          <Route path="payment/:id" element={<Payment/>}></Route>
+          <Route path="my-profile/edit-profile/:id" element={<UpdateProfile/>}></Route> */}
+          
+          {/* 
+          <Route path="manageOrder" element={
+              <RequireAdmin> <ManageOrder /></RequireAdmin>
+           
+          }>
+
+            
+          </Route> */}
+          {/* <Route path="add" element={
+              <RequireAdmin> <AddTools /></RequireAdmin>
+           
+          }></Route>
+          <Route path='updateTool/:id' element={
+              <RequireAdmin> <UpdateTool/></RequireAdmin>
+           
+          }></Route>
+          <Route path="manageTools" element={
+              <RequireAdmin> <ManageTools /></RequireAdmin>
+           
+          }></Route> */}
+        
+        </Route>
         <Route path='/checkout/:id' element={
           
       //     <RequireAuth>
@@ -44,7 +89,8 @@ function App() {
         }></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
-      <Footer/>
+      <Footer />
+      <ToastContainer/>
     </div>
   );
 }

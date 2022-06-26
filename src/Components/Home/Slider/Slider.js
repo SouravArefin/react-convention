@@ -37,9 +37,9 @@ const Slider = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-                <SwiperSlide><img src={banner1}alt=''/></SwiperSlide>
-          <SwiperSlide><img src={banner2}alt=''/></SwiperSlide>
-          <SwiperSlide><img src={banner3}alt=''/></SwiperSlide>
+                <SwiperSlide><img className='size'src={banner1}alt=''/></SwiperSlide>
+          <SwiperSlide><img className='size' src={banner2}alt=''/></SwiperSlide>
+          <SwiperSlide><img className='size'src={banner3}alt=''/></SwiperSlide>
           {/* <SwiperSlide><img src={banner4}alt=''/></SwiperSlide>
           <SwiperSlide><img src={banner5}alt=''/></SwiperSlide>
           <SwiperSlide><img src={banner6}alt=''/></SwiperSlide> */}
