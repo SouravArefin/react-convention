@@ -37,13 +37,15 @@ const CheckOut = () => {
         const phone = e.target.phone.value;
         const sendPackage = found[0]?.name;
         const sendPrice = found[0]?.price;
+        const image = found[0]?.img;
         const adults = e.target.adults.value;
         const child = e.target.children.value;
+        const Address = e.target.address.value;
         const checkin = e.target.checkin.value;
          const startTime = e.target.time.value;
         const description = e.target.description.value
         console.log(name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description);
-        const sendOrder = { name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description }
+        const sendOrder = { name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description,image,Address }
         fetch(`https://hidden-brushlands-28019.herokuapp.com/order`, {
             method:"POST",
             headers: {
@@ -82,6 +84,10 @@ const CheckOut = () => {
                 <div className="mb-6">
                     <label htmlFor="phone">Your Phone</label>
                     <input type="tel" id="phone" name="phone" placeholder="Enter Your Number" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                </div>
+                <div className="mb-6">
+                    <label htmlFor="phone">Address</label>
+                    <input type="text" id="address" name="adress" placeholder="Enter Your address" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
                 <div className="mb-6">
                     <label>Package Name:</label>

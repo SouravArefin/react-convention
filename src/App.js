@@ -22,76 +22,96 @@ import Welcome from './Components/DashBoard/Welcome';
 import DashBoard from './Components/DashBoard/DashBoard';
 import MyProfile from './Components/MyProfile/MyProfile';
 import RequireAdmin from './Components/RequireAuth/RequireAdmin';
-
+import { useEffect, useState } from 'react';
+import Loader from './Components/Loader/Loader'
+import AddReview from './Components/DashBoard/User/AddReview';
+import MyOrder from './Components/DashBoard/User/MyOrder'
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2500);
+
+  }, []);
   return (
-    <div >
-      <Navbar />
-      <Routes>
-        <Route path = '/' element={<Home/>}></Route>
-        <Route path = '/services' element={<Service/>}></Route>
-      
-        <Route path = '/about' element={<About/>}></Route>
-        <Route path='/signin' element={<Login />}></Route>
-        <Route path="/signup" element={<Register />}></Route> 
-        <Route path='/contact' element={<Contact />}></Route>
-        <Route path='/faq' element={<FAQ />}></Route>
-        <Route path='/menu' element={<Menu/>}></Route>
-        <Route path='/photography' element={<Photography />}></Route>
+    <>
+    {
+        isLoading === true ? <Loader/>  :
+        <div >
+        <Navbar />
+        <Routes>
+          <Route path = '/' element={<Home/>}></Route>
+          <Route path = '/services' element={<Service/>}></Route>
         
-        <Route path='/dashboard' element={
-          <RequireAuth>
-            <DashBoard />
-          </RequireAuth>
-
-        }>
-
-          <Route index element={<Welcome/>}></Route>
-          <Route path="user" element={
-            <RequireAdmin><AllUser /></RequireAdmin>
+          <Route path = '/about' element={<About/>}></Route>
+          <Route path='/signin' element={<Login />}></Route>
+          <Route path="/signup" element={<Register />}></Route> 
+          <Route path='/contact' element={<Contact />}></Route>
+          <Route path='/faq' element={<FAQ />}></Route>
+          <Route path='/menu' element={<Menu/>}></Route>
+          <Route path='/photography' element={<Photography />}></Route>
           
-          }></Route>
-           <Route path="profile" element={<MyProfile />}></Route>
-          {/* <Route path="review" element={<AddReview />}></Route>
-         
-          <Route path="myorder" element={<MyOrder />}></Route>
-          <Route path="payment/:id" element={<Payment/>}></Route>
-          <Route path="my-profile/edit-profile/:id" element={<UpdateProfile/>}></Route> */}
-          
-          {/* 
-          <Route path="manageOrder" element={
-              <RequireAdmin> <ManageOrder /></RequireAdmin>
-           
+          <Route path='/dashboard' element={
+            <RequireAuth>
+              <DashBoard />
+            </RequireAuth>
+  
           }>
-
+  
+            <Route index element={<Welcome/>}></Route>
+            <Route path="user" element={
+              <RequireAdmin><AllUser /></RequireAdmin>
             
-          </Route> */}
-          {/* <Route path="add" element={
-              <RequireAdmin> <AddTools /></RequireAdmin>
+            }></Route>
+                <Route path="profile" element={<MyProfile />}></Route>
+                <Route path="review" element={<AddReview />}></Route>
+                <Route path="myorder" element={<MyOrder />}></Route>
+            {/* 
            
-          }></Route>
-          <Route path='updateTool/:id' element={
-              <RequireAdmin> <UpdateTool/></RequireAdmin>
-           
-          }></Route>
-          <Route path="manageTools" element={
-              <RequireAdmin> <ManageTools /></RequireAdmin>
-           
-          }></Route> */}
-        
-        </Route>
-        <Route path='/checkout/:id' element={
           
-      //     <RequireAuth>
-      //     
-      //  </RequireAuth>
-      <CheckOut />
-        }></Route>
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes>
-      <Footer />
-      <ToastContainer/>
-    </div>
+            <Route path="payment/:id" element={<Payment/>}></Route>
+            <Route path="my-profile/edit-profile/:id" element={<UpdateProfile/>}></Route> */}
+            
+            {/* 
+            <Route path="manageOrder" element={
+                <RequireAdmin> <ManageOrder /></RequireAdmin>
+             
+            }>
+  
+              
+            </Route> */}
+            {/* <Route path="add" element={
+                <RequireAdmin> <AddTools /></RequireAdmin>
+             
+            }></Route>
+            <Route path='updateTool/:id' element={
+                <RequireAdmin> <UpdateTool/></RequireAdmin>
+             
+            }></Route>
+            <Route path="manageTools" element={
+                <RequireAdmin> <ManageTools /></RequireAdmin>
+             
+            }></Route> */}
+          
+          </Route>
+          <Route path='/checkout/:id' element={
+            
+        //     <RequireAuth>
+        //     
+        //  </RequireAuth>
+        <CheckOut />
+          }></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+        <Footer />
+        <ToastContainer/>
+      </div>
+
+}
+    </>
+   
   );
 }
 
