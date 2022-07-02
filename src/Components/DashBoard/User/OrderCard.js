@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const OrderCard = ({ o, index, refetch,sendEvent,setModal }) => {
+const OrderCard = ({ o, index, refetch, sendEvent, setModal }) => {
+  console.log(o,'orderlist')
     const {_id,Address,name,email,phone,sendPackage,sendPrice,adults,child,checkin,startTime,description,image}=o
     return (
         <tr className='text-center'>
@@ -26,8 +27,8 @@ const OrderCard = ({ o, index, refetch,sendEvent,setModal }) => {
             <td><span className="font-bold">{startTime}</span></td>
             <td> <p title={description} className="text-sm font-bold">{description.slice(0, 30)}...</p></td>
             <td>
-            <label onClick={() => setModal(o)} htmlFor="deleteModal" className="bg-red-700 btn modal-button">Cancel
-            <FontAwesomeIcon className='pl-2'icon={faTrashRestoreAlt}></FontAwesomeIcon>
+            <label onClick={() => setModal(o)} htmlFor="deleteModal" className="bg-red-700 btn modal-button">
+            <FontAwesomeIcon icon={faTrashRestoreAlt}></FontAwesomeIcon>
               
               </label>
             </td>

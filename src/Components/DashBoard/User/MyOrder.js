@@ -18,15 +18,16 @@ const MyOrder = () => {
     const [modal, setModal] = useState({})
 
     const email = user?.email
+    console.log(email,'order-email');
     const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:4000/singleOrder?email=${email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
         }
     }).then(res => res.json()))
-
+console.log(orders,'fetch-order');
     if (isLoading) {
-        return <Spinner />
+        return <Spinner/>
     }
 
     const orderDelete = (id) => {
