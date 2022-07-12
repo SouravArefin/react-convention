@@ -18,23 +18,23 @@ const MyOrder = () => {
     const [modal, setModal] = useState({})
 
     const email = user?.email
-    console.log(email,'order-email');
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:4000/singleOrder?email=${email}`, {
+    console.log(email, 'order-email');
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://hidden-brushlands-28019.herokuapp.com/singleOrder?email=${email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
         }
     }).then(res => res.json()))
-console.log(orders,'fetch-order');
+    console.log(orders, 'fetch-order');
     if (isLoading) {
-        return <Spinner/>
+        return <Spinner />
     }
 
     const orderDelete = (id) => {
 
 
 
-        fetch(`http://localhost:4000/myorder/${id}`, {
+        fetch(`https://hidden-brushlands-28019.herokuapp.com/myorder/${id}`, {
             method: 'DELETE',
             headers: {
                 "content-type": "application/json",
@@ -85,9 +85,9 @@ console.log(orders,'fetch-order');
                             <th>Child</th>
                             <th>CheckIn</th>
                             <th>StartTme</th>
-                            <th>Description</th>
-                            
-                            <th colspan='2'>ProCeed</th>
+                            <th>Extra</th>
+
+                            <th colspan='2'>Cancel</th>
 
 
                         </tr>

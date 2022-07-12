@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faCheck } from '@fortawesome/free-solid-svg-icons';
 import royal from '../../images/logo-6 - Copy.png'
 import AutoType from './AboutType'
+import Arrow from '../Home/Arrow';
 const About = () => {
     return (
         <div>
@@ -94,11 +95,12 @@ const About = () => {
        
             </div>
           
-            <div className="  mb-10 text-right mr-10">
+            {/* <div className="  mb-10 text-right mr-10">
             <button><a href="#"> <FontAwesomeIcon
                style={{borderRadius:"10px"}}
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
-           </div>
+           </div> */}
+            <Arrow/>
             </div>
 
     );

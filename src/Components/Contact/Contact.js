@@ -1,6 +1,7 @@
 import { faArrowUp, faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import Arrow from '../Home/Arrow.js';
 import Leaflet from '../Leaflet/Leaflet.js';
 import './Contact.css'
 
@@ -30,11 +31,12 @@ const Contact = () => {
         </div>
         <Leaflet style={{ marginLeft: "20%" }}></Leaflet>
       </div>
-      <div className="  mt-10 mb-10 text-right mr-10">
+      {/* <div className="  mt-10 mb-10 text-right mr-10">
             <button><a href="#"> <FontAwesomeIcon
                style={{borderRadius:"10px"}}
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
-           </div>
+           </div> */}
+      <Arrow/>
     </div>
   );
 };

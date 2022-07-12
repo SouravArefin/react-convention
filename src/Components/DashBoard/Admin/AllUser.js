@@ -8,7 +8,7 @@ import UserRow from './UserRow';
 const AllUser = () => {
 
 
-    const { data: allUsers, isLoading, refetch } = useQuery('allUsers', () => fetch(`http://localhost:4000/user`, {
+    const { data: allUsers, isLoading, refetch } = useQuery('allUsers', () => fetch(`https://hidden-brushlands-28019.herokuapp.com/user`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -23,46 +23,47 @@ const AllUser = () => {
     const userList = allUsers.filter(user => user.role !== 'admin')
 
     let user;
-    if(userList.length==0){
-      user=  <h2 className='text-4xl mb-5 sp-style text-red-700 text-center mt-8'>There is no user in your website</h2>
-   }else{
-   
+    if (userList.length == 0) {
+        user = <h2 className='text-4xl mb-5 sp-style text-red-700 text-center mt-8'>There is no user in your website</h2>
+    } else {
+
         user =
             <>
-             <h2 className='text-2xl text-center mt-8'>Total User : {userList.length}</h2>
-             <div className="overflow-x-auto mt-10 mb-8">
-       <table className="table w-full">
+                <h2 className='text-2xl text-center mt-8'>Total User : {userList.length}</h2>
+                <div className="overflow-x-auto mt-10 mb-8">
+                    <table className="table w-full">
 
-           <thead>
-               <tr className="text-center">
-                   <th>No.</th>
-                   <th>Image</th>
-                   <th>Name</th>
-                   <th>Email</th>
-                   <th>User  / admin</th>
+                        <thead>
+                            <tr className="text-center">
+                                <th>No.</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Update </th>
+                                <th>Give Discount</th>
 
-               </tr>
-           </thead>
+                            </tr>
+                        </thead>
 
-           <tbody>
+                        <tbody>
 
-               {
-                   userList?.map((user, index) => <UserRow
-                       key={user._id}
-                       user={user}
-                       index={index}
-                       refetch={refetch}
-                   ></UserRow>)
-               }
-           </tbody>
-       </table>
+                            {
+                                userList?.map((user, index) => <UserRow
+                                    key={user._id}
+                                    user={user}
+                                    index={index}
+                                    refetch={refetch}
+                                ></UserRow>)
+                            }
+                        </tbody>
+                    </table>
 
-       
-       
-   </div>
+
+
+                </div>
             </>
-    
-   }
+
+    }
     return (
         <div >
             <h2 className='text-2xl text-center mt-8'>Total Admin : {adminList.length}</h2>
@@ -75,7 +76,7 @@ const AllUser = () => {
                             <th>Image</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>User  / admin</th>
+                            <th>Role</th>
 
                         </tr>
                     </thead>
@@ -93,12 +94,12 @@ const AllUser = () => {
                     </tbody>
                 </table>
 
-                
-                
+
+
             </div>
 
             {user}
-        
+
         </div>
     );
 };

@@ -1,3 +1,31 @@
+
+
+.image-slide-bgOne {
+ 
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(./banner-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 126px);
+}
+
+.image-slide-bgTwo {
+  /* background-image: url(./Assets/Images/slide2.jpg); */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(./banner-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 126px);
+}
+
+ .image-slide-bgThree {
+   /* background-image: url(./Assets/Images/slide3.jpg);  */
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(./100.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 126px); 
+} 
 .sp-style{
   font-family: 'Times New Roman', Times, serif;
 }
@@ -12,11 +40,11 @@
   height: 20%;
 }
 .google-sign{
-  box-shadow: 
-  inset -10px -10px 5px rgba(255, 255, 255, 0.2),
-  inset 10px 10px 5px rgba(0, 0, 0, 0.1);
+ padding-right: 5px;
   width: 50%;
   height: 100%;
+  border: 1px solid black;
+  
 
 }
 .see-more{
@@ -135,7 +163,8 @@ color: var(--secondery);
   
 }
 .back{
-background-color: #31AA52;
+background-color: #fefffe;
+
 }
 .background{
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(./images/logo-6.png);

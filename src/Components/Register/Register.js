@@ -289,10 +289,13 @@ const Register = () => {
 
             </p>
             <div className="divider">OR</div>
-
-                <div className="text-center sign mt-5">
-                <button onClick={handleGoogleSignIn} className='flex sign back text-white items-center mx-auto google-button rounded '><img className='w-10 h-10 rounded-full mr-3 ' src={googleLogo} alt="" /><p style={{paddingRight:'30px'}}className='ml-5 text-lg '>Signin with Google</p></button>
+            <div className="text-center  mt-5">
+                <button  onClick={handleGoogleSignIn}className='flex sign back p-2
+                 google-sign 
+                
+                text-black items-center mx-auto  rounded '><img className='w-10 h-10 rounded-full  ml-10 ' src={googleLogo} alt="" /><p  className='pl-5 text-lg '>Signin with Google</p></button>
             </div>
+         
            
   
         </div>

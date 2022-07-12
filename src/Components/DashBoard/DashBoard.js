@@ -15,8 +15,8 @@ const DashBoard = () => {
       <div className="drawer-content ">
         <h2 className='mt-5 text-3xl font-mono text-red-900 ml-5'>
 
-          Hey,<span className='text-blue-900 sp-style '>{user.displayName}.</span>
-          Welcome To Your DashBoard</h2>
+        Welcome To Your DashBoard  <span className='text-blue-900 sp-style '>{user.displayName}.</span>
+          </h2>
         <div className="align-right">
           <div className="text-right">
             <label for="my-drawer-2" className=" sp-style text-sm btn btn-primary drawer-button lg:hidden"> Open DashBoard</label>
@@ -39,8 +39,10 @@ const DashBoard = () => {
               <li className='text-primary sp-style font-bold text-xl'>
                 <Link to='/dashboard/manageOrder'>Manage-Order </Link></li>
               <li className='text-primary sp-style font-bold text-xl'>
-                <Link to='/dashboard/manageTools'>Manage-Tools </Link></li>
-              <li className='text-primary sp-style font-bold text-xl'><Link to='/dashboard/add'>Add Products </Link></li>
+                <Link to='/dashboard/discount'>Discount List </Link></li>
+              <li className='text-primary sp-style font-bold text-xl'>
+                <Link to='/dashboard/manageTools'>Manage-Package </Link></li>
+              <li className='text-primary sp-style font-bold text-xl'><Link to='/dashboard/add'>Add Package </Link></li>
 
              </>
               :

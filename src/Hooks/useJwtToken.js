@@ -13,10 +13,10 @@ const useJwtToken = user => {
             const name = user?.user?.displayName
             const img = user?.user?.photoURL
             const currentUser = { email: email, name: name, img: img }
-           // console.log(currentUser);
+            // console.log(currentUser);
             // console.log({ email });
             if (email) {
-                fetch(`http://localhost:4000/user/${email}`, {
+                fetch(`https://hidden-brushlands-28019.herokuapp.com/user/${email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

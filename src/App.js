@@ -26,6 +26,8 @@ import { useEffect, useState } from 'react';
 import Loader from './Components/Loader/Loader'
 import AddReview from './Components/DashBoard/User/AddReview';
 import MyOrder from './Components/DashBoard/User/MyOrder'
+import ManageOrder from './Components/DashBoard/Admin/ManageOrder';
+import Discount from './Components/DashBoard/Admin/Discount';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -68,6 +70,16 @@ function App() {
                 <Route path="profile" element={<MyProfile />}></Route>
                 <Route path="review" element={<AddReview />}></Route>
                 <Route path="myorder" element={<MyOrder />}></Route>
+                <Route path="manageOrder" element={
+                <RequireAdmin> <ManageOrder /></RequireAdmin>
+             
+                }>
+                   </Route> 
+                <Route path="discount" element={
+                <RequireAdmin> <Discount/></RequireAdmin>
+             
+                }>
+                   </Route> 
             {/* 
            
           
@@ -75,13 +87,10 @@ function App() {
             <Route path="my-profile/edit-profile/:id" element={<UpdateProfile/>}></Route> */}
             
             {/* 
-            <Route path="manageOrder" element={
-                <RequireAdmin> <ManageOrder /></RequireAdmin>
-             
-            }>
+           
   
               
-            </Route> */}
+           */}
             {/* <Route path="add" element={
                 <RequireAdmin> <AddTools /></RequireAdmin>
              
@@ -106,7 +115,8 @@ function App() {
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
         <Footer />
-        <ToastContainer/>
+            <ToastContainer
+            position="top-center"/>
       </div>
 
 }

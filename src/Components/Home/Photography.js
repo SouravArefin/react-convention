@@ -7,6 +7,7 @@ import img5 from '../../p-5.jpg'
 import img6 from '../../p-6.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faCheck } from '@fortawesome/free-solid-svg-icons';
+import Arrow from './Arrow';
 const Photography = () => {
     return (
 
@@ -140,12 +141,12 @@ To Capture Your Beautiful Memories
 </div>
             </div>
             
-            <div className="  mt-10 mb-10 text-right mr-10">
+            {/* <div className="  mt-10 mb-10 text-right mr-10">
             <button><a href="#"> <FontAwesomeIcon
                style={{borderRadius:"10px"}}
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
-           </div>
-
+           </div> */}
+<Arrow/>
             </div>
         
     );

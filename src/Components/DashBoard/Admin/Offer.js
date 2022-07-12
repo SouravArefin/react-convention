@@ -1,33 +1,21 @@
+import { faTrashRestoreAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import noImage from '../../../no-image.png'
 const UserRow = ({ user, index, refetch }) => {
-    const { email, role, name, img } = user
-    const makeAdmin = () => {
-        fetch(`https://hidden-brushlands-28019.herokuapp.com/user/admin/${email}`, {
-            method: 'PUT',
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('token')}`
-            }
-        }
+    const { email, discount, name, img, role } = user
 
-        )
-            .then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount > 0) {
-                    refetch()
-                    toast.success('SuccessFully make a admin')
-                }
-                else {
-                    toast.error(`Sorry!!! You can't make anyone admin.Only admin can make other's admin`)
-                }
-            })
+    //console.log(user);
+    // useEffect(() => {
 
-    }
+    // },[email])
     const giveDiscount = (e) => {
-        e.preventDefault()
+
         const sendEmail = email;
-        const sendDiscount = e.target.discount.value
+        console.log(sendEmail);
+        const sendDiscount = 0;
         console.log(sendDiscount, sendEmail);
         fetch(`https://hidden-brushlands-28019.herokuapp.com/discount/${sendEmail}`, {
             method: 'PATCH',
@@ -42,24 +30,16 @@ const UserRow = ({ user, index, refetch }) => {
                 console.log(inserted, 'inser');
                 // console.log(inserted,'inser');
                 if (inserted.modifiedCount > 0) {
-                    toast.success(`${sendDiscount}% , discount sent successfully`);
+                    toast.success(`you remove the discount successfully`);
 
-                    e.target.reset()
+
                 }
                 else {
-                    toast.error('Failed to give discount')
+                    toast.error('Failed to remove discount')
                 }
             }
             )
-        e.target.reset()
-    }
-    let offerSent;
 
-    if (!role) {
-        offerSent = <form onSubmit={giveDiscount}>
-            <input type='text' name='discount' required />
-            <input type='submit' className='pl-5 pr-5 ml-5 bg-slate-500 text-white' value='Discount' />
-        </form>
     }
     return (
         <tr className='text-center'>
@@ -83,14 +63,14 @@ const UserRow = ({ user, index, refetch }) => {
             </td>
             <td><span className="font-bold">{name}</span></td>
             <td><span className="font-bold">{email}</span></td>
-            <td>{role ? <span className='text-green-700 sp-style'> Admin</span> : <button onClick={makeAdmin} className="btn btn-xs">Promote</button>}</td>
+            <td><span className="font-bold">{discount}%</span></td>
             <td>
-                {
-                    offerSent
-                }
+                <label onClick={giveDiscount} className="bg-red-700 btn modal-button">
+                    <FontAwesomeIcon icon={faTrashRestoreAlt}></FontAwesomeIcon>
 
-
+                </label>
             </td>
+
         </tr>
 
     );

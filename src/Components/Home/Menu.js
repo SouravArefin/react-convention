@@ -4,6 +4,7 @@ import React from 'react';
 import img1 from '../../conven/10018.png'
 import img2 from '../../conven/10019.png'
 import img3 from '../../conven/10020.png'
+import Arrow from './Arrow';
 import Dish from './Dish';
 const Menu = () => {
     return (
@@ -62,11 +63,12 @@ const Menu = () => {
                 </div>
             </div>
             <Dish />
-            <div className="  mt-10 mb-10 text-right mr-10">
+            {/* <div className="  mt-10 mb-10 text-right mr-10">
             <button><a href="#"> <FontAwesomeIcon
                style={{borderRadius:"10px"}}
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
-           </div>
+           </div> */}
+            <Arrow/>
         </div>
         
     );

@@ -20,6 +20,7 @@ import BusinessSummary from '../BusinessSummary/BusinessSummary';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import Spinner from '../Spinner/Spinner';
+import Arrow from './Arrow';
 
 const Home = () => {
     const [services] = useService()
@@ -63,11 +64,7 @@ const Home = () => {
                     <div className='container mx-auto  mb-10'>
                         <ReviewSlider/>
                     </div>
-                    <div className="  mt-10 mb-10 text-right mr-10">
-                    <button><a href="#"> <FontAwesomeIcon
-                       style={{borderRadius:"10px"}}
-                        className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
-                   </div>
+                  <Arrow/>
                     <div className='bg-[#04193A] mt-10'>
         
                                 <div className="custom-shape-divider-top-1653206227">

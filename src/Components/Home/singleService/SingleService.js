@@ -6,7 +6,7 @@ const SingleService = (props) => {
     return (
         <div data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000" className='custom-shadow py-10 rounded-md'>
+            data-aos-duration="2000" className='shadow-lg py-10 rounded-md'>
 
             <div style={{ border: "none" }} className="max-w-sm  rounded-lg border text-center">
                 <img className="rounded-t-lg w-2/3 mx-auto hover:scale-110 transform duration-100 ease-linear" src={img} alt="" />

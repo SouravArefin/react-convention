@@ -2,6 +2,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import image from '../../images/Thinking.png'
+import Arrow from '../Home/Arrow';
 import Accordion from './Compo/Accordion'
 const FAQ = () => {
     return (
@@ -30,12 +31,14 @@ const FAQ = () => {
     For More Information Contact Us
 </marquee>
         </div>
-        <div className="  mt-10 mb-5 ml-60  text-right ">
+        {/* <div className="  mt-10 mb-5 ml-60  text-right ">
             <button><a href="#"> <FontAwesomeIcon
                style={{borderRadius:"10px"}}
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
-           </div>
+           </div> */}
+          
         </div>
+        <Arrow/>
         </div>
     );
 };
