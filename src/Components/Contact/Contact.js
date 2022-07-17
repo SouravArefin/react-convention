@@ -26,7 +26,7 @@ const Contact = () => {
           <h5 className="mt-5 text-2xl">
             <FontAwesomeIcon className="" icon={faPhone} />
             <span style={{marginLeft:'10px'}}>Helpline :
-            01300000000,01700000000</span>    
+          +8801858555888,+8801798406245</span>    
           </h5>
         </div>
         <Leaflet style={{ marginLeft: "20%" }}></Leaflet>

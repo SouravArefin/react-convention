@@ -3,7 +3,7 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import './Leaflet.css'
 const Leaflet = () => {
     return (
-        <div className='map-continer'>
+        <div className='map-continer '>
           <MapContainer
             center={[22.298067351440114, 91.97470847924231]}
             zoom={14}
@@ -15,7 +15,7 @@ const Leaflet = () => {
             />
             <Marker position={[22.298067351440114, 91.97470847924231]}>
               <Popup>
-                Royl-Convention Hall
+                Royal-Convention Hall
               </Popup>
             </Marker>
           </MapContainer>
