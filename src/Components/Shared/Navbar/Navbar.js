@@ -110,7 +110,7 @@ const Navbar = () => {
                                         to='/about'
                                         className="
                                          sp-style
-                                        nav-btn px-3 py-2 rounded-md text-sm font-bold"
+                                   mt-2     nav-btn px-3 py-2 rounded-md text-sm font-bold"
                                     >
                                         About
                                     </NavLink>
@@ -120,7 +120,7 @@ const Navbar = () => {
                                         user &&
                                         <>
 
-                                            <NavLink className="nav-btn px-3 py-2 sp-style rounded-md text-sm font-bold" to="/dashboard">DashBoard</NavLink>
+                                            <NavLink className="nav-btn px-3 py-2 mt-2 sp-style rounded-md text-sm font-bold" to="/dashboard">DashBoard</NavLink>
 
 
                                         </>
@@ -133,7 +133,7 @@ const Navbar = () => {
                                     user ?
                                         <>
                                           
-                                            <button onClick={logout} className='text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-5 py-[10px] rounded-md ml-2'>Sign Out <FontAwesomeIcon icon={faSignOut} /></button>
+                                            <button onClick={logout} className='text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-5 py-[10px] rounded-md ml-2 '>Sign Out <FontAwesomeIcon icon={faSignOut} /></button>
                                         </>
                                         :
                                         <button className='text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-5 py-[10px] rounded-md ml-2'><Link to="/signin">Sign In <FontAwesomeIcon icon={faSignIn} /></Link> </button>
