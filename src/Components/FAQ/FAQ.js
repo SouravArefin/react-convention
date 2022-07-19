@@ -1,10 +1,13 @@
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useEffect } from 'react';
 import image from '../../images/Thinking.png'
 import Arrow from '../Home/Arrow';
 import Accordion from './Compo/Accordion'
 const FAQ = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
     return (
         <div className=" ">
            

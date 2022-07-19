@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import img1 from '../../p-1.jpg'
 import img2 from '../../p-2.jpg'
 import img3 from '../../p-3.jpg'
@@ -9,6 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faCheck } from '@fortawesome/free-solid-svg-icons';
 import Arrow from './Arrow';
 const Photography = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
     return (
 
         <div>

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import image from '../../person 1.png'
 import image2 from '../../person 2.png'
 import image3 from '../../person 3.png'
 const Blog = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return (
         <div style={{ margin: "20%" }} >
             <div className="custom-shadow ">

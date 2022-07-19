@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import sourav from '../../sourav.jpeg'
 import promi from '../../promi.jpg'
 import rahat from '../../rahat.jpg'
@@ -10,6 +10,9 @@ import royal from '../../images/logo-6 - Copy.png'
 import AutoType from './AboutType'
 import Arrow from '../Home/Arrow';
 const About = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return (
         <div>
                  <div className="text-white mx-auto about-card background  custom-shadow ">

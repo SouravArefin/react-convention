@@ -1,12 +1,15 @@
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useEffect } from 'react';
 import img1 from '../../conven/10018.png'
 import img2 from '../../conven/10019.png'
 import img3 from '../../conven/10020.png'
 import Arrow from './Arrow';
 import Dish from './Dish';
 const Menu = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return (
         <div>
             <h1 className='text-center text-4xl sp-style mt-10 text-green-700'>Our Packages</h1>

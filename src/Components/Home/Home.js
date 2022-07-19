@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useService from '../../Hooks/useService';
 import BestProject from '../BestProject/BestProject';
@@ -23,6 +23,9 @@ import Spinner from '../Spinner/Spinner';
 import Arrow from './Arrow';
 
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     const [services] = useService()
     const navigate = useNavigate()
     return (

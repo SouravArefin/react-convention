@@ -1,12 +1,15 @@
 import { faArrowUp, faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Arrow from '../Home/Arrow.js';
 import Leaflet from '../Leaflet/Leaflet.js';
 import './Contact.css'
 
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className="contact">
       <div className="contact-head text-center text-6xl text-gray-400">
