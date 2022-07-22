@@ -179,7 +179,7 @@ const Login = () => {
                 <button onClick={handleGoogleSignIn} className='flex p-2 sign back text-2xl
                  google-sign 
                 
-                text-black items-center mx-auto  rounded '><img className='w-10 h-10 rounded-full  ml-10 ' src={googleLogo} alt="" /><p  className='pl-5 text-lg '>Signin with Google</p></button>
+                text-black items-center mx-auto  rounded '><img className='w-10 h-10 rounded-full  ml-10 ' src={googleLogo} alt="" /><p  className=' md:pl-5 text-lg '>Signin with Google</p></button>
             </div>
        
            

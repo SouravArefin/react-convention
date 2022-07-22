@@ -142,16 +142,16 @@ const Navbar = () => {
 
                             </div>
                         </div>
-                        <div className="-mr-2 flex md:hidden">
+                        <div className="  -mr-2 flex md:hidden">
                             {
                                 user ?
                                     <>
                                        
-                                        <button onClick={logout} className=' border-2 border-red-700 hover:text-red-700 transition-all transition-duration:150ms font-medium hover:font-medium px-5 py-[10px] rounded-md ml-2'>Sign Out <FontAwesomeIcon icon={faSignOut} /></button>
+                                        <button onClick={logout} className=' border-2 border-red-700 hover:text-red-700 transition-all transition-duration:150ms font-medium hover:font-medium   flex justify-between   px-2 items-center  rounded-md '>Sign Out <FontAwesomeIcon className="ml-2" icon={faSignOut} /></button>
                                     </>
 
                                     :
-                                    <button className='border-2 border-blue-700    hover:text-blue-700 transition-all transition-duration:150ms font-medium hover:font-medium px-5 py-[10px] rounded-md ml-2'><Link to="/signin">Sign In <FontAwesomeIcon icon={faSignIn} /></Link> </button>
+                                    <button className='border-2 border-blue-700    hover:text-blue-700 transition-all transition-duration:150ms font-medium hover:font-medium p-1   flex rounded-md '><Link to="/signin">Sign In <FontAwesomeIcon icon={faSignIn} /></Link> </button>
 
                             }
 
@@ -159,7 +159,7 @@ const Navbar = () => {
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
-                                className=" ml-5 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                className=" ml-2 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                                 aria-controls="mobile-menu"
                                 aria-expanded="false"
                             >

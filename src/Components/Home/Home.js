@@ -22,6 +22,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import Spinner from '../Spinner/Spinner';
 import Arrow from './Arrow';
 
+
 const Home = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -83,13 +84,28 @@ const Home = () => {
                 See More
             </button>
 
-            {/* <Review /> */}
+          
             <h1 className="md:text-5xl text-2xl sp-style text-center mb-10 text-amber-900 mt-10 ">What Our Client's Says</h1>
             <div className='container mx-auto  mb-10'>
                 <ReviewSlider />
             </div>
             <Arrow />
-            <div className='bg-[#04193A] mt-10'>
+            {/* toast start */}
+            <div className='ml-auto'>
+            <div
+                className="bg-red-900  w-72 mt-10 flex justify-between text-white shadow-xl rounded p-3 "
+            >
+                <p className="self-center">
+               To need any help,Message us or call us
+                </p>
+                <strong className="text-2xl mt-2 ml-5 align-center cursor-pointer alert-del"
+                >&times;</strong
+                >
+            </div>
+            </div>
+            
+            {/* toast end */}
+            <div className='bg-[#04193A] '>
 
                 <div className="custom-shape-divider-top-1653206227">
                     <img src={wave} alt="" />

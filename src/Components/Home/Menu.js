@@ -9,7 +9,15 @@ import Dish from './Dish';
 const Menu = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, [])
+    }, [])
+    useEffect(() => {
+        var alert_del = document.querySelectorAll('.alert-del');
+        alert_del.forEach((x) =>
+          x.addEventListener('click', function () {
+            x.parentElement.classList.add('hidden');
+          })
+        );
+    }, [])
     return (
         <div>
             <h1 className='text-center text-4xl sp-style mt-10 text-green-700'>Our Packages</h1>
@@ -71,7 +79,22 @@ const Menu = () => {
                style={{borderRadius:"10px"}}
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
            </div> */}
-            <Arrow/>
+            <Arrow />
+                 {/* toast start */}
+                 <div className='ml-auto mb-5'>
+            <div
+                className="bg-red-900  w-72 mt-10 flex justify-between text-white shadow-xl rounded p-3 "
+            >
+                <p className="self-center">
+               To need any help,Message us or call us
+                </p>
+                <strong className="text-2xl mt-2 ml-5 align-center cursor-pointer alert-del"
+                >&times;</strong
+                >
+            </div>
+            </div>
+            
+            {/* toast end */}
         </div>
         
     );
