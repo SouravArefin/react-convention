@@ -20,7 +20,7 @@ const ManageOrder = () => {
 
 
 
-    //     fetch(`https://salty-reef-27679.herokuapp.com/order/${id}`, {
+    //     fetch(`https://hidden-brushlands-28019.herokuapp.com//order/${id}`, {
     //         method: 'DELETE',
     //         headers: {
     //             "content-type": "application/json",
@@ -77,6 +77,9 @@ const ManageOrder = () => {
                             <th>CheckIn</th>
                             <th>StartTme</th>
                             <th>Extra Request</th>
+                            <th>Payment Complete </th>
+                            <th> Transaction Id </th>
+
                             {/* <th>Give Discount</th> */}
                             {/* <th colspan='2'>Action</th> */}
 

@@ -9,11 +9,11 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
 
   //console.log(o)
 
-  const { _id, Address, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image } = o
+  const { _id, paid, transactionId, Address, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image } = o
 
   const [user] = useAuthState(auth)
   // const makeShip = () => {
-  //     fetch(`https://salty-reef-27679.herokuapp.com/ship/${_id}`, {
+  //     fetch(`https://hidden-brushlands-28019.herokuapp.com//ship/${_id}`, {
   //         method: 'PUT',
   //         headers: {
   //             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -95,7 +95,16 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
 
            </td> */}
 
-
+      <td>
+        {
+          paid ? <p className="text-green-700 text-2xl font-bold sp-style">Yes</p> : <p className='text-red-700 text-2xl sp-style font-bold'>Not Yet</p>
+        }
+      </td>
+      <td>
+        {
+          transactionId && <p className="text-orange-500 text-2xl font-bold sp-style">{transactionId}</p>
+        }
+      </td>
 
 
 

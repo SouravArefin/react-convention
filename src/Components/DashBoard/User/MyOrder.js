@@ -87,7 +87,9 @@ const MyOrder = () => {
                             <th>StartTme</th>
                             <th>Extra</th>
 
-                            <th colspan='2'>Cancel</th>
+                            <th>Cancel</th>
+                            <th>Proceed</th>
+                            <th>Transaction Id</th>
 
 
                         </tr>

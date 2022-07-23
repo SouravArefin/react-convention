@@ -28,6 +28,7 @@ import AddReview from './Components/DashBoard/User/AddReview';
 import MyOrder from './Components/DashBoard/User/MyOrder'
 import ManageOrder from './Components/DashBoard/Admin/ManageOrder';
 import Discount from './Components/DashBoard/Admin/Discount';
+import Payment from './Components/DashBoard/User/Payment';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -68,7 +69,8 @@ function App() {
             <Route path="user" element={
               <RequireAdmin><AllUser /></RequireAdmin>
             
-            }></Route>
+                }></Route>
+                <Route path="payment/:id" element={<Payment/>}></Route>
                 <Route path="profile" element={<MyProfile />}></Route>
                 <Route path="review" element={<AddReview />}></Route>
                 <Route path="myorder" element={<MyOrder />}></Route>
