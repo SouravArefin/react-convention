@@ -106,11 +106,7 @@ const About = () => {
        
             </div>
           
-            {/* <div className="  mb-10 text-right mr-10">
-            <button><a href="#"> <FontAwesomeIcon
-               style={{borderRadius:"10px"}}
-                className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
-           </div> */}
+           
             <Arrow />
                  {/* toast start */}
                  <div className='ml-auto mb-5'>

@@ -26,14 +26,13 @@ const Register = () => {
         loading,
         error
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-
-    console.log(error, 'error');
-    console.log(user, 'register')
-
+    // console.log(error, 'error');
+   //  console.log(user, 'register-user')
     const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth)
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const [updateProfile, updating, error3] = useUpdateProfile(auth);
     const allUser = user2 || user1 || user
+    console.log(allUser,'alluser')
     const [token] = useJwtToken(allUser)
     //console.log(user2,'signup')
 
@@ -51,7 +50,7 @@ const Register = () => {
 
     const handleCreateUser = async e => {
         const fullName = e.firstname + '' + e.lastname;
-        console.log(e.firstname + '' + e.lastname)
+        console.log(e.firstname + '' + e.lastname,'fullname')
         // console.log(e,"eeeeeee");
         console.log(e.email, 'email')
         console.log(e.password, 'pass')
@@ -61,12 +60,7 @@ const Register = () => {
             return;
         }
         await createUserWithEmailAndPassword(e.email, e.password)
-
-
-
         await updateProfile({ displayName: fullName });
-
-
 
     }
 
@@ -157,7 +151,7 @@ const Register = () => {
                             {...register("lastname", {
                                 required: 'last name is Required',
                                 minLength: {
-                                    value: 3, message: 'Minimum 3 character required'
+                                    value: 1, message: 'Minimum 1 character required'
                                 }
                             })}
                             // register function er fitor condition r message gula object akare likhte hoy

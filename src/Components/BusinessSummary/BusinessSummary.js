@@ -3,7 +3,7 @@ import React from 'react';
 import CountUp, { useCountUp } from 'react-countup';
 
 const BusinessSummary = ({ icon, end, title, image }) => {
-    console.log(icon, end, title, image)
+    //console.log(icon, end, title, image)
     const countUpRef = React.useRef(null);
     const { start, pauseResume, reset, update } = useCountUp({
         ref: countUpRef,

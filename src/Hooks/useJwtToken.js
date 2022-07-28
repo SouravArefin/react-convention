@@ -3,17 +3,18 @@
 
 import React, { useEffect, useState } from 'react';
 const useJwtToken = user => {
-    console.log(user, '555');
+    console.log(user, 'jwt-token-user');
     const [token, setToken] = useState('')
     useEffect(() => {
 
         const getToken = async () => {
 
             const email = user?.user?.email
-            const name = user?.user?.displayName
+             const name = user?.user?.displayName
+            console.log(user?.user?.displayName,'jwt-token-name');
             const img = user?.user?.photoURL
             const currentUser = { email: email, name: name, img: img }
-            // console.log(currentUser);
+             console.log(currentUser,'jwt-token-currentuser');
             // console.log({ email });
             if (email) {
                 fetch(`https://hidden-brushlands-28019.herokuapp.com/user/${email}`, {
