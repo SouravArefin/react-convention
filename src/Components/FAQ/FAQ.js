@@ -51,7 +51,7 @@ const FAQ = () => {
         </div>
         <Arrow />
              {/* toast start */}
-             <div className='ml-auto mb-5'>
+             {/* <div className='ml-auto mb-5'>
             <div
                 className="bg-red-900  w-72 mt-10 flex justify-between text-white shadow-xl rounded p-3 "
             >
@@ -62,7 +62,7 @@ const FAQ = () => {
                 >&times;</strong
                 >
             </div>
-            </div>
+            </div> */}
             
             {/* toast end */}
         </div>
