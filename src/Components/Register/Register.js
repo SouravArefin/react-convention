@@ -32,7 +32,8 @@ const Register = () => {
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const [updateProfile, updating, error3] = useUpdateProfile(auth);
     const allUser = user2 || user1 || user
-    console.log(allUser,'alluser')
+    console.log(allUser, 'alluser')
+    console.log( allUser?.user?.displayName,'reg-nm')
     const [token] = useJwtToken(allUser)
     //console.log(user2,'signup')
 

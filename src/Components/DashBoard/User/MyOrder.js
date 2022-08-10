@@ -18,14 +18,14 @@ const MyOrder = () => {
     const [modal, setModal] = useState({})
 
     const email = user?.email
-    console.log(email, 'order-email');
+    //console.log(email, 'order-email');
     const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://hidden-brushlands-28019.herokuapp.com/singleOrder?email=${email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
         }
     }).then(res => res.json()))
-    console.log(orders, 'fetch-order');
+    //console.log(orders, 'fetch-order');
     if (isLoading) {
         return <Spinner />
     }

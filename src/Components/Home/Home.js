@@ -21,6 +21,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import Spinner from '../Spinner/Spinner';
 import Arrow from './Arrow';
+import Chat from './Chat';
 
 
 const Home = () => {
@@ -47,7 +48,7 @@ const Home = () => {
         //         services.length === 0 ?
         //             <Spinner />
         //             :
-        <div>
+        <div className="relative">
             <Slider />
             {/* toast start */}
             <div
@@ -90,8 +91,9 @@ const Home = () => {
                 <ReviewSlider />
             </div>
             <Arrow />
+            <Chat/>
             {/* toast start */}
-            <div className='ml-auto'>
+            <div className=''>
             <div
                 className="bg-red-900  w-72 mt-10 flex justify-between text-white shadow-xl rounded p-3 "
             >

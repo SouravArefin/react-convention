@@ -29,6 +29,7 @@ import MyOrder from './Components/DashBoard/User/MyOrder'
 import ManageOrder from './Components/DashBoard/Admin/ManageOrder';
 import Discount from './Components/DashBoard/Admin/Discount';
 import Payment from './Components/DashBoard/User/Payment';
+import Chat from './Components/Home/Chat';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -117,7 +118,8 @@ function App() {
         <CheckOut />
           }></Route>
           <Route path="*" element={<NotFound />}></Route>
-        </Routes>
+            </Routes>
+         
         <Footer />
             <ToastContainer
             position="top-center"/>

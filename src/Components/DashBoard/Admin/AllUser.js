@@ -18,7 +18,7 @@ const AllUser = () => {
     if (isLoading) {
         return <Spinner />
     }
-    console.log(allUsers)
+   // console.log(allUsers)
     const adminList = allUsers.filter(user => user.role == 'admin')
     const userList = allUsers.filter(user => user.role !== 'admin')
 

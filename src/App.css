@@ -1,3 +1,10 @@
+.chat{
+  position: fixed;
+  ;
+  top: 87%;
+  right: 0.1%;
+
+}
 
 .image-slide-bgOne {
  
@@ -5,7 +12,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(100vh - 126px);
+  height: calc(100vh - 180px);
 }
 
 .image-slide-bgTwo {
@@ -14,7 +21,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(100vh - 126px);
+  height: calc(100vh - 180px);
 }
 
  .image-slide-bgThree {
@@ -23,7 +30,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(100vh - 126px); 
+  height: calc(100vh - 180px); 
 } 
 .sp-style{
   font-family: 'Times New Roman', Times, serif;
