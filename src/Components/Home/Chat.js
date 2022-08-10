@@ -9,7 +9,7 @@ const Chat = () => {
                 <button >
                     <a href="https://www.facebook.com/One-Million-101069885894174" target='_blank'>   <FontAwesomeIcon
                style={{borderRadius:"50px"}}
-            className='text-3xl bg-cyan-900 text-white p-5 ' icon={faComment} /> </a>
+            className='text-2xl bg-cyan-900 text-white p-5 ' icon={faComment} /> </a>
                  
                     {/* <img src={message} alt="arrow" className="w-44 "/>
             </a> */}

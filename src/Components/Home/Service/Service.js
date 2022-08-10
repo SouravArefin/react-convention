@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
 import useService from '../../../Hooks/useService';
 import Arrow from '../Arrow';
+import Chat from '../Chat';
 import SingleService from '../singleService/SingleService';
 
 const Service = () => {
@@ -58,7 +59,8 @@ const Service = () => {
             </div>
             
             {/* toast end */}
-        </div>
+            </div>
+          
         </div>
     );
 };
