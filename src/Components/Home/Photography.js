@@ -8,6 +8,7 @@ import img6 from '../../p-6.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faCheck } from '@fortawesome/free-solid-svg-icons';
 import Arrow from './Arrow';
+import Chat from './Chat';
 const Photography = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -158,6 +159,7 @@ To Capture Your Beautiful Memories
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
            </div> */}
         <Arrow />
+        <Chat/>
              {/* toast start */}
              {/* <div className='ml-auto mb-5'>
             <div

@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Arrow from '../Home/Arrow.js';
 import Leaflet from '../Leaflet/Leaflet.js';
 import './Contact.css'
-
+import Chat from '../Home/Chat.js';
 
 const Contact = () => {
   useEffect(() => {
@@ -48,6 +48,8 @@ const Contact = () => {
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
            </div> */}
       <Arrow />
+     <Chat/>
+
            {/* toast start */}
            {/* <div className='ml-auto mb-5'>
             <div

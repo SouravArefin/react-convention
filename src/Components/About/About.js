@@ -9,6 +9,7 @@ import { faArrowUp, faCheck } from '@fortawesome/free-solid-svg-icons';
 import royal from '../../images/logo-6 - Copy.png'
 import AutoType from './AboutType'
 import Arrow from '../Home/Arrow';
+import Chat from '../Home/Chat';
 const About = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -108,6 +109,8 @@ const About = () => {
           
            
             <Arrow />
+            <Chat/>
+
                  {/* toast start */}
                  {/* <div className='ml-auto mb-5'>
             <div

@@ -186,11 +186,27 @@ background-color: #fefffe;
 }
 li{font-family: bold;}
 .feature{
-  background-color:white;
-  padding:10%;
-  border-radius:10px;
-
   
+  
+  padding-left: 4%;
+  padding-bottom: 10%;
+ 
+  height: 100%;
+  width:60%;
+  
+  
+}
+.decoration{
+  margin-left:10% ;
+  background-color:rgb(180, 216, 180);
+  border-radius:10px;
+  height: 100%;
+  width:70%;
+}
+.feature-mar{
+  margin-left: 30%;
+  background-color:rgb(180, 216, 180);
+  border-radius:10px;
 }
 .about-card {
   /* background-color:rgb(176, 176, 230); */

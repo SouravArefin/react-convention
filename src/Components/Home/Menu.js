@@ -5,6 +5,7 @@ import img1 from '../../conven/10018.png'
 import img2 from '../../conven/10019.png'
 import img3 from '../../conven/10020.png'
 import Arrow from './Arrow';
+import Chat from './Chat';
 import Dish from './Dish';
 const Menu = () => {
     useEffect(() => {
@@ -80,6 +81,7 @@ const Menu = () => {
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
            </div> */}
             <Arrow />
+            <Chat/>
                  {/* toast start */}
                  {/* <div className='ml-auto mb-5'>
             <div

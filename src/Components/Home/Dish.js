@@ -5,6 +5,7 @@ import img3 from '../../conven/10023.png'
 import img4 from '../../conven/10024.png'
 import img5 from '../../conven/10025.png'
 import img6 from '../../conven/10026.png'
+import Chat from './Chat';
 const Dish = () => {
     return (
         <div className='mt-10 '>
@@ -98,7 +99,8 @@ const Dish = () => {
                 
             </div>
 
-                </div>
+            </div>
+            <Chat/>
                 </div>
         
     );
