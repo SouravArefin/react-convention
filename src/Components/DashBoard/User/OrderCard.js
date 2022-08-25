@@ -5,7 +5,16 @@ import { Link } from 'react-router-dom';
 
 const OrderCard = ({ o, index, refetch, sendEvent, setModal }) => {
   console.log(o, 'orderlist')
-  const { _id, Address, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image, transactionId, paid } = o
+  const { _id, Address,Photography, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image, transactionId, paid } = o
+  
+  let photography;
+  if (Photography) {
+    photography = {Photography};
+  }
+  else {
+    photography = 'own Photography';
+
+  }
   return (
     <tr className='text-center'>
       <th>{index + 1}</th>
@@ -23,6 +32,7 @@ const OrderCard = ({ o, index, refetch, sendEvent, setModal }) => {
       <td><span className="font-bold">{sendPrice}</span></td>
       <td><span className="font-bold">{adults}</span></td>
       <td><span className="font-bold">{child}</span></td>
+      <td><span className="font-bold">{Photography}</span></td>
       <td><span className="font-bold">{checkin}</span></td>
       <td><span className="font-bold">{startTime}</span></td>
       <td> <p title={description} className="text-sm font-bold">{description.slice(0, 30)}...</p></td>

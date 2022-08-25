@@ -9,7 +9,7 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
 
   //console.log(o)
 
-  const { _id, paid, transactionId, Address, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image } = o
+  const { _id, paid,Photography, transactionId, Address, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image } = o
 
   const [user] = useAuthState(auth)
   // const makeShip = () => {
@@ -84,6 +84,7 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
       <td><span className="font-bold">{sendPrice}</span></td>
       <td><span className="font-bold">{adults}</span></td>
       <td><span className="font-bold">{child}</span></td>
+      <td><span className="font-bold">{Photography}</span></td>
       <td><span className="font-bold">{checkin}</span></td>
       <td><span className="font-bold">{startTime}</span></td>
       <td> <p title={description} className="text-sm font-bold">{description.slice(0, 30)}...</p></td>

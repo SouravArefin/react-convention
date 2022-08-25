@@ -74,6 +74,7 @@ const ManageOrder = () => {
                             <th>Price</th>
                             <th>Adults</th>
                             <th>Child</th>
+                            <th>PhotoGraphy</th>
                             <th>CheckIn</th>
                             <th>StartTme</th>
                             <th>Extra Request</th>
