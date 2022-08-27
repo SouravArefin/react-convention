@@ -155,7 +155,7 @@ const CheckOut = () => {
                     <div className="mb-6">
                         <label className='form-font font-bold text-2xl' htmlFor="adult">Limits of Guests :</label>
                         <input type="number" id="adult" name="adults" placeholder="Range of guests" min="1" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                  <p className="text-gray-800">**Must provide your guests list to the Authority</p>
+                  <p className="text-gray-900">**Must provide your guests list to the Authority</p>
                     </div>
             
                     <div className="mb-6">
@@ -171,20 +171,28 @@ const CheckOut = () => {
                             <option>Own PhotoGraphy</option>
                             
                         </select>
+                        <p className="text-gray-900">**If you want to take our photography service,choose your suitable package. 
+                        OtherWise,choose your own Photography
+                        
+                        </p>
                     </div>
                     <div className="mb-6">
-                    <label className='form-font font-bold text-2xl'>Menu(optional) :</label><br/>
+                    <label className='form-font font-bold text-2xl'>Food Menu(optional) :</label><br/>
                         <select name='menu' className="select select-bordered w-full max-w-xs" >
-                            <option disabled selected>choose</option>
+                            <option >choose</option>
                             <option>package-1</option>
                             <option>package-2</option>
                             <option>package-3</option>
                             <option>package-4</option>
                             <option>package-5</option>
                             <option>package-6</option>
-                            <option>Own Menu</option>
+                            <option>Own Food Menu</option>
                             
                         </select>
+                        <p className="text-gray-900">**If you want to take our Food Menu service,choose your suitable package. 
+                        OtherWise,choose your own Food Menu
+                        
+                        </p>
                     </div>
 
                     <div className="mb-6">

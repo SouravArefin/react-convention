@@ -76,7 +76,7 @@ const Navbar = () => {
                                          sp-style
                                         nav-btn px-3 py-2 rounded-md text-sm font-bold"
                                     >
-                                        Menu
+                                       Food Menu
                                     </NavLink>
 
 
