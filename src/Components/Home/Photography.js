@@ -47,7 +47,7 @@ To Capture Your Beautiful Memories
     <div className="p-5">
         <h1 className='font-bold'> Package-1 </h1>
 
-      <p><span className='font-bold'>Price:</span> BDT, 40000/-</p>
+      <p><span className='font-bold'>Price:</span> BDT, 20000/-</p>
        
       <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
       <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
@@ -67,7 +67,7 @@ To Capture Your Beautiful Memories
     <div className="p-5">
         <h1 className='font-bold'> Package-2 </h1>
 
-      <p><span className='font-bold'>Price:</span> BDT, 20000/-</p>
+      <p><span className='font-bold'>Price:</span> BDT, 30000/-</p>
        
       <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
       <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
@@ -85,7 +85,7 @@ To Capture Your Beautiful Memories
     <div className="p-5">
         <h1 className='font-bold'> Package-3 </h1>
 
-      <p><span className='font-bold'>Price:</span> BDT, 30000/-</p>
+      <p><span className='font-bold'>Price:</span> BDT, 40000/-</p>
        
       <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
       <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>
@@ -139,7 +139,7 @@ To Capture Your Beautiful Memories
     <div className="p-5">
         <h1 className='font-bold'> Package-6 </h1>
 
-      <p><span className='font-bold'>Price:</span> BDT, 40000/-</p>
+      <p><span className='font-bold'>Price:</span> BDT, 70000/-</p>
        
       
       <li className="mt-5"style={{listStyle:'none'}}><FontAwesomeIcon className='text-[#3b069e]' icon={faCheck} /> <span className="ml-2">Lorem ipsum dolor sit amet.</span></li>

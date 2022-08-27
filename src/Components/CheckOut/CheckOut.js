@@ -13,18 +13,40 @@ const CheckOut = () => {
     // const [services] = useService()
     //  console.log(id);
     const [services, setServices] = useState([])
+    const [photoGraphyPackage, setPhotoPackage] = useState([])
+    const [storePrice, setStorePrice] = useState(0)
+    console.log(storePrice, 'setStorePrice');
+    const [blurPhoto, setBlurPhoto] = useState({})
+    console.log(blurPhoto,'blurPhoto');
+    //console.log(photoGraphyPackage,"photo-pck");
     //console.log(services)
-
-    useEffect(() => {
-        fetch('https://hidden-brushlands-28019.herokuapp.com/package')
-            .then(response => response.json())
-            .then(data => setServices(data))
-    }, [])
 
 
     const found = services.filter(service =>
         service._id == id
     )
+    useEffect(() => {
+        fetch('https://hidden-brushlands-28019.herokuapp.com/package')
+            .then(response => response.json())
+            .then(data => setServices(data))
+    }, [])
+    useEffect(() => {
+        fetch('/photography.json')
+            .then(response => response.json())
+            .then(data => setPhotoPackage(data))
+    }, [])
+
+
+ 
+   
+        console.log(found,'takePrice')
+    useEffect(() => {
+        const takePrice = found[0]?.price
+             setStorePrice( takePrice)
+    }, [found[0]?._id])
+
+   
+  
     //console.log(found[0]);
 
     const [user] = useAuthState(auth)
@@ -34,17 +56,35 @@ const CheckOut = () => {
     const confirmOrder = e => {
         e.preventDefault();
         console.log(e, "chck e")
+      
         let photoPacakage;
+      console.log(e.target?.photography?.value);  
         if (e.target?.photography?.value == 'choose') {
     photoPacakage = 'own PhotoGraphy'
         } else {
             photoPacakage=e.target?.photography?.value
-}
+        }
+        const foundPhoto = photoGraphyPackage.filter(photoGraphyPack =>
+            photoGraphyPack.name === e.target?.photography?.value
+        )
+        
+        console.log(foundPhoto, 'found photol');
+        console.log(foundPhoto[0], 'found photo');
+        let totalPrice;
+        if (foundPhoto[0]?.price) {
+            totalPrice = found[0]?.price + parseInt(foundPhoto[0].price)
+            setStorePrice( totalPrice)
+        }
+        else {
+            totalPrice = found[0]?.price
+            setStorePrice( totalPrice)
+       }
+        console.log(totalPrice,'totalPrice')
         const name = e.target.name.value;
         const email = e.target.email.value;
         const phone = e.target.phone.value;
         const sendPackage = found[0]?.name;
-        const sendPrice = found[0]?.price;
+        const sendPrice = totalPrice;
         const image = found[0]?.img;
         const adults = e.target.adults.value;
         const child = e.target.children.value;
@@ -83,46 +123,46 @@ const CheckOut = () => {
                 <h1 className='text-center text-3xl sp-style mt-20'><Type /></h1>
                 <form onSubmit={confirmOrder} className='mt-5 add-cover'>
                     <div className="mb-6">
-                        <label>Email:</label>
+                        <label className='form-font font-bold text-2xl'>Email :</label>
                         <input type="email" id="text" name='email' placeholder='Enter your email' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                     </div>
 
                     <div className="mb-6">
-                        <label> Name:</label>
+                        <label className='form-font font-bold text-2xl'> Name :</label>
                         <input type="text" id="text" name='name' placeholder="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
 
 
                     <div className="mb-6">
-                        <label htmlFor="phone">Your Phone</label>
+                        <label htmlFor="phone" className='form-font font-bold text-2xl'>Your Phone :</label>
                         <input type="tel" id="phone" name="phone" placeholder="Enter Your Number" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                     <div className="mb-6">
-                        <label htmlFor="phone">Address</label>
+                        <label htmlFor="phone" className='form-font font-bold text-2xl'>Address :</label>
                         <input type="text" id="address" name="adress" placeholder="Enter Your address" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                     <div className="mb-6">
-                        <label>Package Name:</label>
+                        <label className='form-font font-bold text-2xl'>Package Name :</label>
                         <input value={found[0]?.name} type="text" id="text" name='itemImage' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                     <div className="mb-6">
-                        <label>Price:</label>
-                        <input type="number" value={found[0]?.price} id="text" name='price' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                        <label className='form-font font-bold text-2xl'>Price :</label>
+                        <input type="number" value={ storePrice } id="text" name='price' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                     <div className="mb-6">
-                        <label htmlFor="adult">Adults</label>
+                        <label className='form-font font-bold text-2xl' htmlFor="adult">Adults :</label>
                         <input type="number" id="adult" name="adults" placeholder="Quantity of Adults" min="1" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                    
                     <div className="mb-6">
-                        <label htmlFor="child">Children</label>
+                        <label className='form-font font-bold text-2xl' htmlFor="child">Children :</label>
                         <input type="number" id="child" name="children" placeholder="Quantity of Children" min="0"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                     <div className="mb-6">
-                    <label>PhotoGraphy(optional):</label><br/>
+                    <label className='form-font font-bold text-2xl'>PhotoGraphy(optional) :</label><br/>
                         <select name='photography' className="select select-bordered w-full max-w-xs" >
-                            <option disabled selected>choose</option>
+                            <option >choose</option>
                             <option>package-1</option>
                             <option>package-2</option>
                             <option>package-3</option>
@@ -134,7 +174,7 @@ const CheckOut = () => {
                         </select>
                     </div>
                     <div className="mb-6">
-                    <label>Menu(optional):</label><br/>
+                    <label className='form-font font-bold text-2xl'>Menu(optional) :</label><br/>
                         <select name='menu' className="select select-bordered w-full max-w-xs" >
                             <option disabled selected>choose</option>
                             <option>package-1</option>
@@ -149,17 +189,17 @@ const CheckOut = () => {
                     </div>
 
                     <div className="mb-6">
-                        <label htmlFor="checkin-date">Check-in Date</label>
+                        <label className='form-font font-bold text-2xl' htmlFor="checkin-date">Check-in Date :</label>
                         <input type="date" id="checkin-date" name="checkin"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                     <div className="mb-6">
-                        <label htmlFor="checkout-date">Starting Time</label>
+                        <label className='form-font font-bold text-2xl' htmlFor="checkout-date">Starting Time :</label>
                         <input type="time" id="time" name="time"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                     <div className="mb-6">
-                        <label>Anything Else??</label>
+                        <label className='form-font font-bold text-2xl'>Anything Else??</label>
                         <textarea rows="10" cols="80" type="text" id="text" name='description' placeholder="Tell us" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                     <div className='text-center'>

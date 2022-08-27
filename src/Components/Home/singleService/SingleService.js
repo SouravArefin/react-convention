@@ -18,7 +18,7 @@ const SingleService = (props) => {
                     <h1 className='font-bold'> Package Name: {name}</h1>
 
                     <p className="mb-3 font-normal pt-5 text-gray-700 dark:text-gray-400"><span className='font-bold'>Description:</span>    {details} </p>
-                    <p><span className='font-bold'>Price:</span> BDT, {price}/-</p>
+                    <p><span className='font-bold'>Price:</span> BDT, {price}/-<span>(without our Menu + PhotoGraphy)</span></p>
                     {/* <p><span className='font-bold'>Time:</span> : {Duration}</p> */}
 
                 </div>

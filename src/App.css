@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 .chat{
   position: fixed;
   ;
@@ -6,9 +7,12 @@
 
 }
 .add-cover{
-  background-color: cadetblue;
+  background-color:rgb(159, 163, 219);
   padding: 30px;
   border-radius: 10px;
+}
+.form-font{
+  font-family: 'Dancing Script', cursive;
 }
 .image-slide-bgOne {
  
@@ -253,6 +257,17 @@ width:90%;
   .about-text{
     font-size:25px;
   }
+  .feature-mar{
+    margin-left: 10%;
+  
+  }
 
+}
+@media screen and (max-width: 640px) {
+  .feature-mar{
+    margin-left: 10%;
+  
+  }
+  
 }
   
