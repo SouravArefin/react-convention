@@ -83,7 +83,7 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
       <td><span className="font-bold">{sendPackage}</span></td>
       <td><span className="font-bold">{sendPrice}</span></td>
       <td><span className="font-bold">{adults}</span></td>
-      <td><span className="font-bold">{child}</span></td>
+     
       <td><span className="font-bold">{Photography}</span></td>
       <td><span className="font-bold">{checkin}</span></td>
       <td><span className="font-bold">{startTime}</span></td>

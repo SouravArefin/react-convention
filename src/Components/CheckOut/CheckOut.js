@@ -87,14 +87,14 @@ const CheckOut = () => {
         const sendPrice = totalPrice;
         const image = found[0]?.img;
         const adults = e.target.adults.value;
-        const child = e.target.children.value;
+        //const child = e.target.children.value;
         const Address = e.target.address.value;
         const checkin = e.target.checkin.value;
         const startTime = e.target.time.value;
         const description = e.target.description.value;
         const Photography= photoPacakage
-        console.log(name,Photography,email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description);
-        const sendOrder = { name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image, Address,Photography }
+        console.log(name,Photography,email, phone, sendPackage, sendPrice, adults,  checkin, startTime, description);
+        const sendOrder = { name, email, phone, sendPackage, sendPrice, adults,  checkin, startTime, description, image, Address,Photography }
         fetch(`https://hidden-brushlands-28019.herokuapp.com/order`, {
             method: "POST",
             headers: {
@@ -150,15 +150,11 @@ const CheckOut = () => {
                         <input type="number" value={ storePrice } id="text" name='price' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
                     <div className="mb-6">
-                        <label className='form-font font-bold text-2xl' htmlFor="adult">Adults :</label>
-                        <input type="number" id="adult" name="adults" placeholder="Quantity of Adults" min="1" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                        <label className='form-font font-bold text-2xl' htmlFor="adult">Limits of Guests :</label>
+                        <input type="number" id="adult" name="adults" placeholder="Range of guests" min="1" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                  <p className="text-gray-800">**Must provide your guests list to the Authority</p>
                     </div>
-                   
-                    <div className="mb-6">
-                        <label className='form-font font-bold text-2xl' htmlFor="child">Children :</label>
-                        <input type="number" id="child" name="children" placeholder="Quantity of Children" min="0"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                    </div>
+            
                     <div className="mb-6">
                     <label className='form-font font-bold text-2xl'>PhotoGraphy(optional) :</label><br/>
                         <select name='photography' className="select select-bordered w-full max-w-xs" >

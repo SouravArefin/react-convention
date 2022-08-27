@@ -81,8 +81,8 @@ const MyOrder = () => {
                             <th>Address</th>
                             <th>Package</th>
                             <th>Price</th>
-                            <th>Adults</th>
-                            <th>Child</th>
+                            <th>Limits of Guests</th>
+                          
                             <th>Photography</th>
                             <th>CheckIn</th>
                             <th>StartTme</th>
