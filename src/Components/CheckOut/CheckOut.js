@@ -71,9 +71,12 @@ const CheckOut = () => {
         console.log(foundPhoto, 'found photol');
         console.log(foundPhoto[0], 'found photo');
         let totalPrice;
+   
         if (foundPhoto[0]?.price) {
             totalPrice = found[0]?.price + parseInt(foundPhoto[0].price)
-            setStorePrice( totalPrice)
+            setStorePrice(totalPrice)
+           
+            toast.info(`You choose our photography package.That's why your updated price is ${totalPrice}`)
         }
         else {
             totalPrice = found[0]?.price
