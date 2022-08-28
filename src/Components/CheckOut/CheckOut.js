@@ -159,7 +159,7 @@ const CheckOut = () => {
                     </div>
             
                     <div className="mb-6">
-                    <label className='form-font font-bold text-2xl'>PhotoGraphy(optional) :</label><br/>
+                    <label className='form-font font-bold text-2xl'>PhotoGraphy (optional) :</label><br/>
                         <select name='photography' className="select select-bordered w-full max-w-xs" >
                             <option >choose</option>
                             <option>package-1</option>
@@ -172,12 +172,12 @@ const CheckOut = () => {
                             
                         </select>
                         <p className="text-gray-900">**If you want to take our photography service,choose your suitable package. 
-                        OtherWise,choose your own Photography
+                         Otherwise,choose your own Photography
                         
                         </p>
                     </div>
                     <div className="mb-6">
-                    <label className='form-font font-bold text-2xl'>Food Menu(optional) :</label><br/>
+                    <label className='form-font font-bold text-2xl'>Food Menu (optional) :</label><br/>
                         <select name='menu' className="select select-bordered w-full max-w-xs" >
                             <option >choose</option>
                             <option>package-1</option>
@@ -190,7 +190,7 @@ const CheckOut = () => {
                             
                         </select>
                         <p className="text-gray-900">**If you want to take our Food Menu service,choose your suitable package. 
-                        OtherWise,choose your own Food Menu
+                         Otherwise,choose your own Food Menu
                         
                         </p>
                     </div>
