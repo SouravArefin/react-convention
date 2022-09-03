@@ -110,6 +110,7 @@ const CheckOut = () => {
                 console.log(data);
                 if (data.insertedId) {
                     toast.success(`Dear ${name}, We received your order.We will contact you soon.`)
+                    toast.info(`Go to your Dashboard to see your order details`)
                     e.target.reset()
                 }
                 else {

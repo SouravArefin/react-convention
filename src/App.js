@@ -39,64 +39,64 @@ function App() {
     }, 1500);
 
   }, []);
- 
+
 
   return (
     <>
-    {
-        isLoading === true ? <Loader/>  :
-        <div >
-        <Navbar />
-        <Routes>
-          <Route path = '/' element={<Home/>}></Route>
-          <Route path = '/services' element={<Service/>}></Route>
-        
-          <Route path = '/about' element={<About/>}></Route>
-          <Route path='/signin' element={<Login />}></Route>
-          <Route path="/signup" element={<Register />}></Route> 
-          <Route path='/contact' element={<Contact />}></Route>
-          <Route path='/faq' element={<FAQ />}></Route>
-          <Route path='/menu' element={<Menu/>}></Route>
-          <Route path='/photography' element={<Photography />}></Route>
-          
-          <Route path='/dashboard' element={
-            <RequireAuth>
-              <DashBoard />
-            </RequireAuth>
-  
-          }>
-  
-            <Route index element={<Welcome/>}></Route>
-            <Route path="user" element={
-              <RequireAdmin><AllUser /></RequireAdmin>
-            
+      {
+        isLoading === true ? <Loader /> :
+          <div >
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<Home />}></Route>
+              <Route path='/services' element={<Service />}></Route>
+
+              <Route path='/about' element={<About />}></Route>
+              <Route path='/signin' element={<Login />}></Route>
+              <Route path="/signup" element={<Register />}></Route>
+              <Route path='/contact' element={<Contact />}></Route>
+              <Route path='/faq' element={<FAQ />}></Route>
+              <Route path='/menu' element={<Menu />}></Route>
+              <Route path='/photography' element={<Photography />}></Route>
+
+              <Route path='/dashboard' element={
+                <RequireAuth>
+                  <DashBoard />
+                </RequireAuth>
+
+              }>
+
+                <Route index element={<Welcome />}></Route>
+                <Route path="user" element={
+                  <RequireAdmin><AllUser /></RequireAdmin>
+
                 }></Route>
-                <Route path="payment/:id" element={<Payment/>}></Route>
+                <Route path="payment/:id" element={<Payment />}></Route>
                 <Route path="profile" element={<MyProfile />}></Route>
                 <Route path="review" element={<AddReview />}></Route>
                 <Route path="myorder" element={<MyOrder />}></Route>
                 <Route path="manageOrder" element={
-                <RequireAdmin> <ManageOrder /></RequireAdmin>
-             
+                  <RequireAdmin> <ManageOrder /></RequireAdmin>
+
                 }>
-                   </Route> 
+                </Route>
                 <Route path="discount" element={
-                <RequireAdmin> <Discount/></RequireAdmin>
-             
+                  <RequireAdmin> <Discount /></RequireAdmin>
+
                 }>
-                   </Route> 
-            {/* 
+                </Route>
+                {/* 
            
           
             <Route path="payment/:id" element={<Payment/>}></Route>
             <Route path="my-profile/edit-profile/:id" element={<UpdateProfile/>}></Route> */}
-            
-            {/* 
+
+                {/* 
            
   
               
            */}
-            {/* <Route path="add" element={
+                {/* <Route path="add" element={
                 <RequireAdmin> <AddTools /></RequireAdmin>
              
             }></Route>
@@ -108,26 +108,26 @@ function App() {
                 <RequireAdmin> <ManageTools /></RequireAdmin>
              
             }></Route> */}
-          
-          </Route>
-          <Route path='/checkout/:id' element={
-            
-        //     <RequireAuth>
-        //     
-        //  </RequireAuth>
-        <CheckOut />
-          }></Route>
-          <Route path="*" element={<NotFound />}></Route>
-            </Routes>
-         
-        <Footer />
-            <ToastContainer
-            position="top-center"/>
-      </div>
 
-}
+              </Route>
+              <Route path='/checkout/:id' element={
+
+                <RequireAuth>
+                  <CheckOut />
+                </RequireAuth>
+
+              }></Route>
+              <Route path="*" element={<NotFound />}></Route>
+            </Routes>
+
+            <Footer />
+            <ToastContainer
+              position="top-center" />
+          </div>
+
+      }
     </>
-   
+
   );
 }
 

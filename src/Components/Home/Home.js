@@ -51,7 +51,7 @@ const Home = () => {
         <div className="relative">
             <Slider />
             {/* toast start */}
-            <div
+            {/* <div
                 className="bg-blue-900 w-72 mt-10 flex justify-between text-white shadow-xl rounded p-3 "
             >
                 <p className="self-center">
@@ -60,7 +60,7 @@ const Home = () => {
                 <strong className="text-2xl mt-2 ml-5 align-center cursor-pointer alert-del"
                 >&times;</strong
                 >
-            </div>
+            </div> */}
             {/* toast end */}
             <h1 className="tracking-widest mt-10 best-moment text-center text-3xl">Some Of Our Best Memories</h1>
             <BestProject></BestProject>
