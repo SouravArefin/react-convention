@@ -30,6 +30,10 @@ import ManageOrder from './Components/DashBoard/Admin/ManageOrder';
 import Discount from './Components/DashBoard/Admin/Discount';
 import Payment from './Components/DashBoard/User/Payment';
 import Chat from './Components/Home/Chat';
+
+import AllClient from './Components/DashBoard/Admin/AllClient';
+
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -57,6 +61,7 @@ function App() {
               <Route path='/contact' element={<Contact />}></Route>
               <Route path='/faq' element={<FAQ />}></Route>
               <Route path='/menu' element={<Menu />}></Route>
+
               <Route path='/photography' element={<Photography />}></Route>
 
               <Route path='/dashboard' element={
@@ -65,7 +70,6 @@ function App() {
                 </RequireAuth>
 
               }>
-
                 <Route index element={<Welcome />}></Route>
                 <Route path="user" element={
                   <RequireAdmin><AllUser /></RequireAdmin>
@@ -75,14 +79,16 @@ function App() {
                 <Route path="profile" element={<MyProfile />}></Route>
                 <Route path="review" element={<AddReview />}></Route>
                 <Route path="myorder" element={<MyOrder />}></Route>
+                <Route path="allClient" element={
+                  <RequireAdmin>  <AllClient /></RequireAdmin>
+                }></Route>
+             
                 <Route path="manageOrder" element={
                   <RequireAdmin> <ManageOrder /></RequireAdmin>
 
-                }>
-                </Route>
+                }></Route>
                 <Route path="discount" element={
                   <RequireAdmin> <Discount /></RequireAdmin>
-
                 }>
                 </Route>
                 {/* 

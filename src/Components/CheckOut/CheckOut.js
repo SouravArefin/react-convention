@@ -84,7 +84,7 @@ const CheckOut = () => {
        }
         console.log(totalPrice,'totalPrice')
         const name = e.target.name.value;
-        const email = e.target.email.value;
+        const email =   user.email;
         const phone = e.target.phone.value;
         const sendPackage = found[0]?.name;
         const sendPrice = totalPrice;
@@ -128,7 +128,7 @@ const CheckOut = () => {
                 <form onSubmit={confirmOrder} className='mt-5 add-cover'>
                     <div className="mb-6">
                         <label className='form-font font-bold text-2xl'>Email :</label>
-                        <input type="email" id="text" name='email' placeholder='Enter your email' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                        <input value={ user.email}type="email" id="text" name='email' placeholder='Enter your email' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                     </div>
 
                     <div className="mb-6">

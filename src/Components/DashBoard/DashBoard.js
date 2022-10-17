@@ -43,6 +43,11 @@ const DashBoard = () => {
                 <Link to='/dashboard/manageOrder'>Manage-Order </Link></li>
               <li className='text-primary sp-style font-bold text-xl'>
                 <Link to='/dashboard/discount'>Discount List </Link></li>
+                
+              
+                <li className='text-primary sp-style font-bold text-xl'>
+                <Link to='/dashboard/allClient'>All Client </Link></li>
+
               <li className='text-primary sp-style font-bold text-xl'>
                 <Link to='/dashboard/manageTools'>Manage-Package </Link></li>
               <li className='text-primary sp-style font-bold text-xl'><Link to='/dashboard/add'>Add Package </Link></li>

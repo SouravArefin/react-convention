@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 import { ToastContainer } from 'react-toastify';
 
 import Spinner from '../../Spinner/Spinner'
+import ClientDiscount from './ClientDiscount';
 import UserRow from './UserRow';
 
 const AllUser = () => {
@@ -55,6 +56,7 @@ const AllUser = () => {
                                     refetch={refetch}
                                 ></UserRow>)
                             }
+                       
                         </tbody>
                     </table>
 

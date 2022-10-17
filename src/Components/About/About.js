@@ -43,9 +43,9 @@ const About = () => {
 
 
 
-            <h1 className='text-center text-3xl sp-style mt-20'><AutoType/></h1>
+            {/* <h1 className='text-center text-3xl sp-style mt-20'><AutoType/></h1> */}
        
-        <div className='grid grid-cols-1 md:grid-cols-3'>
+        {/* <div className='grid grid-cols-1 md:grid-cols-3'>
           
       
                 <div  style={{ margin: "20%" }} className="custom-shadow
@@ -105,7 +105,7 @@ const About = () => {
                 </div>
         </div>
        
-            </div>
+            </div> */}
           
            
             <Arrow />
