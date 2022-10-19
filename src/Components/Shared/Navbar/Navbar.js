@@ -90,14 +90,14 @@ const Navbar = () => {
                                     >
                                         PhotoGraphy
                                     </NavLink>
-                                    <NavLink
+                                    {/* <NavLink
                                         to='/faq'
                                         className="
                                          sp-style
                                         nav-btn px-3 py-2 rounded-md text-sm font-bold"
                                     >
                                         FAQ
-                                    </NavLink>
+                                    </NavLink> */}
                                     <NavLink
                                         to='/contact'
                                         className="

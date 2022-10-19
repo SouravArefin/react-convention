@@ -36,7 +36,7 @@ const ClientDiscount = ({send,index,}) => {
     }
     let offerSent=<form onSubmit={giveDiscount}>
     <input type='text' name='discount' required />
-    <input type='submit' className='pl-5 pr-5 ml-5 bg-slate-500 text-white' value='Discount' />
+    <input type='submit' className='pl-5 pr-5 ml-5 bg-slate-500 text-white' value='Confirm' />
 </form>;
 
 
@@ -48,8 +48,9 @@ const ClientDiscount = ({send,index,}) => {
     
   <td><span className="font-bold">{name}</span></td>
       <td><span className="font-bold">{email}</span></td>
-      <td><span className="font-bold">{sendPrice}</span></td>
       <td><span className="font-bold">{phone}</span></td>
+      <td><span className="font-bold">{sendPrice}</span></td>
+      
      <td>
                 {
                     offerSent

@@ -32,6 +32,7 @@ import Payment from './Components/DashBoard/User/Payment';
 import Chat from './Components/Home/Chat';
 
 import AllClient from './Components/DashBoard/Admin/AllClient';
+import AddPackage from './Components/DashBoard/Admin/AddPackage';
 
 
 function App() {
@@ -73,6 +74,10 @@ function App() {
                 <Route index element={<Welcome />}></Route>
                 <Route path="user" element={
                   <RequireAdmin><AllUser /></RequireAdmin>
+
+                }></Route>
+                <Route path="add" element={
+                  <RequireAdmin><AddPackage /></RequireAdmin>
 
                 }></Route>
                 <Route path="payment/:id" element={<Payment />}></Route>

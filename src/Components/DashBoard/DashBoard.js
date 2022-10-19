@@ -46,7 +46,7 @@ const DashBoard = () => {
                 
               
                 <li className='text-primary sp-style font-bold text-xl'>
-                <Link to='/dashboard/allClient'>All Client </Link></li>
+                <Link to='/dashboard/allClient'>Give Discount</Link></li>
 
               <li className='text-primary sp-style font-bold text-xl'>
                 <Link to='/dashboard/manageTools'>Manage-Package </Link></li>
