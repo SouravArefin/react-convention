@@ -29,7 +29,7 @@ const AddPackage = () => {
                         price: data.price,
                         
                         details: data.details,
-                        image: img
+                        img: img
                     }
                     console.log(tools)
                     //send data to db

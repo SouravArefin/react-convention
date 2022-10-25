@@ -84,13 +84,13 @@ const UserRow = ({ user, index, refetch }) => {
             <td><span className="font-bold">{name}</span></td>
             <td><span className="font-bold">{email}</span></td>
             <td>{role ? <span className='text-green-700 sp-style'> Admin</span> : <button onClick={makeAdmin} className="btn btn-xs">Promote</button>}</td>
-            <td>
+            {/* <td>
                 {
                     offerSent
                 }
 
 
-            </td>
+            </td> */}
         </tr>
 
     );
