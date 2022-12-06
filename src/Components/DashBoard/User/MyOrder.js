@@ -19,7 +19,7 @@ const MyOrder = () => {
 
     const email = user?.email
     //console.log(email, 'order-email');
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://hidden-brushlands-28019.herokuapp.com/singleOrder?email=${email}`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:4000/singleOrder?email=${email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -34,7 +34,7 @@ const MyOrder = () => {
 
 
 
-        fetch(`https://hidden-brushlands-28019.herokuapp.com/myorder/${id}`, {
+        fetch(`http://localhost:4000/myorder/${id}`, {
             method: 'DELETE',
             headers: {
                 "content-type": "application/json",
@@ -82,7 +82,7 @@ const MyOrder = () => {
                             <th>Package</th>
                             <th>Price</th>
                             <th>Limits of Guests</th>
-                          
+
                             <th>Photography</th>
                             <th>CheckIn</th>
                             <th>StartTme</th>

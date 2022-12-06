@@ -9,7 +9,7 @@ const Discount = () => {
 
 
 
-    const { data: allUsers, isLoading, refetch } = useQuery('allUsers', () => fetch(`https://hidden-brushlands-28019.herokuapp.com/user`, {
+    const { data: allUsers, isLoading, refetch } = useQuery('allUsers', () => fetch(`http://localhost:4000/user`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -23,17 +23,17 @@ const Discount = () => {
 
     const newOffer = allUsers.filter(user => user.discount > 0)
     //  console.log(newOffer,'offer');
-    
+
     let offerMsg;
     if (newOffer.length > 0) {
-        offerMsg=<h2 className='text-4xl sp-style text-green-900 text-center mt-8'>
-                
-        You have given discounts to {newOffer.length} people 🥳</h2>
+        offerMsg = <h2 className='text-4xl sp-style text-green-900 text-center mt-8'>
+
+            You have given discounts to {newOffer.length} people 🥳</h2>
     }
     else {
-        offerMsg=<h2 className='text-4xl sp-style text-green-900 text-center mt-8'>
-                
-        Give some discount to the people 😥</h2>
+        offerMsg = <h2 className='text-4xl sp-style text-green-900 text-center mt-8'>
+
+            Give some discount to the people 😥</h2>
     }
 
 

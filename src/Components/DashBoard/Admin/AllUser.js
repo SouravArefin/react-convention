@@ -9,7 +9,7 @@ import UserRow from './UserRow';
 const AllUser = () => {
 
 
-    const { data: allUsers, isLoading, refetch } = useQuery('allUsers', () => fetch(`https://hidden-brushlands-28019.herokuapp.com/user`, {
+    const { data: allUsers, isLoading, refetch } = useQuery('allUsers', () => fetch(`http://localhost:4000/user`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -19,7 +19,7 @@ const AllUser = () => {
     if (isLoading) {
         return <Spinner />
     }
-   // console.log(allUsers)
+    // console.log(allUsers)
     const adminList = allUsers.filter(user => user.role == 'admin')
     const userList = allUsers.filter(user => user.role !== 'admin')
 
@@ -56,7 +56,7 @@ const AllUser = () => {
                                     refetch={refetch}
                                 ></UserRow>)
                             }
-                       
+
                         </tbody>
                     </table>
 

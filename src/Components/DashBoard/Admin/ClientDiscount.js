@@ -1,16 +1,16 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const ClientDiscount = ({send,index,}) => {
+const ClientDiscount = ({ send, index, }) => {
     const { name, email, sendPrice, phone } = send;
-   
-  
+
+
     const giveDiscount = (e) => {
         e.preventDefault()
         const sendEmail = email;
         const sendDiscount = e.target.discount.value
         console.log(sendDiscount, sendEmail);
-        fetch(`https://hidden-brushlands-28019.herokuapp.com/discount/${sendEmail}`, {
+        fetch(`http://localhost:4000/discount/${sendEmail}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -34,32 +34,32 @@ const ClientDiscount = ({send,index,}) => {
             )
         e.target.reset()
     }
-    let offerSent=<form onSubmit={giveDiscount}>
-    <input type='text' name='discount' required />
-    <input type='submit' className='pl-5 pr-5 ml-5 bg-slate-500 text-white' value='Confirm' />
-</form>;
+    let offerSent = <form onSubmit={giveDiscount}>
+        <input type='text' name='discount' required />
+        <input type='submit' className='pl-5 pr-5 ml-5 bg-slate-500 text-white' value='Confirm' />
+    </form>;
 
 
     return (
-    
-           <tr className='text-center'>
-      <th >{index + 1}</th>
- 
-    
-  <td><span className="font-bold">{name}</span></td>
-      <td><span className="font-bold">{email}</span></td>
-      <td><span className="font-bold">{phone}</span></td>
-      <td><span className="font-bold">{sendPrice}</span></td>
-      
-     <td>
+
+        <tr className='text-center'>
+            <th >{index + 1}</th>
+
+
+            <td><span className="font-bold">{name}</span></td>
+            <td><span className="font-bold">{email}</span></td>
+            <td><span className="font-bold">{phone}</span></td>
+            <td><span className="font-bold">{sendPrice}</span></td>
+
+            <td>
                 {
                     offerSent
                 }
 
 
             </td>
-    </tr>  
-    
+        </tr>
+
     );
 };
 

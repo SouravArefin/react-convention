@@ -10,14 +10,14 @@ const useJwtToken = user => {
         const getToken = async () => {
 
             const email = user?.user?.email
-             const name = user?.user?.displayName
-            console.log(user?.user?.displayName,'jwt-token-name');
+            const name = user?.user?.displayName
+            console.log(user?.user?.displayName, 'jwt-token-name');
             const img = user?.user?.photoURL
             const currentUser = { email: email, name: name, img: img }
-             console.log(currentUser,'jwt-token-currentuser');
+            console.log(currentUser, 'jwt-token-currentuser');
             // console.log({ email });
             if (email) {
-                fetch(`https://hidden-brushlands-28019.herokuapp.com/user/${email}`, {
+                fetch(`http://localhost:4000/user/${email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

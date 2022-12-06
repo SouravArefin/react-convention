@@ -4,9 +4,9 @@ import Spinner from '../../Spinner/Spinner';
 import ClientDiscount from './ClientDiscount';
 
 const AllClient = () => {
- 
- 
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://hidden-brushlands-28019.herokuapp.com/order`, {
+
+
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:4000/order`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -17,46 +17,46 @@ const AllClient = () => {
         return <Spinner />
     }
     let text;
-    if (orders.length > 0) { 
-        text =  <p className='text-green-700 text-2xl mt-10'>we have {orders.length} clients at this moment </p>
+    if (orders.length > 0) {
+        text = <p className='text-green-700 text-2xl mt-10'>we have {orders.length} clients at this moment </p>
     }
     else {
-        text=<p>We have 0 client</p>
+        text = <p>We have 0 client</p>
     }
 
     const bronzeFilter = orders.filter(order => order.sendPrice <= 200000)
-    console.log(bronzeFilter,"bronze")
-    const goldFilter = orders.filter(order => order.sendPrice >200000 && order.sendPrice <= 300000)
-    console.log(goldFilter,"gold")
-    const platinumFilter = orders.filter(order =>order.sendPrice >300000 && order.sendPrice <= 500000)
-    console.log(platinumFilter,"platinum")
+    console.log(bronzeFilter, "bronze")
+    const goldFilter = orders.filter(order => order.sendPrice > 200000 && order.sendPrice <= 300000)
+    console.log(goldFilter, "gold")
+    const platinumFilter = orders.filter(order => order.sendPrice > 300000 && order.sendPrice <= 500000)
+    console.log(platinumFilter, "platinum")
     const premiumFilter = orders.filter(order => order.sendPrice > 500000)
     console.log(premiumFilter, "premiumFilter")
-    
+
     let bronzeMessage;
     if (bronzeFilter.length) {
-        bronzeMessage = <p className='text-green-500'>There are { bronzeFilter.length}  clients in this rank</p>
+        bronzeMessage = <p className='text-green-500'>There are {bronzeFilter.length}  clients in this rank</p>
     } else {
-        bronzeMessage=<p className='text-red-500'>There is no clients matching in this rank</p>
+        bronzeMessage = <p className='text-red-500'>There is no clients matching in this rank</p>
     }
     let goldMessage;
     if (goldFilter.length) {
-        goldMessage = <p className='text-green-500'>There are { goldFilter.length}  clients in this rank</p>
+        goldMessage = <p className='text-green-500'>There are {goldFilter.length}  clients in this rank</p>
     } else {
-        goldMessage=<p className='text-red-500'>There is no clients matching in this rank</p>
+        goldMessage = <p className='text-red-500'>There is no clients matching in this rank</p>
     }
     let platinumMessage;
     if (platinumFilter.length) {
-        platinumMessage = <p className='text-green-500'>There are { platinumFilter.length}  clients in this rank</p>
+        platinumMessage = <p className='text-green-500'>There are {platinumFilter.length}  clients in this rank</p>
     } else {
-        platinumMessage=<p className='text-red-500'>There is no clients matching in this rank</p>
-    } 
+        platinumMessage = <p className='text-red-500'>There is no clients matching in this rank</p>
+    }
 
     let premiumMessage
     if (premiumFilter.length) {
-        premiumMessage = <p className='text-green-500'>There are { premiumFilter.length}  clients in this rank</p>
+        premiumMessage = <p className='text-green-500'>There are {premiumFilter.length}  clients in this rank</p>
     } else {
-        premiumMessage=<p className='text-red-500'>There is no clients matching in this rank</p>
+        premiumMessage = <p className='text-red-500'>There is no clients matching in this rank</p>
     }
     return (
         <div>
@@ -80,14 +80,14 @@ const AllClient = () => {
                     <tbody>
 
                         {
-                            bronzeFilter?.map((send,index) =>
+                            bronzeFilter?.map((send, index) =>
                                 <ClientDiscount
                                     key={send._id}
-                                    send={send} 
+                                    send={send}
                                     index={index}
-                                
+
                                 />)
-                 }
+                        }
                     </tbody>
                 </table>
             </div>
@@ -109,14 +109,14 @@ const AllClient = () => {
                     <tbody>
 
                         {
-                            goldFilter?.map((send,index) =>
+                            goldFilter?.map((send, index) =>
                                 <ClientDiscount
                                     key={send._id}
-                                    send={send} 
+                                    send={send}
                                     index={index}
-                                
+
                                 />)
-                 }
+                        }
                     </tbody>
                 </table>
             </div>
@@ -138,14 +138,14 @@ const AllClient = () => {
                     <tbody>
 
                         {
-                           platinumFilter?.map((send,index) =>
+                            platinumFilter?.map((send, index) =>
                                 <ClientDiscount
                                     key={send._id}
-                                    send={send} 
+                                    send={send}
                                     index={index}
-                                
+
                                 />)
-                 }
+                        }
                     </tbody>
                 </table>
             </div>
@@ -167,20 +167,20 @@ const AllClient = () => {
                     <tbody>
 
                         {
-                           premiumFilter?.map((send,index) =>
+                            premiumFilter?.map((send, index) =>
                                 <ClientDiscount
                                     key={send._id}
-                                    send={send} 
+                                    send={send}
                                     index={index}
-                                
+
                                 />)
-                 }
+                        }
                     </tbody>
                 </table>
             </div>
         </div>
     );
 };
- 
+
 
 export default AllClient;

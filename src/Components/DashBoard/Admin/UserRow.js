@@ -4,7 +4,7 @@ import noImage from '../../../no-image.png'
 const UserRow = ({ user, index, refetch }) => {
     const { email, role, name, img } = user
     const makeAdmin = () => {
-        fetch(`https://hidden-brushlands-28019.herokuapp.com/user/admin/${email}`, {
+        fetch(`http://localhost:4000/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
@@ -29,7 +29,7 @@ const UserRow = ({ user, index, refetch }) => {
         const sendEmail = email;
         const sendDiscount = e.target.discount.value
         console.log(sendDiscount, sendEmail);
-        fetch(`https://hidden-brushlands-28019.herokuapp.com/discount/${sendEmail}`, {
+        fetch(`http://localhost:4000/discount/${sendEmail}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

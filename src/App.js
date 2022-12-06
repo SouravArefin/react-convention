@@ -33,6 +33,13 @@ import Chat from './Components/Home/Chat';
 
 import AllClient from './Components/DashBoard/Admin/AllClient';
 import AddPackage from './Components/DashBoard/Admin/AddPackage';
+import MuslimStage from './Components/Home/MusLimStage/MuslimStage';
+import Wedding from './Components/Home/Wedding/Wedding';
+import NormalParty from './Components/Home/Birthday/NormalBirthday/NormalParty';
+import BusinessMeeting from './Components/Home/BusinessMeeting/BusinessMeeting';
+import WeddingMemory from './Components/Home/Memory/WeddingMemory';
+import BirthdayMemory from './Components/Home/Memory/BirthdayMemory';
+import BusinessMemory from './Components/Home/Memory/BusinessMemory';
 
 
 function App() {
@@ -61,6 +68,14 @@ function App() {
               <Route path="/signup" element={<Register />}></Route>
               <Route path='/contact' element={<Contact />}></Route>
               <Route path='/faq' element={<FAQ />}></Route>
+              <Route path='/muslimstage' element={<MuslimStage />}></Route>
+              <Route path='/wedding' element={<Wedding />}></Route>
+              <Route path='/birthday' element={<NormalParty/>}></Route>
+              <Route path='/wedding' element={<Wedding />}></Route>
+              <Route path='/weddingMemory' element={<WeddingMemory />}></Route>
+              <Route path='/birthMemory' element={<BirthdayMemory />}></Route>
+              <Route path='/busiMemory' element={<BusinessMemory />}></Route>
+              <Route path='/businessMeeting' element={<BusinessMeeting/>}></Route>
               <Route path='/menu' element={<Menu />}></Route>
 
               <Route path='/photography' element={<Photography />}></Route>
@@ -122,6 +137,13 @@ function App() {
 
               </Route>
               <Route path='/checkout/:id' element={
+
+                <RequireAuth>
+                  <CheckOut />
+                </RequireAuth>
+
+              }></Route>
+              <Route path='/checkout' element={
 
                 <RequireAuth>
                   <CheckOut />

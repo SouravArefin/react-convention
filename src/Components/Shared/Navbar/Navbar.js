@@ -114,6 +114,7 @@ const Navbar = () => {
                                     >
                                         About
                                     </NavLink>
+                                 
 
 
                                     {
@@ -127,6 +128,14 @@ const Navbar = () => {
 
 
                                     }
+                                       <NavLink
+                                        to='/checkout'
+                                        className="
+                                         sp-style
+                                   mt-2   bg-blue-700  nav-btn px-3 py-2 rounded-md text-sm font-bold"
+                                    >
+                                       <span className="text-white">Book-Now</span> 
+                                    </NavLink>
 
                                 </div>
                                 {
@@ -264,17 +273,23 @@ const Navbar = () => {
                                 >
                                     PhotoGraphy
                                 </NavLink>
-                                <NavLink
+                                {/* <NavLink
                                     to="/faq"
                                     className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md sp-style text-base font-bold"
                                 >
                                     FAQ
-                                </NavLink>
+                                </NavLink> */}
                                 <NavLink
                                     to="/about"
                                     className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md sp-style text-base font-bold"
                                 >
                                     About
+                                </NavLink>
+                                <NavLink
+                                    to="/checkout"
+                                    className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md bg-blue-700 sp-style text-base font-bold"
+                                >
+                                    <span className='text-white'>Book-Now</span>
                                 </NavLink>
 
                             </div>

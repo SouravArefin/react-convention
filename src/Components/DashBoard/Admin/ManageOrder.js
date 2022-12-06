@@ -6,7 +6,7 @@ import Modal from '../Modal';
 import ManageTable from './ManageTable'
 const ManageOrder = () => {
     const [modal, setModal] = useState({})
-    const { data: allorders, isLoading, refetch } = useQuery('allorders', () => fetch(`https://hidden-brushlands-28019.herokuapp.com/order`, {
+    const { data: allorders, isLoading, refetch } = useQuery('allorders', () => fetch(`http://localhost:4000/order`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -20,7 +20,7 @@ const ManageOrder = () => {
 
 
 
-    //     fetch(`https://hidden-brushlands-28019.herokuapp.com//order/${id}`, {
+    //     fetch(`http://localhost:4000//order/${id}`, {
     //         method: 'DELETE',
     //         headers: {
     //             "content-type": "application/json",
@@ -73,7 +73,7 @@ const ManageOrder = () => {
                             <th>Package</th>
                             <th>Price</th>
                             <th>Limits of Guests</th>
-                           
+
                             <th>PhotoGraphy</th>
                             <th>CheckIn</th>
                             <th>StartTme</th>

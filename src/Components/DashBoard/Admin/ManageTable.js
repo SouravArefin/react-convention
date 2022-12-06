@@ -9,11 +9,11 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
 
   //console.log(o)
 
-  const { _id, paid,Photography, transactionId, Address, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image } = o
+  const { _id, paid, Photography, transactionId, Address, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image } = o
 
   const [user] = useAuthState(auth)
   // const makeShip = () => {
-  //     fetch(`https://hidden-brushlands-28019.herokuapp.com//ship/${_id}`, {
+  //     fetch(`http://localhost:4000//ship/${_id}`, {
   //         method: 'PUT',
   //         headers: {
   //             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -43,7 +43,7 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
     const sendEmail = email;
     const sendDiscount = e.target.discount.value
     console.log(sendDiscount, sendEmail);
-    fetch(`https://hidden-brushlands-28019.herokuapp.com/discount/${sendEmail}`, {
+    fetch(`http://localhost:4000/discount/${sendEmail}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json',
@@ -83,7 +83,7 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
       <td><span className="font-bold">{sendPackage}</span></td>
       <td><span className="font-bold">{sendPrice}</span></td>
       <td><span className="font-bold">{adults}</span></td>
-     
+
       <td><span className="font-bold">{Photography}</span></td>
       <td><span className="font-bold">{checkin}</span></td>
       <td><span className="font-bold">{startTime}</span></td>

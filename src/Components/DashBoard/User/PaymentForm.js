@@ -14,7 +14,7 @@ const PaymentForm = ({ myOrder }) => {
 
     const { _id, sendPrice, name, email } = myOrder;
     useEffect(() => {
-        fetch('https://hidden-brushlands-28019.herokuapp.com/create-payment-intent', {
+        fetch('http://localhost:4000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -77,7 +77,7 @@ const PaymentForm = ({ myOrder }) => {
                 myOrder: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://hidden-brushlands-28019.herokuapp.com/orderPay/${_id}`, {
+            fetch(`http://localhost:4000/orderPay/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

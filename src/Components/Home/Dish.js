@@ -9,7 +9,7 @@ import Chat from './Chat';
 const Dish = () => {
     return (
         <div className='mt-10 '>
-            <h1 className='text-center text-4xl text-green-700'>Our Signature Dishes</h1>
+           
             
         <div  className='ml-10 mr-10  grid grid-cols-1 md:grid-cols-3 gap-5 py-10 rounded-md'>
 

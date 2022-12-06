@@ -7,6 +7,7 @@ import img3 from '../../conven/10020.png'
 import Arrow from './Arrow';
 import Chat from './Chat';
 import Dish from './Dish';
+import FoodPackage from './FoodPackage';
 const Menu = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -74,7 +75,8 @@ const Menu = () => {
 
                 </div>
             </div>
-            <Dish />
+            {/* <Dish /> */}
+            <FoodPackage/>
             {/* <div className="  mt-10 mb-10 text-right mr-10">
             <button><a href="#"> <FontAwesomeIcon
                style={{borderRadius:"10px"}}

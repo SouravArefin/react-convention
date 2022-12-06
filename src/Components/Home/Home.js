@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useService from '../../Hooks/useService';
 import BestProject from '../BestProject/BestProject';
 import Happy from '../Happy/Happy';
@@ -31,9 +31,9 @@ const Home = () => {
     useEffect(() => {
         var alert_del = document.querySelectorAll('.alert-del');
         alert_del.forEach((x) =>
-          x.addEventListener('click', function () {
-            x.parentElement.classList.add('hidden');
-          })
+            x.addEventListener('click', function () {
+                x.parentElement.classList.add('hidden');
+            })
         );
     }, [])
 
@@ -63,7 +63,13 @@ const Home = () => {
             </div> */}
             {/* toast end */}
             <h1 className="tracking-widest mt-10 best-moment text-center text-3xl">Some Of Our Best Memories</h1>
-            <BestProject></BestProject>
+            {/* <BestProject></BestProject> */}
+            <div>
+                <Link to='/weddingMemory' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Wedding Memory</button></Link>
+                <Link to='/birthMemory' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Birthday Memory</button></Link>
+                <Link to='/busiMemory' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Business Memory</button></Link>
+            </div>
+
             <h1 className=" font-bold text-purple-900 mt-10 sp-style text-center text-3xl">
                 Features & Facilities
             </h1>
@@ -80,32 +86,36 @@ const Home = () => {
                     }
                 </div>
             </div>
-
-            <button style={{ marginLeft: '45%' }} className=" text-center cursor:pointer happy bg-[#3005ee] hover:bg-[#141414]  px-4 py-2 mb-2 rounded-full text-white" onClick={() => navigate('/services')}>
+            <div>
+                <Link to='/wedding' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Wedding</button></Link>
+                <Link to='/birthday' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Birthday</button></Link>
+                <Link to='/businessMeeting' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Corporation Events</button></Link>
+            </div>
+            <button style={{ marginLeft: '45%' }} className="mt-10 text-center cursor:pointer happy bg-[#3005ee] hover:bg-[#141414]  px-4 py-2 mb-2 rounded-full text-white" onClick={() => navigate('/services')}>
                 See More
             </button>
 
-          
+
             <h1 className="md:text-5xl text-2xl sp-style text-center mb-10 text-amber-900 mt-10 ">What Our Client's Says</h1>
             <div className='container mx-auto  mb-10'>
                 <ReviewSlider />
             </div>
             <Arrow />
-            <Chat/>
+            <Chat />
             {/* toast start */}
             <div className=''>
-            <div
-                className="bg-red-900  w-72 mt-10 flex justify-between text-white shadow-xl rounded p-3 "
-            >
-                <p className="self-center">
-               To need any help,Message us or call us
-                </p>
-                <strong className="text-2xl mt-2 ml-5 align-center cursor-pointer alert-del"
-                >&times;</strong
+                <div
+                    className="bg-red-900  w-72 mt-10 flex justify-between text-white shadow-xl rounded p-3 "
                 >
+                    <p className="self-center">
+                        To need any help,Message us or call us
+                    </p>
+                    <strong className="text-2xl mt-2 ml-5 align-center cursor-pointer alert-del"
+                    >&times;</strong
+                    >
+                </div>
             </div>
-            </div>
-            
+
             {/* toast end */}
             <div className='bg-[#04193A] '>
 
