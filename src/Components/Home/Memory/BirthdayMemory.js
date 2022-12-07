@@ -1,7 +1,7 @@
 import React from 'react';
-import wed1 from './bi-1.jpeg'
-import wed2 from './bi-2.jpeg'
-import wed3 from './bi-3.jpeg'
+import wed1 from './bi-1.png'
+import wed2 from './bi-2.png'
+import wed3 from './bi-3.png'
 const BirthdayMemory = () => {
     return (
         <>

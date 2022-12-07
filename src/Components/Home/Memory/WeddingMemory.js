@@ -1,7 +1,7 @@
 import React from 'react';
-import wed1 from './wed-1.jpeg'
-import wed2 from './wed-2.jpeg'
-import wed3 from './wed-3.jpeg'
+import wed1 from './wed-1.png'
+import wed2 from './wed-2.png'
+import wed3 from './wed-3.png'
 const WeddingMemory = () => {
     return (
         <>

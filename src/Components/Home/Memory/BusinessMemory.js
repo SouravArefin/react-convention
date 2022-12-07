@@ -1,7 +1,7 @@
 import React from 'react';
-import wed1 from './bs-1.jpeg'
-import wed2 from './bs-2.jpeg'
-import wed3 from './bs-3.jpeg'
+import wed1 from './bs-1.png'
+import wed2 from './bs-2.png'
+import wed3 from './bs-3.png'
 const BusinessMemory= () => {
     return (
         <>
