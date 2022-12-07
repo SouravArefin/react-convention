@@ -4,11 +4,16 @@ import wed2 from './wed-2.jpeg'
 import wed3 from './wed-3.jpeg'
 const WeddingMemory = () => {
     return (
-        <div className='grid grid-cols-3 gap-5 mt-10 mb-10 mr-10 ml-10'>
-            <img src={wed1} alt=""/>
-            <img src={wed2} alt=""/>
-            <img src={wed3} alt=""/>
-        </div>
+        <>
+            <h1 className='sp-style mt-10 text-center text-2xl text-cyan-900'>Wedding Memories</h1>
+            <div className='grid grid-cols-3 gap-5 mt-10 mb-10 mr-10 ml-10'>
+           
+           <img src={wed1} alt=""/>
+           <img src={wed2} alt=""/>
+           <img src={wed3} alt=""/>
+       </div>
+        </>
+  
     );
 };
 

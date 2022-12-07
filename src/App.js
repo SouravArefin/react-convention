@@ -40,6 +40,7 @@ import BusinessMeeting from './Components/Home/BusinessMeeting/BusinessMeeting';
 import WeddingMemory from './Components/Home/Memory/WeddingMemory';
 import BirthdayMemory from './Components/Home/Memory/BirthdayMemory';
 import BusinessMemory from './Components/Home/Memory/BusinessMemory';
+import Reunion from './Components/Home/ReUnion/Reunion';
 
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
               <Route path='/wedding' element={<Wedding />}></Route>
               <Route path='/birthday' element={<NormalParty/>}></Route>
               <Route path='/wedding' element={<Wedding />}></Route>
+              <Route path='/reunion' element={<Reunion />}></Route>
               <Route path='/weddingMemory' element={<WeddingMemory />}></Route>
               <Route path='/birthMemory' element={<BirthdayMemory />}></Route>
               <Route path='/busiMemory' element={<BusinessMemory />}></Route>

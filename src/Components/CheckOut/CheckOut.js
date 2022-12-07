@@ -35,9 +35,14 @@ const CheckOut = () => {
     
     const [businessStage,setBusinessStage] = useState([])
     const [businessStagePrice, setBusinessStagePrice] = useState(0)
+
+    const [reunionStage,setReunionStage] = useState([])
+    const [reunionStagePrice,setReunionStagePrice] = useState(0)
     
     const [newTotalPrice,setNewTotalPrice] = useState(0)
+    const [packageName,setPackageName] = useState({})
 console.log(newTotalPrice,'newTotalPrice')
+console.log(packageName,'packageName')
     
     const [blurPhoto, setBlurPhoto] = useState({})
     console.log(blurPhoto, 'blurPhoto');
@@ -54,6 +59,13 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
             .then(response => response.json())
             .then(data => setServices(data))
     }, [])
+    // useEffect(() => {
+    //     const newPackageChoose = services.map(packageName => packageName)
+    //         console.log(newPackageChoose , 'newPackage')
+    //         setPackageName(newPackageChoose )
+    // }, [])
+
+
     let AllnewPrice;
     if (singlePackagePrice || singlePhotoPackagePrice || singleFoodPackagePrice || hinduStagePrice || weddingStagePrice || holudStagePrice || birthdayStagePrice || themebirthdayStagePrice || businessStagePrice) {
             
@@ -108,6 +120,11 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
         fetch('/business.json')
             .then(response => response.json())
             .then(data => setBusinessStage(data))
+    }, [])
+    useEffect(() => {
+        fetch('/reunion.json')
+            .then(response => response.json())
+            .then(data => setReunionStage(data))
     }, [])
 
 
@@ -206,6 +223,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
             const newPackage = services.filter(packageName => packageName.name == selectPackage)
             console.log(newPackage, 'newPackage')
             setSinglePackagePrice(newPackage[0].price)
+            setPackageName(newPackage )
         }
 
     }
@@ -329,6 +347,179 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
         }
 
     }
+    const handleReunion = (e) => {
+        if (e.target.value == 'choose') {
+            setReunionStagePrice(0)
+            // singleFoodPrice
+        }
+        else {
+            const selectReunionStagePrice = e.target.value
+            console.log(selectReunionStagePrice , 'selectpackage');
+            const newReunionStagePrice = reunionStage.filter(singlereunionStage => singlereunionStage .name == selectReunionStagePrice )
+            console.log( newReunionStagePrice  , ' newBirthdayStagePrice')
+            setReunionStagePrice( newReunionStagePrice [0].price)
+
+        }
+
+    }
+    // wedding stge 
+   
+    let a = packageName[0]?.name;
+    
+    let chooseWedding;
+    let birthday;
+    let business;
+    let reunion;
+    
+    console.log(a,'packageName[0]?.name');
+    if (a == "Wedding Event") {
+        
+            chooseWedding =   
+            <>
+            <div className="mb-6 flex  items-center ">
+        <div>
+            <label className='form-font font-bold text-2xl'>Wedding Reception Stage :</label><br />
+            <select onClick={handleWeddingStage } name='photography' className="select select-bordered w-full max-w-xs" >
+                <option >choose</option>
+                <option>Stage-1</option>
+                <option>Stage-2</option>
+                <option>Stage-3</option>
+        
+            </select>
+
+        </div>
+        <div className=" mt-10 ml-10">
+            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
+            <input className=" rounded" type="number" value={weddingStagePrice} />
+        </div>
+                </div>
+                
+                <div className="mb-6 flex  items-center ">
+                        <div>
+                            <label className='form-font font-bold text-2xl'>Holud  Stage :</label><br />
+                            <select onClick={handleHoludStage} name='photography' className="select select-bordered w-full max-w-xs" >
+                                <option >choose</option>
+                                <option>Stage-1</option>
+                                <option>Stage-2</option>
+                                <option>Stage-3</option>
+                            </select>
+
+                        </div>
+                        <div className=" mt-10 ml-10">
+                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
+                            <input className=" rounded" type="number" value={holudStagePrice} />
+                        </div>
+                    </div>
+                    <div className="mb-6 flex  items-center ">
+                        <div>
+                            <label className='form-font font-bold text-2xl'>Specefic Wedding Stage For Hindu :</label><br />
+                            <select onClick={handleHinduStage} name='photography' className="select select-bordered w-full max-w-xs" >
+                                <option >choose</option>
+                                <option>Stage-1</option>
+                                <option>Stage-2</option>
+                                <option>Stage-3</option>
+                            </select>
+
+                        </div>
+                        <div className=" mt-10 ml-10">
+                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
+                            <input className=" rounded" type="number" value={hinduStagePrice} />
+                        </div>
+                    </div>
+        </>
+        
+        
+    }
+    if (a == "Birthday Party") {
+        
+    birthday=   
+            <>
+             <div className="mb-6 flex  items-center ">
+                        <div>
+                            <label className='form-font font-bold text-2xl'>Birthday Stage :</label><br />
+                            <select onClick={handleBirthdayStage} name='photography' className="select select-bordered w-full max-w-xs" >
+                                <option >choose</option>
+                                <option>decoration-1</option>
+                                <option>decoration-2</option>
+                                <option>decoration-3</option>
+                            </select>
+
+                        </div>
+                        <div className=" mt-10 ml-10">
+                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
+                            <input className=" rounded" type="number" value={birthdayStagePrice} />
+                        </div>
+                    </div>
+                    <div className="mb-6 flex  items-center ">
+                        <div>
+                            <label className='form-font font-bold text-2xl'>Theme Birthday Stage :</label><br />
+                            <select onClick={handleThemeBirthdayStage} name='photography' className="select select-bordered w-full max-w-xs" >
+                                <option >choose</option>
+                                <option>decoration-1</option>
+                                <option>decoration-2</option>
+                                <option>decoration-3</option>
+                            </select>
+
+                        </div>
+                        <div className=" mt-10 ml-10">
+                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
+                            <input className=" rounded" type="number" value={themebirthdayStagePrice} />
+                        </div>
+                    </div>
+        </>
+        
+        
+    }
+    if (a == "Business Fair" || a==" Political Conference" || a=="Corporate Event") {
+        
+        business=   
+            <>
+                <div className="mb-6 flex  items-center ">
+                        <div>
+                            <label className='form-font font-bold text-2xl'>Corporation Event :</label><br />
+                            <select onClick={handleBusiness} name='photography' className="select select-bordered w-full max-w-xs" >
+                                <option >choose</option>
+                                <option>Bronze</option>
+                                <option>Silver</option>
+                                <option>Gold</option>
+                            </select>
+
+                        </div>
+                        <div className=" mt-10 ml-10">
+                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
+                            <input className=" rounded" type="number" value={businessStagePrice} />
+                        </div>
+                    </div>
+        </>
+        
+        
+    }
+    if (a == "reunion" || a=="Fairwell Event" || a=="Rag Day Program") {
+        
+        business=   
+            <>
+                <div className="mb-6 flex  items-center ">
+                        <div>
+                            <label className='form-font font-bold text-2xl'>Corporation Event :</label><br />
+                            <select onClick={handleBusiness} name='photography' className="select select-bordered w-full max-w-xs" >
+                                <option >choose</option>
+                                <option>Bronze</option>
+                                <option>Silver</option>
+                                <option>Gold</option>
+                            </select>
+
+                        </div>
+                        <div className=" mt-10 ml-10">
+                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
+                            <input className=" rounded" type="number" value={businessStagePrice} />
+                        </div>
+                    </div>
+        </>
+        
+        
+    }
+  
+  
     return (
         <div>
 
@@ -384,91 +575,18 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
                         </div>
 
                     </div>
+    
+                    {chooseWedding}
+                    {birthday}
+                    {business}
+                    {reunion}
+   
+                  
+               
                     <div className="mb-6 flex  items-center ">
                         <div>
-                            <label className='form-font font-bold text-2xl'>Wedding Reception Stage :</label><br />
-                            <select onClick={handleWeddingStage } name='photography' className="select select-bordered w-full max-w-xs" >
-                                <option >choose</option>
-                                <option>Stage-1</option>
-                                <option>Stage-2</option>
-                                <option>Stage-3</option>
-                        
-                            </select>
-
-                        </div>
-                        <div className=" mt-10 ml-10">
-                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
-                            <input className=" rounded" type="number" value={weddingStagePrice} />
-                        </div>
-                    </div>
-                    <div className="mb-6 flex  items-center ">
-                        <div>
-                            <label className='form-font font-bold text-2xl'>Holud  Stage :</label><br />
-                            <select onClick={handleHoludStage} name='photography' className="select select-bordered w-full max-w-xs" >
-                                <option >choose</option>
-                                <option>Stage-1</option>
-                                <option>Stage-2</option>
-                                <option>Stage-3</option>
-                            </select>
-
-                        </div>
-                        <div className=" mt-10 ml-10">
-                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
-                            <input className=" rounded" type="number" value={holudStagePrice} />
-                        </div>
-                    </div>
-                    <div className="mb-6 flex  items-center ">
-                        <div>
-                            <label className='form-font font-bold text-2xl'>Specefic Wedding Stage For Hindu :</label><br />
-                            <select onClick={handleHinduStage} name='photography' className="select select-bordered w-full max-w-xs" >
-                                <option >choose</option>
-                                <option>Stage-1</option>
-                                <option>Stage-2</option>
-                                <option>Stage-3</option>
-                            </select>
-
-                        </div>
-                        <div className=" mt-10 ml-10">
-                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
-                            <input className=" rounded" type="number" value={hinduStagePrice} />
-                        </div>
-                    </div>
-                    <div className="mb-6 flex  items-center ">
-                        <div>
-                            <label className='form-font font-bold text-2xl'>Birthday Stage :</label><br />
-                            <select onClick={handleBirthdayStage} name='photography' className="select select-bordered w-full max-w-xs" >
-                                <option >choose</option>
-                                <option>decoration-1</option>
-                                <option>decoration-2</option>
-                                <option>decoration-3</option>
-                            </select>
-
-                        </div>
-                        <div className=" mt-10 ml-10">
-                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
-                            <input className=" rounded" type="number" value={birthdayStagePrice} />
-                        </div>
-                    </div>
-                    <div className="mb-6 flex  items-center ">
-                        <div>
-                            <label className='form-font font-bold text-2xl'>Theme Birthday Stage :</label><br />
-                            <select onClick={handleThemeBirthdayStage} name='photography' className="select select-bordered w-full max-w-xs" >
-                                <option >choose</option>
-                                <option>decoration-1</option>
-                                <option>decoration-2</option>
-                                <option>decoration-3</option>
-                            </select>
-
-                        </div>
-                        <div className=" mt-10 ml-10">
-                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
-                            <input className=" rounded" type="number" value={themebirthdayStagePrice} />
-                        </div>
-                    </div>
-                    <div className="mb-6 flex  items-center ">
-                        <div>
-                            <label className='form-font font-bold text-2xl'>Corporation Event :</label><br />
-                            <select onClick={handleBusiness} name='photography' className="select select-bordered w-full max-w-xs" >
+                            <label className='form-font font-bold text-2xl'>Reunion Event :</label><br />
+                            <select onClick={handleReunion} name='photography' className="select select-bordered w-full max-w-xs" >
                                 <option >choose</option>
                                 <option>Bronze</option>
                                 <option>Silver</option>
@@ -478,7 +596,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
                         </div>
                         <div className=" mt-10 ml-10">
                             <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
-                            <input className=" rounded" type="number" value={businessStagePrice} />
+                            <input className=" rounded" type="number" value={reunionStagePrice} />
                         </div>
                     </div>
                    

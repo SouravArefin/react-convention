@@ -86,10 +86,11 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div>
-                <Link to='/wedding' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Wedding</button></Link>
-                <Link to='/birthday' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Birthday</button></Link>
-                <Link to='/businessMeeting' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Corporation Events</button></Link>
+            <div className='flex items-center justify-evenly'>
+                <Link to='/wedding' className=''> <button className='text-white text-xl sp-style bg-blue-700 px-5 mt-10 '>Wedding</button></Link>
+                <Link to='/birthday' className=''> <button className='text-white text-xl sp-style bg-blue-700 px-5 mt-10 '>Birthday</button></Link>
+                <Link to='/businessMeeting' className=''> <button className='text-white text-xl sp-style bg-blue-700 px-5 mt-10 '>Corporation Events</button></Link>
+                <Link to='/reunion' className=''> <button className='text-white text-xl sp-style bg-blue-700 px-5 mt-10 '>Reunion Events</button></Link>
             </div>
             <button style={{ marginLeft: '45%' }} className="mt-10 text-center cursor:pointer happy bg-[#3005ee] hover:bg-[#141414]  px-4 py-2 mb-2 rounded-full text-white" onClick={() => navigate('/services')}>
                 See More
