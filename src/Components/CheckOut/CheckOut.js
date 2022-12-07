@@ -39,7 +39,10 @@ const CheckOut = () => {
     const [reunionStage,setReunionStage] = useState([])
     const [reunionStagePrice,setReunionStagePrice] = useState(0)
     
-    const [newTotalPrice,setNewTotalPrice] = useState(0)
+    console.log(reunionStagePrice,'reunionStagePrice')
+    const [newTotalPrice, setNewTotalPrice] = useState(0)
+    const [photoLink, setPhotoLink] = useState('')
+    console.log(photoLink,'photolink');
     const [packageName,setPackageName] = useState({})
 console.log(newTotalPrice,'newTotalPrice')
 console.log(packageName,'packageName')
@@ -47,13 +50,12 @@ console.log(packageName,'packageName')
     const [blurPhoto, setBlurPhoto] = useState({})
     console.log(blurPhoto, 'blurPhoto');
     //console.log(photoGraphyPackage,"photo-pck");
-    console.log(services)
-console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
-    console.log(singlePackagePrice +weddingStagePrice + holudStagePrice +hinduStagePrice + birthdayStagePrice +themebirthdayStagePrice + businessStagePrice + singleFoodPackagePrice  ,'singlePackagePrice')
+    console.log(services,"services")
+    console.log(parseInt(singlePhotoPackagePrice), 'singlePhotoPackagePrice')
+    
+    console.log(singlePackagePrice +weddingStagePrice + holudStagePrice +hinduStagePrice + birthdayStagePrice +themebirthdayStagePrice + businessStagePrice + singleFoodPackagePrice + setReunionStagePrice+reunionStagePrice  ,'allnewprice')
 
-    const found = services.filter(service =>
-        service._id == id
-    )
+ 
     useEffect(() => {
         fetch('http://localhost:4000/package')
             .then(response => response.json())
@@ -67,20 +69,25 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
 
     let AllnewPrice;
-    if (singlePackagePrice || singlePhotoPackagePrice || singleFoodPackagePrice || hinduStagePrice || weddingStagePrice || holudStagePrice || birthdayStagePrice || themebirthdayStagePrice || businessStagePrice) {
+  
+    
+ 
+    useEffect(() => {
+        if (singlePackagePrice || singlePhotoPackagePrice || singleFoodPackagePrice || hinduStagePrice || weddingStagePrice || holudStagePrice || birthdayStagePrice || themebirthdayStagePrice || businessStagePrice|| reunionStagePrice) {
             
      
         
-        AllnewPrice = singlePackagePrice +weddingStagePrice + holudStagePrice +hinduStagePrice + birthdayStagePrice +themebirthdayStagePrice + businessStagePrice + singleFoodPackagePrice 
-    }
-    else {
-        AllnewPrice = 0;
-    }
-    console.log(AllnewPrice,'allnewprice');
- 
-    useEffect(() => {
-        setNewTotalPrice(AllnewPrice)
-    }, [])
+            AllnewPrice = parseInt(singlePackagePrice) + parseInt(weddingStagePrice) + parseInt(holudStagePrice) + parseInt(hinduStagePrice) + parseInt(birthdayStagePrice) + parseInt(themebirthdayStagePrice) + parseInt(businessStagePrice) + parseInt(singleFoodPackagePrice) + parseInt(reunionStagePrice)  
+
+            setNewTotalPrice(AllnewPrice)
+            console.log(AllnewPrice,'Allnewprice');
+        }
+        else {
+            AllnewPrice = 0;
+            setNewTotalPrice(AllnewPrice)
+        }
+       
+    }, [singlePackagePrice , singlePhotoPackagePrice , singleFoodPackagePrice , hinduStagePrice , weddingStagePrice, holudStagePrice, birthdayStagePrice ,themebirthdayStagePrice , businessStagePrice, reunionStagePrice,singlePhotoPackagePrice])
     useEffect(() => {
         fetch('/photography.json')
             .then(response => response.json())
@@ -130,12 +137,12 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
    
 
-    console.log(found, 'takePrice')
-    useEffect(() => {
-        const takePrice = found[0]?.price
-        setStorePrice(takePrice)
-        setSinglePhotoPackagePrice(takePrice)
-    }, [found[0]?._id])
+    // console.log(found, 'takePrice')
+    // useEffect(() => {
+    //     const takePrice = found[0]?.price
+    //     setStorePrice(takePrice)
+    //     setSinglePhotoPackagePrice(takePrice)
+    // }, [found[0]?._id])
 
 
 
@@ -147,7 +154,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
     const confirmOrder = e => {
         e.preventDefault();
-        console.log(e, "chck e")
+        console.log(e.target, "chck e")
 
         let photoPacakage;
         console.log(e.target?.photography?.value);
@@ -160,27 +167,25 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
             photoGraphyPack.name === e.target?.photography?.value
         )
 
-        console.log(foundPhoto, 'found photol');
-        console.log(foundPhoto[0], 'found photo');
-        let totalPrice;
-
-        if (foundPhoto[0]?.price) {
-            totalPrice = found[0]?.price + parseInt(foundPhoto[0].price)
-            setStorePrice(totalPrice)
-
-            toast.info(`You choose our photography package.That's why your updated price is ${totalPrice}`)
+        let foodMenu;
+        if (e.target?.food?.value == 'choose') {
+            foodMenu= 'own'
+        } else {
+            foodMenu = e.target.food.value
         }
-        else {
-            totalPrice = found[0]?.price
-            setStorePrice(totalPrice)
-        }
-        console.log(totalPrice, 'totalPrice')
-        const name = e.target.name.value;
+       
+
+        const name = e.target.personname.value;
+        const sendPackage = e.target.photographyname.value;
         const email = user.email;
         const phone = e.target.phone.value;
-        const sendPackage = found[0]?.name;
-        const sendPrice = totalPrice;
-        const image = found[0]?.img;
+        const decoration = e.target?.stage?.value;
+        const holudStage = e.target?.holudstage?.value 
+        const hinduStage = e.target?.hindustage?.value 
+       
+        const sendFoodMenu =foodMenu;
+        const sendPrice = newTotalPrice;
+        const image = photoLink;
         const adults = e.target.adults.value;
         //const child = e.target.children.value;
         const Address = e.target.address.value;
@@ -188,8 +193,10 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
         const startTime = e.target.time.value;
         const description = e.target.description.value;
         const Photography = photoPacakage
-        console.log(name, Photography, email, phone, sendPackage, sendPrice, adults, checkin, startTime, description);
-        const sendOrder = { name, email, phone, sendPackage, sendPrice, adults, checkin, startTime, description, image, Address, Photography }
+        // console.log(name, Photography, email, phone, sendPackage, sendPrice, adults, checkin, startTime, description);
+        const sendOrder = { name, email, phone, sendPackage, sendPrice, adults, checkin, startTime, description, image, Address, Photography,sendFoodMenu,decoration,hinduStage,holudStage }
+       
+       console.log(sendOrder,'sendOrder')
         fetch(`http://localhost:4000/order`, {
             method: "POST",
             headers: {
@@ -214,7 +221,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
     //new code for package-----------!SECTION
 
     const handlePackagePrice = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose' || e.target.value == 'own') {
             setSinglePackagePrice(0)
         }
         else {
@@ -223,13 +230,14 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
             const newPackage = services.filter(packageName => packageName.name == selectPackage)
             console.log(newPackage, 'newPackage')
             setSinglePackagePrice(newPackage[0].price)
-            setPackageName(newPackage )
+            setPackageName(newPackage)
+            setPhotoLink(newPackage[0].img)
         }
 
     }
-
+   
     const photoPackagePrice = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose' || e.target.value == 'own') {
             setSinglePhotoPackagePrice(0)
         }
         else {
@@ -243,7 +251,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
     }
     const handleFoodPrice = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose'|| e.target.value == 'own') {
             setSingleFoodPackagePrice(0)
             // singleFoodPrice
         }
@@ -258,7 +266,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
     }
     const handleWeddingStage = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose' || e.target.value == 'own') {
             setWeddingStagePrice(0)
             // singleFoodPrice
         }
@@ -273,7 +281,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
     }
     const handleHoludStage = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose' || e.target.value == 'own') {
             setholudStagePrice(0)
             // singleFoodPrice
         }
@@ -288,7 +296,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
     }
     const handleHinduStage = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose' || e.target.value == 'own') {
             sethinduStagePrice(0)
             // singleFoodPrice
         }
@@ -303,7 +311,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
     }
     const handleBirthdayStage = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose' || e.target.value == 'own') {
             setBirthdayStagePrice(0)
             // singleFoodPrice
         }
@@ -318,7 +326,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
     }
     const handleThemeBirthdayStage = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose' || e.target.value == 'own') {
             setThemeBirthdayStagePrice(0)
             // singleFoodPrice
         }
@@ -333,7 +341,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
     }
     const handleBusiness = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose' || e.target.value == 'own') {
             setBusinessStagePrice(0)
             // singleFoodPrice
         }
@@ -348,7 +356,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
     }
     const handleReunion = (e) => {
-        if (e.target.value == 'choose') {
+        if (e.target.value == 'choose' || e.target.value == 'own') {
             setReunionStagePrice(0)
             // singleFoodPrice
         }
@@ -379,11 +387,12 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
             <div className="mb-6 flex  items-center ">
         <div>
             <label className='form-font font-bold text-2xl'>Wedding Reception Stage :</label><br />
-            <select onClick={handleWeddingStage } name='photography' className="select select-bordered w-full max-w-xs" >
+            <select onClick={handleWeddingStage } name='stage'  className="select select-bordered w-full max-w-xs" >
                 <option >choose</option>
                 <option>Stage-1</option>
                 <option>Stage-2</option>
                 <option>Stage-3</option>
+                <option>own</option>
         
             </select>
 
@@ -397,11 +406,12 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
                 <div className="mb-6 flex  items-center ">
                         <div>
                             <label className='form-font font-bold text-2xl'>Holud  Stage :</label><br />
-                            <select onClick={handleHoludStage} name='photography' className="select select-bordered w-full max-w-xs" >
+                            <select onClick={handleHoludStage} name='holudstage' className="select select-bordered w-full max-w-xs" >
                                 <option >choose</option>
                                 <option>Stage-1</option>
                                 <option>Stage-2</option>
-                                <option>Stage-3</option>
+                            <option>Stage-3</option>
+                            <option>own</option>
                             </select>
 
                         </div>
@@ -413,11 +423,12 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
                     <div className="mb-6 flex  items-center ">
                         <div>
                             <label className='form-font font-bold text-2xl'>Specefic Wedding Stage For Hindu :</label><br />
-                            <select onClick={handleHinduStage} name='photography' className="select select-bordered w-full max-w-xs" >
+                            <select onClick={handleHinduStage} name='hindustage'  className="select select-bordered w-full max-w-xs" >
                                 <option >choose</option>
                                 <option>Stage-1</option>
                                 <option>Stage-2</option>
-                                <option>Stage-3</option>
+                            <option>Stage-3</option>
+                            <option>own</option>
                             </select>
 
                         </div>
@@ -436,12 +447,13 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
             <>
              <div className="mb-6 flex  items-center ">
                         <div>
-                            <label className='form-font font-bold text-2xl'>Birthday Stage :</label><br />
+                            <label className='form-font font-bold text-2xl'>Normal Decoration :</label><br />
                             <select onClick={handleBirthdayStage} name='photography' className="select select-bordered w-full max-w-xs" >
                                 <option >choose</option>
                                 <option>decoration-1</option>
                                 <option>decoration-2</option>
-                                <option>decoration-3</option>
+                    <option>decoration-3</option>
+                    <option>own</option>
                             </select>
 
                         </div>
@@ -452,12 +464,13 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
                     </div>
                     <div className="mb-6 flex  items-center ">
                         <div>
-                            <label className='form-font font-bold text-2xl'>Theme Birthday Stage :</label><br />
+                            <label className='form-font font-bold text-2xl'>Theme Decoration :</label><br />
                             <select onClick={handleThemeBirthdayStage} name='photography' className="select select-bordered w-full max-w-xs" >
                                 <option >choose</option>
                                 <option>decoration-1</option>
                                 <option>decoration-2</option>
-                                <option>decoration-3</option>
+                    <option>decoration-3</option>
+                    <option>own</option>
                             </select>
 
                         </div>
@@ -470,18 +483,19 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
         
         
     }
-    if (a == "Business Fair" || a==" Political Conference" || a=="Corporate Event") {
+    if (a == "Business Fair" || a=="Political Conference" || a=="Corporate Event") {
         
         business=   
             <>
                 <div className="mb-6 flex  items-center ">
                         <div>
-                            <label className='form-font font-bold text-2xl'>Corporation Event :</label><br />
-                            <select onClick={handleBusiness} name='photography' className="select select-bordered w-full max-w-xs" >
+                            <label className='form-font font-bold text-2xl'>decoration :</label><br />
+                            <select onClick={handleBusiness} name='stage'  className="select select-bordered w-full max-w-xs" >
                                 <option >choose</option>
                                 <option>Bronze</option>
                                 <option>Silver</option>
-                                <option>Gold</option>
+                        <option>Gold</option>
+                        <option>own</option>
                             </select>
 
                         </div>
@@ -494,24 +508,25 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
         
         
     }
-    if (a == "reunion" || a=="Fairwell Event" || a=="Rag Day Program") {
+    if (a == "Reunion Program" || a=="Fairwell Event" || a=="Rag Day Program") {
         
-        business=   
+        reunion=   
             <>
-                <div className="mb-6 flex  items-center ">
+                   <div className="mb-6 flex  items-center ">
                         <div>
-                            <label className='form-font font-bold text-2xl'>Corporation Event :</label><br />
-                            <select onClick={handleBusiness} name='photography' className="select select-bordered w-full max-w-xs" >
+                            <label className='form-font font-bold text-2xl'>Decoration:</label><br />
+                            <select onClick={handleReunion} name='stage' className="select select-bordered w-full max-w-xs" >
                                 <option >choose</option>
                                 <option>Bronze</option>
                                 <option>Silver</option>
-                                <option>Gold</option>
+                        <option>Gold</option>
+                        <option>own</option>
                             </select>
 
                         </div>
                         <div className=" mt-10 ml-10">
                             <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
-                            <input className=" rounded" type="number" value={businessStagePrice} />
+                            <input className=" rounded" type="number" value={reunionStagePrice} />
                         </div>
                     </div>
         </>
@@ -533,7 +548,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
                     <div className="mb-6">
                         <label className='form-font font-bold text-2xl'> Name :</label>
-                        <input type="text" id="text" name='name' placeholder="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                        <input type="text" id="text" name='personname' placeholder="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                     </div>
 
 
@@ -551,7 +566,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
 
                         <div>
                             <label className='form-font font-bold text-2xl'>Choose Your Package :</label><br />
-                            <select onClick={handlePackagePrice} name='photography' className="select select-bordered w-full max-w-xs" >
+                            <select onClick={handlePackagePrice} name='photographyname' className="select select-bordered w-full max-w-xs" >
                                 <option >choose</option>
                                 <option>Political Conference</option>
                                 <option>Corporate Event</option>
@@ -563,7 +578,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
                                 <option>Wedding Event</option>
                                 <option> Custom package-1</option>
                                 <option>customize package-2</option>
-
+                                <option>own</option>
                             </select>
 
 
@@ -583,22 +598,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
    
                   
                
-                    <div className="mb-6 flex  items-center ">
-                        <div>
-                            <label className='form-font font-bold text-2xl'>Reunion Event :</label><br />
-                            <select onClick={handleReunion} name='photography' className="select select-bordered w-full max-w-xs" >
-                                <option >choose</option>
-                                <option>Bronze</option>
-                                <option>Silver</option>
-                                <option>Gold</option>
-                            </select>
-
-                        </div>
-                        <div className=" mt-10 ml-10">
-                            <label htmlFor="BDT" className=' font-bold text-xl'>BDT:</label>
-                            <input className=" rounded" type="number" value={reunionStagePrice} />
-                        </div>
-                    </div>
+                 
                    
                  
 
@@ -613,7 +613,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
                                 <option>package-4</option>
                                 <option>package-5</option>
                                 <option>package-6</option>
-                               
+                                <option>own</option>
 
                             </select>
                             <p className="text-gray-900">**If you want to take our photography service,choose your suitable package.
@@ -630,7 +630,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
                     <div className="mb-6 flex items-center justify-center">
                         <div>
                         <label className='form-font font-bold text-2xl'>Food Menu (optional) :</label><br />
-                        <select onClick={handleFoodPrice}name='menu' className="select select-bordered w-full max-w-xs" >
+                        <select onClick={handleFoodPrice}name='food' className="select select-bordered w-full max-w-xs" >
                             <option >choose</option>
                             <option>platter-1</option>
                             <option>platter-2</option>
@@ -638,7 +638,7 @@ console.log(parseInt(singlePhotoPackagePrice),'singlePhotoPackagePrice')
                             <option>platter-4</option>
                             <option>platter-5</option>
                             <option>platter-6</option>
-                         
+                            <option>own</option>
 
                         </select>
                         <p className="text-gray-900">**If you want to take our Food Menu service,choose your suitable package.

@@ -41,6 +41,9 @@ import WeddingMemory from './Components/Home/Memory/WeddingMemory';
 import BirthdayMemory from './Components/Home/Memory/BirthdayMemory';
 import BusinessMemory from './Components/Home/Memory/BusinessMemory';
 import Reunion from './Components/Home/ReUnion/Reunion';
+import ManagePackage from './Components/DashBoard/Admin/ManagePackage';
+import UpdatePackage from './Components/DashBoard/Admin/UpdatePackage';
+import Update from './Components/DashBoard/Admin/Update';
 
 
 function App() {
@@ -77,7 +80,11 @@ function App() {
               <Route path='/weddingMemory' element={<WeddingMemory />}></Route>
               <Route path='/birthMemory' element={<BirthdayMemory />}></Route>
               <Route path='/busiMemory' element={<BusinessMemory />}></Route>
-              <Route path='/businessMeeting' element={<BusinessMeeting/>}></Route>
+              <Route path='/businessMeeting' element={<BusinessMeeting />}></Route>
+              <Route path="/package/:id" element={
+                  <RequireAdmin><Update /></RequireAdmin>
+
+                }></Route>
               <Route path='/menu' element={<Menu />}></Route>
 
               <Route path='/photography' element={<Photography />}></Route>
@@ -97,6 +104,12 @@ function App() {
                   <RequireAdmin><AddPackage /></RequireAdmin>
 
                 }></Route>
+                <Route path="manageTools" element={
+                  <RequireAdmin><ManagePackage /></RequireAdmin>
+
+                }></Route>
+              
+
                 <Route path="payment/:id" element={<Payment />}></Route>
                 <Route path="profile" element={<MyProfile />}></Route>
                 <Route path="review" element={<AddReview />}></Route>

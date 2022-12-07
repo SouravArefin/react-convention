@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const OrderCard = ({ o, index, refetch, sendEvent, setModal }) => {
   console.log(o, 'orderlist')
-  const { _id, Address,Photography, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image, transactionId, paid } = o
+  const { _id,decoration,hinduStage,holudStage, Address,Photography, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image, transactionId, paid } = o
   
   let photography;
   if (Photography) {
@@ -14,6 +14,20 @@ const OrderCard = ({ o, index, refetch, sendEvent, setModal }) => {
   else {
     photography = 'own Photography';
 
+  }
+  let hinduwrite;
+  if (hinduStage == 'choose') {
+    hinduwrite=<p>No need</p>
+  }
+  else {
+    hinduwrite = holudStage
+  }
+  let holudwrite;
+  if (holudStage == 'choose') {
+    holudwrite=<p>No need</p>
+  }
+  else {
+    holudwrite= holudStage
   }
   return (
     <tr className='text-center'>
@@ -29,6 +43,9 @@ const OrderCard = ({ o, index, refetch, sendEvent, setModal }) => {
       <td><span className="font-bold">{phone}</span></td>
       <td><span className="font-bold">{Address}</span></td>
       <td><span className="font-bold">{sendPackage}</span></td>
+      <td><span className="font-bold">{decoration}</span></td>
+      <td><span className="font-bold">{holudwrite}</span></td>
+      <td><span className="font-bold">{hinduwrite}</span></td>
       <td><span className="font-bold">{sendPrice}</span></td>
       <td><span className="font-bold">{adults}</span></td>
    

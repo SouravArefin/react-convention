@@ -80,6 +80,9 @@ const MyOrder = () => {
                             <th>Phone</th>
                             <th>Address</th>
                             <th>Package</th>
+                            <th>Decoration</th>
+                            <th>Holud Stage</th>
+                            <th>Hindu wedding Stage</th>
                             <th>Price</th>
                             <th>Limits of Guests</th>
 

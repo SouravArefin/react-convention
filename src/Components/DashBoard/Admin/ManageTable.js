@@ -9,7 +9,7 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
 
   //console.log(o)
 
-  const { _id, paid, Photography, transactionId, Address, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image } = o
+  const { _id,decoration,hinduStage,holudStage, paid, Photography, transactionId, Address, name, email, phone, sendPackage, sendPrice, adults, child, checkin, startTime, description, image } = o
 
   const [user] = useAuthState(auth)
   // const makeShip = () => {
@@ -67,6 +67,20 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
       )
     e.target.reset()
   }
+  let hinduwrite;
+  if (hinduStage == 'choose') {
+    hinduwrite=<p>No need</p>
+  }
+  else {
+    hinduwrite = holudStage
+  }
+  let holudwrite;
+  if (holudStage == 'choose') {
+    holudwrite=<p>No need</p>
+  }
+  else {
+    holudwrite= holudStage
+  }
   return (
     <tr className='text-center'>
       <th>{index + 1}</th>
@@ -81,6 +95,10 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
       <td><span className="font-bold">{phone}</span></td>
       <td><span className="font-bold">{Address}</span></td>
       <td><span className="font-bold">{sendPackage}</span></td>
+      <td><span className="font-bold">{decoration}</span></td>
+      <td><span className="font-bold">{holudwrite}</span></td>
+      <td><span className="font-bold">{hinduwrite}</span></td>
+     
       <td><span className="font-bold">{sendPrice}</span></td>
       <td><span className="font-bold">{adults}</span></td>
 
