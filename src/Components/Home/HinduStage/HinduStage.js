@@ -8,7 +8,7 @@ const HinduStage = () => {
    const [hindustage, setHinduStage] = useState([])
    
     useEffect(() => {
-        fetch('/hinduStage.json')
+        fetch('http://localhost:4000/hindustage')
         .then(response => response.json())
     .then(data=>setHinduStage(data))
       }, [])

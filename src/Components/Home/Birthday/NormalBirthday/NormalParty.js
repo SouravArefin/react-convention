@@ -8,7 +8,7 @@ const NormalParty = () => {
     const [normalstage, setNormalStage] = useState([])
    
     useEffect(() => {
-        fetch('/normalBirthday.json')
+        fetch('http://localhost:4000/normalbirthday')
         .then(response => response.json())
     .then(data=> setNormalStage(data))
       }, [])

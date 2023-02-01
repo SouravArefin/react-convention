@@ -7,7 +7,7 @@ const BusinessMeeting = () => {
     const [businessstage, setbusinessStage] = useState([])
    
     useEffect(() => {
-        fetch('/business.json')
+        fetch('http://localhost:4000/business')
         .then(response => response.json())
     .then(data=>  setbusinessStage(data))
       }, [])

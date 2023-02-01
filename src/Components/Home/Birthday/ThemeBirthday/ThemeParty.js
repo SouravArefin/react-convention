@@ -7,7 +7,7 @@ const ThemeParty = () => {
     const [themestage, setThemeStage] = useState([])
    
     useEffect(() => {
-        fetch('/themeBirthday.json')
+        fetch('http://localhost:4000/themebirthday')
         .then(response => response.json())
     .then(data=> setThemeStage(data))
       }, [])

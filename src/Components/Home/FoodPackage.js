@@ -7,7 +7,7 @@ const FoodPackage = () => {
     const [foodMenu, setFoodMenu] = useState([])
    
     useEffect(() => {
-        fetch('/food.json')
+        fetch('http://localhost:4000/food')
         .then(response => response.json())
     .then(data=> setFoodMenu(data))
       }, [])

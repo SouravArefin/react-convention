@@ -11,7 +11,7 @@ const Wedding = () => {
     const [stage, setStage] = useState([])
     console.log(stage,'stage');
     useEffect(() => {
-        fetch('/wedding.json')
+        fetch('http://localhost:4000/wedding')
         .then(response => response.json())
     .then(data=> setStage(data))
       }, [])
