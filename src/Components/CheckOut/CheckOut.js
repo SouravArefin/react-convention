@@ -57,7 +57,7 @@ console.log(packageName,'packageName')
 
  
     useEffect(() => {
-        fetch('http://localhost:4000/package')
+        fetch('https://royal-convention-server-production.up.railway.app/package')
             .then(response => response.json())
             .then(data => setServices(data))
     }, [])
@@ -89,47 +89,47 @@ console.log(packageName,'packageName')
        
     }, [singlePackagePrice , singlePhotoPackagePrice , singleFoodPackagePrice , hinduStagePrice , weddingStagePrice, holudStagePrice, birthdayStagePrice ,themebirthdayStagePrice , businessStagePrice, reunionStagePrice,singlePhotoPackagePrice])
     useEffect(() => {
-        fetch('http://localhost:4000/photography')
+        fetch('https://royal-convention-server-production.up.railway.app/photography')
             .then(response => response.json())
             .then(data => setPhotoPackage(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:4000/food.json')
+        fetch('https://royal-convention-server-production.up.railway.app/food.json')
             .then(response => response.json())
             .then(data => setSingleFoodPackage(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:4000/wedding.json')
+        fetch('https://royal-convention-server-production.up.railway.app/wedding.json')
             .then(response => response.json())
             .then(data => setWeddingStage(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:4000/holud.json')
+        fetch('https://royal-convention-server-production.up.railway.app/holud.json')
             .then(response => response.json())
             .then(data => setHoludStage(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:4000/hinduStage.json')
+        fetch('https://royal-convention-server-production.up.railway.app/hinduStage.json')
             .then(response => response.json())
             .then(data => sethinduStage(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:4000/normalBirthday.json')
+        fetch('https://royal-convention-server-production.up.railway.app/normalBirthday.json')
             .then(response => response.json())
             .then(data => setBirthdayStage(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:4000/themeBirthday.json')
+        fetch('https://royal-convention-server-production.up.railway.app/themeBirthday.json')
             .then(response => response.json())
             .then(data => setThemeBirthdayStage(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:4000/business.json')
+        fetch('https://royal-convention-server-production.up.railway.app/business.json')
             .then(response => response.json())
             .then(data => setBusinessStage(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:4000/reunion.json')
+        fetch('https://royal-convention-server-production.up.railway.app/reunion.json')
             .then(response => response.json())
             .then(data => setReunionStage(data))
     }, [])
@@ -197,7 +197,7 @@ console.log(packageName,'packageName')
         const sendOrder = { name, email, phone, sendPackage, sendPrice, adults, checkin, startTime, description, image, Address, Photography,sendFoodMenu,decoration,hinduStage,holudStage }
        
        console.log(sendOrder,'sendOrder')
-        fetch(`http://localhost:4000/order`, {
+        fetch(`https://royal-convention-server-production.up.railway.app/order`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",

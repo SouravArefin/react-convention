@@ -10,7 +10,7 @@ const ClientDiscount = ({ send, index, }) => {
         const sendEmail = email;
         const sendDiscount = e.target.discount.value
         console.log(sendDiscount, sendEmail);
-        fetch(`http://localhost:4000/discount/${sendEmail}`, {
+        fetch(`https://royal-convention-server-production.up.railway.app/discount/${sendEmail}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

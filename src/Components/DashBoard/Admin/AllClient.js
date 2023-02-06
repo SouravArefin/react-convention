@@ -6,7 +6,7 @@ import ClientDiscount from './ClientDiscount';
 const AllClient = () => {
 
 
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:4000/order`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://royal-convention-server-production.up.railway.app/order`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`

@@ -7,7 +7,7 @@ const Holud = () => {
     const [holudstage, setHoludStage] = useState([])
    
     useEffect(() => {
-        fetch('http://localhost:4000/holud')
+        fetch('https://royal-convention-server-production.up.railway.app/holud')
         .then(response => response.json())
     .then(data=> setHoludStage(data))
       }, [])

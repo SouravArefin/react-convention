@@ -17,7 +17,7 @@ const useJwtToken = user => {
             console.log(currentUser, 'jwt-token-currentuser');
             // console.log({ email });
             if (email) {
-                fetch(`http://localhost:4000/user/${email}`, {
+                fetch(`https://royal-convention-server-production.up.railway.app/user/${email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

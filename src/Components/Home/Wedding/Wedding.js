@@ -11,7 +11,7 @@ const Wedding = () => {
     const [stage, setStage] = useState([])
     console.log(stage,'stage');
     useEffect(() => {
-        fetch('http://localhost:4000/wedding')
+        fetch('https://royal-convention-server-production.up.railway.app/wedding')
         .then(response => response.json())
     .then(data=> setStage(data))
       }, [])

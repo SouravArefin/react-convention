@@ -6,7 +6,7 @@ const useServiceDetail = (id) => {
     const [item, setItem] = useState([]);  
     useEffect(() => {
         
-            const url = `http://localhost:4000/package/${id}`
+            const url = `https://royal-convention-server-production.up.railway.app/package/${id}`
             fetch(url)
             .then(response => response.json())
         .then(data=>setItem(data))

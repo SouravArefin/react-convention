@@ -19,7 +19,7 @@ const MyOrder = () => {
 
     const email = user?.email
     //console.log(email, 'order-email');
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:4000/singleOrder?email=${email}`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://royal-convention-server-production.up.railway.app/singleOrder?email=${email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -34,7 +34,7 @@ const MyOrder = () => {
 
 
 
-        fetch(`http://localhost:4000/myorder/${id}`, {
+        fetch(`https://royal-convention-server-production.up.railway.app/myorder/${id}`, {
             method: 'DELETE',
             headers: {
                 "content-type": "application/json",

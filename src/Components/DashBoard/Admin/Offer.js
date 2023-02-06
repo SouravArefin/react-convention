@@ -17,7 +17,7 @@ const UserRow = ({ user, index, refetch }) => {
         console.log(sendEmail);
         const sendDiscount = 0;
         console.log(sendDiscount, sendEmail);
-        fetch(`http://localhost:4000/discount/${sendEmail}`, {
+        fetch(`https://royal-convention-server-production.up.railway.app/discount/${sendEmail}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

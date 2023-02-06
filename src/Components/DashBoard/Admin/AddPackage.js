@@ -33,7 +33,7 @@ const AddPackage = () => {
                     }
                     console.log(tools)
                     //send data to db
-                    fetch(`http://localhost:4000/package`, {
+                    fetch(`https://royal-convention-server-production.up.railway.app/package`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
