@@ -4,7 +4,7 @@ import noImage from '../../../no-image.png'
 const UserRow = ({ user, index, refetch }) => {
     const { email, role, name, img } = user
     const makeAdmin = () => {
-        fetch(`https://royal-convention-server-production.up.railway.app/user/admin/${email}`, {
+        fetch(`https://royal-convention-server.onrender.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
@@ -29,7 +29,7 @@ const UserRow = ({ user, index, refetch }) => {
         const sendEmail = email;
         const sendDiscount = e.target.discount.value
         console.log(sendDiscount, sendEmail);
-        fetch(`https://royal-convention-server-production.up.railway.app/discount/${sendEmail}`, {
+        fetch(`https://royal-convention-server.onrender.com/discount/${sendEmail}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

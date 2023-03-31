@@ -7,7 +7,7 @@ const ThemeParty = () => {
     const [themestage, setThemeStage] = useState([])
    
     useEffect(() => {
-        fetch('https://royal-convention-server-production.up.railway.app/themebirthday')
+        fetch('https://royal-convention-server.onrender.com/themebirthday')
         .then(response => response.json())
     .then(data=> setThemeStage(data))
       }, [])

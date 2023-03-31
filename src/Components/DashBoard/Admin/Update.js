@@ -30,7 +30,7 @@ const navigate= useNavigate()
             console.log(updateItem);
             
            
-            fetch(`https://royal-convention-server-production.up.railway.app/package/${id}`, {
+            fetch(`https://royal-convention-server.onrender.com/package/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

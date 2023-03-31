@@ -24,7 +24,7 @@ const MyProfile = () => {
     // useEffect(() => {
     const getItems = async () => {
         const email = signedUser?.email
-        const url = `https://royal-convention-server-production.up.railway.app/user/${email}`
+        const url = `https://royal-convention-server.onrender.com/user/${email}`
         // console.log(url);
         try {
             const { data } = await axios.get(url, {

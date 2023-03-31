@@ -9,7 +9,7 @@ import UserRow from './UserRow';
 const AllUser = () => {
 
 
-    const { data: allUsers, isLoading, refetch } = useQuery('allUsers', () => fetch(`https://royal-convention-server-production.up.railway.app/user`, {
+    const { data: allUsers, isLoading, refetch } = useQuery('allUsers', () => fetch(`https://royal-convention-server.onrender.com/user`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`

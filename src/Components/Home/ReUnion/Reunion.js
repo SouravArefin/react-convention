@@ -5,7 +5,7 @@ const Reunion = () => {
     const [reunion, setReunionStage] = useState([])
    
     useEffect(() => {
-        fetch('https://royal-convention-server-production.up.railway.app/reunion')
+        fetch('https://royal-convention-server.onrender.com/reunion')
         .then(response => response.json())
     .then(data=>  setReunionStage(data))
       }, [])

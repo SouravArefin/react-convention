@@ -14,7 +14,7 @@ const PaymentForm = ({ myOrder }) => {
 
     const { _id, sendPrice, name, email } = myOrder;
     useEffect(() => {
-        fetch('https://royal-convention-server-production.up.railway.app/create-payment-intent', {
+        fetch('https://royal-convention-server.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -77,7 +77,7 @@ const PaymentForm = ({ myOrder }) => {
                 myOrder: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://royal-convention-server-production.up.railway.app/orderPay/${_id}`, {
+            fetch(`https://royal-convention-server.onrender.com/orderPay/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

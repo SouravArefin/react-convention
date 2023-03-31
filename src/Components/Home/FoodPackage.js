@@ -7,7 +7,7 @@ const FoodPackage = () => {
     const [foodMenu, setFoodMenu] = useState([])
    
     useEffect(() => {
-        fetch('https://royal-convention-server-production.up.railway.app/food')
+        fetch('https://royal-convention-server.onrender.com/food')
         .then(response => response.json())
     .then(data=> setFoodMenu(data))
       }, [])
