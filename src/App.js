@@ -44,8 +44,9 @@ import Reunion from './Components/Home/ReUnion/Reunion';
 import ManagePackage from './Components/DashBoard/Admin/ManagePackage';
 import UpdatePackage from './Components/DashBoard/Admin/UpdatePackage';
 import Update from './Components/DashBoard/Admin/Update';
-
-
+import "react-whatsapp-chat-widget/index.css";
+import WhatsAppWidget from "react-whatsapp-chat-widget";
+import ScrollToTop from "react-scroll-to-top";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -169,6 +170,32 @@ function App() {
             </Routes>
 
             <Footer />
+            <ScrollToTop
+                smooth
+                style={{
+                    backgroundColor: "#1E1649",
+                    borderRadius: "50%",
+                    boxShadow: "none",
+                    left: 20,
+                    
+                    // border:"1px solid #00C0FF"
+                }}
+                color="#00C0FF"
+                viewBox="0 0 160 256"
+            />
+            <WhatsAppWidget
+           
+           headerIcon="https://i.ibb.co/6ym78Cs/wp-modified.png"
+           companyName="Sourav Arefin"
+           chatMessage="Hello, How can I help you?"
+           phoneNo="8801858557886"
+           autoOpenTimer={0}
+           iconColor="#008000"
+           chatPersonName="Sourav Arefin"
+           position="center"
+         style={{ border: "none" }}
+        
+       />
             <ToastContainer
               position="top-center" />
           </div>

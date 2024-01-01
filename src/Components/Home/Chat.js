@@ -7,9 +7,9 @@ const Chat = () => {
         <div className="chat z-50">
             <div className='text-right mr-5'>
                 <button >
-                    <a href="https://www.facebook.com/One-Million-101069885894174" target='_blank'>   <FontAwesomeIcon
+                    <FontAwesomeIcon
                style={{borderRadius:"50px"}}
-            className='text-2xl bg-cyan-900 text-white p-5 ' icon={faComment} /> </a>
+            className='text-2xl bg-cyan-900 text-white p-5 ' icon={faComment} /> 
                  
                     {/* <img src={message} alt="arrow" className="w-44 "/>
             </a> */}

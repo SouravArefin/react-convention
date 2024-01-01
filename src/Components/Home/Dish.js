@@ -100,7 +100,7 @@ const Dish = () => {
             </div>
 
             </div>
-            <Chat/>
+            {/* <Chat/> */}
                 </div>
         
     );

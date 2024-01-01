@@ -108,8 +108,8 @@ const About = () => {
             </div> */}
           
            
-            <Arrow />
-            <Chat/>
+            {/* <Arrow /> */}
+            {/* <Chat/> */}
 
                  {/* toast start */}
                  {/* <div className='ml-auto mb-5'>

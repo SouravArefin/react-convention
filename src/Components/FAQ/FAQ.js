@@ -49,7 +49,7 @@ const FAQ = () => {
            </div> */}
           
         </div>
-        <Arrow />
+        {/* <Arrow /> */}
              {/* toast start */}
              {/* <div className='ml-auto mb-5'>
             <div

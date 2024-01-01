@@ -39,8 +39,8 @@ const Service = () => {
                 }
                 </div>
            
-                <Arrow />
-                <Chat/>
+                {/* <Arrow /> */}
+                {/* <Chat/> */}
                    
             </div>
           

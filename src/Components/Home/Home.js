@@ -101,8 +101,8 @@ const Home = () => {
             <div className='container mx-auto  mb-10'>
                 <ReviewSlider />
             </div>
-            <Arrow />
-            <Chat />
+            {/* <Arrow /> */}
+            {/* <Chat /> */}
             {/* toast start */}
             <div className=''>
                 <div
@@ -120,9 +120,9 @@ const Home = () => {
             {/* toast end */}
             <div className='bg-[#04193A] '>
 
-                <div className="custom-shape-divider-top-1653206227">
+                {/* <div className="custom-shape-divider-top-1653206227">
                     <img src={wave} alt="" />
-                </div>
+                </div> */}
                 <h1 className='text-uppercase sp-style text-center text-white text-4xl md:text-5xl '>We Always Try To Give Our Best</h1>
 
                 <div className="business-summery mt-10 pb-10 grid grid-cols-1 md:grid-cols-3 gap-10 container mx-auto">

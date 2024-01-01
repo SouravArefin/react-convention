@@ -82,8 +82,8 @@ const Menu = () => {
                style={{borderRadius:"10px"}}
                 className='text-6xl bg-cyan-900 text-white p-5 ' icon={faArrowUp} /></a></button>
            </div> */}
-            <Arrow />
-            <Chat/>
+            {/* <Arrow /> */}
+            {/* <Chat/> */}
                  {/* toast start */}
                  {/* <div className='ml-auto mb-5'>
             <div
