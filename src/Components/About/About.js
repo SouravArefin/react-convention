@@ -7,7 +7,7 @@ import sanjid from '../../sanjd.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faCheck } from '@fortawesome/free-solid-svg-icons';
 import royal from '../../images/logo-6 - Copy.png'
-import AutoType from './AboutType'
+// import AutoType from './AboutType'
 import Arrow from '../Home/Arrow';
 import Chat from '../Home/Chat';
 const About = () => {
