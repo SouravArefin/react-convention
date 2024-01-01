@@ -5,7 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 
 import { auth } from '../../firebase.init';
 import useService from '../../Hooks/useService';
-import Type from '../Contact/Type';
+
 
 const CheckOut = () => {
     const navigate = useNavigate()
@@ -539,7 +539,7 @@ console.log(packageName,'packageName')
         <div>
 
             <div style={{ margin: "10%" }}>
-                <h1 className='text-center text-3xl sp-style mt-20'><Type /></h1>
+                <h1 className='text-center text-3xl sp-style mt-20'>Fill the form,If you want to purchase this service</h1>
                 <form onSubmit={confirmOrder} className='mt-5 add-cover'>
                     <div className="mb-6">
                         <label className='form-font font-bold text-2xl'>Email :</label>
