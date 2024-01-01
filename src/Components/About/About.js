@@ -107,7 +107,7 @@ const About = () => {
        
             </div> */}
           
-           
+           {/*dont need this */}
             {/* <Arrow /> */}
             {/* <Chat/> */}
 
